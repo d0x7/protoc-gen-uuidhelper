@@ -1,0 +1,5 @@
+.idea/
+protoc-gen-uuidhelper-go
+protoc-gen-uuidhelper-kotlin
+!/*/protoc-gen-uuidhelper-go
+!/*/protoc-gen-uuidhelper-kotlin
