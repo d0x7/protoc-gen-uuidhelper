@@ -1,0 +1,72 @@
+version: 3
+
+tasks:
+  update-version:
+    desc: Update the version in all protoc-gen-uuidhelper-* plugin folders
+    cmd: |
+      for dir in ./cmd/protoc-gen-uuidhelper-*; do
+        if [ -d "$dir" ]; then
+          echo "package main
+      var version = \"$(gitversion)\"
+      func (b backend) Version() string {
+        return version
+      }" > "$dir/version.go"
+        fi
+        done
+  build-go:
+    desc: Build the Go plugin
+    deps:
+      - update-version
+    cmds:
+      - go build -o protoc-gen-uuidhelper-go cmd/protoc-gen-uuidhelper-go/*.go
+  run-go:
+    desc: Run the Go plugin
+    deps:
+      - update-version
+    cmds:
+      - go run cmd/protoc-gen-uuidhelper-go/*.go -v
+  build-kotlin:
+    desc: Build the Kotlin plugin
+    deps:
+      - update-version
+    cmds:
+      - go build -o protoc-gen-uuidhelper-kotlin cmd/protoc-gen-uuidhelper-kotlin/*.go
+  run-kotlin:
+    desc: Run the Kotlin plugin
+    deps:
+      - update-version
+    cmds:
+      - go run cmd/protoc-gen-uuidhelper-kotlin/*.go -v
+  install-go:
+    desc: Install the Go plugin
+    deps:
+      - build-go
+    cmds:
+      - cp protoc-gen-uuidhelper-go ~/go/bin/protoc-gen-uuidhelper-go
+  install-kotlin:
+    desc: Install the Kotlin plugin
+    deps:
+      - build
+    cmds:
+      - cp protoc-gen-uuidhelper-kotlin ~/go/bin/protoc-gen-uuidhelper-kotlin
+  install:
+    desc: Install all plugin
+    deps:
+      - install-go
+      - install-kotlin
+  proto:
+    desc: Generate protobuf files
+    deps:
+      - build-go
+      - build-kotlin
+    cmds:
+      - rm -rf internal/test/gen
+      - mkdir -p internal/test/gen/go internal/test/gen/kotlin
+      - fd -t f -e proto . internal/test -x protoc -I internal/test --go_out=internal/test/gen/go --go_opt=paths=source_relative --plugin=./protoc-gen-uuidhelper-go --uuidhelper-go_out=internal/test/gen/go --uuidhelper-go_opt=paths=source_relative {}
+      - fd -t f -e proto . internal/test -x protoc -I internal/test --java_out=internal/test/gen/kotlin --kotlin_out=internal/test/gen/kotlin --plugin=./protoc-gen-uuidhelper-kotlin --uuidhelper-kotlin_out=internal/test/gen/kotlin --uuidhelper-kotlin_opt=paths=source_relative {}
+  test-go:
+    desc: Run tests
+    deps:
+      - proto
+    cmds:
+      - go test -parallel 8 -v ./...
