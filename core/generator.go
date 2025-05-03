@@ -20,6 +20,9 @@ type UUIDFileWriter interface {
 	// GenerateUUIDHelper will be called for each UUID field found in a message
 	GenerateUUIDHelper(msg *protogen.Message, field *protogen.Field)
 
+	// GenerateUUIDsHelper will be called for each repeated UUID field found in a message
+	GenerateUUIDsHelper(msg *protogen.Message, field *protogen.Field)
+
 	// Close will be called after all UUIDs are handled; should return the generated file
 	Close()
 }

@@ -28,3 +28,26 @@ func TestUUID(t *testing.T) {
 		t.Fatalf("Internal UUID mismatch: expected %v, got %v", internal, newPlayer.GetInternalUUID())
 	}
 }
+
+func TestUUIDs(t *testing.T) {
+	uuids := []uuid.UUID{uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom())}
+	player := &gen.Player{}
+	player.SetGameUUIDs(uuids)
+
+	bytes, err := proto.Marshal(player)
+	if err != nil {
+		t.Fatalf("Failed to marshal player: %v", err)
+	}
+	newPlayer := &gen.Player{}
+	if err := proto.Unmarshal(bytes, newPlayer); err != nil {
+		t.Fatalf("Failed to unmarshal player: %v", err)
+	}
+	if len(newPlayer.GetGameUUIDs()) != len(uuids) {
+		t.Fatalf("UUIDs length mismatch: expected %d, got %d", len(uuids), len(newPlayer.GetGameUUIDs()))
+	}
+	for i, uid := range uuids {
+		if newPlayer.GetGameUUIDs()[i] != uid {
+			t.Fatalf("UUID mismatch at index %d: expected %v, got %v", i, uid, newPlayer.GetGameUUIDs()[i])
+		}
+	}
+}

@@ -95,7 +95,72 @@ public object PlayerKt {
     public fun clearStringUuid() {
       _builder.clearStringUuid()
     }
-  }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class GameUuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `repeated bytes game_uuids = 5;`
+     */
+     public val gameUuids: com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.gameUuidsList
+      )
+    /**
+     * `repeated bytes game_uuids = 5;`
+     * @param value The gameUuids to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addGameUuids")
+    public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.add(value: com.google.protobuf.ByteString) {
+      _builder.addGameUuids(value)
+    }/**
+     * `repeated bytes game_uuids = 5;`
+     * @param value The gameUuids to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignGameUuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.plusAssign(value: com.google.protobuf.ByteString) {
+      add(value)
+    }/**
+     * `repeated bytes game_uuids = 5;`
+     * @param values The gameUuids to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllGameUuids")
+    public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.addAll(values: kotlin.collections.Iterable<com.google.protobuf.ByteString>) {
+      _builder.addAllGameUuids(values)
+    }/**
+     * `repeated bytes game_uuids = 5;`
+     * @param values The gameUuids to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllGameUuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.plusAssign(values: kotlin.collections.Iterable<com.google.protobuf.ByteString>) {
+      addAll(values)
+    }/**
+     * `repeated bytes game_uuids = 5;`
+     * @param index The index to set the value at.
+     * @param value The gameUuids to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setGameUuids")
+    public operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.set(index: kotlin.Int, value: com.google.protobuf.ByteString) {
+      _builder.setGameUuids(index, value)
+    }/**
+     * `repeated bytes game_uuids = 5;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearGameUuids")
+    public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.clear() {
+      _builder.clearGameUuids()
+    }}
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun li.xiam.uuidhelper.test.Test.Player.copy(block: `li.xiam.uuidhelper.test`.PlayerKt.Dsl.() -> kotlin.Unit): li.xiam.uuidhelper.test.Test.Player =

@@ -85,4 +85,59 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 	w.g.P()
 }
 
+func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protogen.Field) {
+	// original proto field name, e.g. "game_uuids"
+	name := string(field.Desc.Name())
+
+	// strip the "_uuid" suffix
+	base := strings.TrimSuffix(name, "_uuids")
+
+	property := core.DescriptorToLowerCamelCase(field.Desc)
+
+	// PascalCase
+	camelBase := core.SnakeToCamelCase(base)
+
+	// extension name
+	methodName := camelBase + "UUIDs"
+
+	javaImport := toJavaImport(msg)
+
+	// DSL
+
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Get", methodName, "(index: Int): UUID {")
+	w.g.P("	return byteStringToUUID(this.", property, "[index])")
+	w.g.P("}")
+	w.g.P()
+
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Set", methodName, "(value: Collection<UUID>) {")
+	w.g.P("	val list = mutableListOf<ByteString>()")
+	w.g.P("	for (i in 0 until value.size) {")
+	w.g.P("		list.add(uuidToByteString(value.elementAt(i)))")
+	w.g.P("	}")
+	w.g.P("	", property, ".clear()")
+	w.g.P("	", property, ".addAll(list)")
+	w.g.P("}")
+	w.g.P()
+
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Add", methodName, "(value: UUID) {")
+	w.g.P("	", property, ".add(uuidToByteString(value))")
+	w.g.P("}")
+	w.g.P()
+
+	// Java Accessor
+	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, "(): List<UUID> {")
+	w.g.P("	val list = this.", property, "List")
+	w.g.P("	val result = mutableListOf<UUID>()")
+	w.g.P("	for (i in 0 until list.size) {")
+	w.g.P("		result.add(byteStringToUUID(list[i]))")
+	w.g.P("	}")
+	w.g.P("	return Collections.unmodifiableList(result)")
+	w.g.P("}")
+	w.g.P()
+	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".Get", methodName, "(index: Int): UUID {")
+	w.g.P("	return byteStringToUUID(this.", property, "List[index])")
+	w.g.P("}")
+	w.g.P()
+}
+
 func (w *kotlinFileWriter) Close() {}

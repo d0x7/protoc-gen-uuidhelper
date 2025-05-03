@@ -11,4 +11,5 @@ message Player {
   string username = 2;
   bytes session_uuid = 3;
   string string_uuid = 4;
+  repeated bytes game_uuids = 5;
 }

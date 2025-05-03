@@ -64,6 +64,23 @@ public final class Test {
      */
     com.google.protobuf.ByteString
         getStringUuidBytes();
+
+    /**
+     * <code>repeated bytes game_uuids = 5;</code>
+     * @return A list containing the gameUuids.
+     */
+    java.util.List<com.google.protobuf.ByteString> getGameUuidsList();
+    /**
+     * <code>repeated bytes game_uuids = 5;</code>
+     * @return The count of gameUuids.
+     */
+    int getGameUuidsCount();
+    /**
+     * <code>repeated bytes game_uuids = 5;</code>
+     * @param index The index of the element to return.
+     * @return The gameUuids at the given index.
+     */
+    com.google.protobuf.ByteString getGameUuids(int index);
   }
   /**
    * Protobuf type {@code uuidhelper.test.Player}
@@ -91,6 +108,7 @@ public final class Test {
       username_ = "";
       sessionUuid_ = com.google.protobuf.ByteString.EMPTY;
       stringUuid_ = "";
+      gameUuids_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -206,6 +224,35 @@ public final class Test {
       }
     }
 
+    public static final int GAME_UUIDS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> gameUuids_ =
+        emptyList(com.google.protobuf.ByteString.class);
+    /**
+     * <code>repeated bytes game_uuids = 5;</code>
+     * @return A list containing the gameUuids.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getGameUuidsList() {
+      return gameUuids_;
+    }
+    /**
+     * <code>repeated bytes game_uuids = 5;</code>
+     * @return The count of gameUuids.
+     */
+    public int getGameUuidsCount() {
+      return gameUuids_.size();
+    }
+    /**
+     * <code>repeated bytes game_uuids = 5;</code>
+     * @param index The index of the element to return.
+     * @return The gameUuids at the given index.
+     */
+    public com.google.protobuf.ByteString getGameUuids(int index) {
+      return gameUuids_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -232,6 +279,9 @@ public final class Test {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(stringUuid_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 4, stringUuid_);
       }
+      for (int i = 0; i < gameUuids_.size(); i++) {
+        output.writeBytes(5, gameUuids_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -254,6 +304,15 @@ public final class Test {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(stringUuid_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(4, stringUuid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < gameUuids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(gameUuids_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getGameUuidsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -278,6 +337,8 @@ public final class Test {
           .equals(other.getSessionUuid())) return false;
       if (!getStringUuid()
           .equals(other.getStringUuid())) return false;
+      if (!getGameUuidsList()
+          .equals(other.getGameUuidsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -297,6 +358,10 @@ public final class Test {
       hash = (53 * hash) + getSessionUuid().hashCode();
       hash = (37 * hash) + STRING_UUID_FIELD_NUMBER;
       hash = (53 * hash) + getStringUuid().hashCode();
+      if (getGameUuidsCount() > 0) {
+        hash = (37 * hash) + GAME_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getGameUuidsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -432,6 +497,7 @@ public final class Test {
         username_ = "";
         sessionUuid_ = com.google.protobuf.ByteString.EMPTY;
         stringUuid_ = "";
+        gameUuids_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -477,6 +543,10 @@ public final class Test {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.stringUuid_ = stringUuid_;
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          gameUuids_.makeImmutable();
+          result.gameUuids_ = gameUuids_;
+        }
       }
 
       @java.lang.Override
@@ -505,6 +575,17 @@ public final class Test {
         if (!other.getStringUuid().isEmpty()) {
           stringUuid_ = other.stringUuid_;
           bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.gameUuids_.isEmpty()) {
+          if (gameUuids_.isEmpty()) {
+            gameUuids_ = other.gameUuids_;
+            gameUuids_.makeImmutable();
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureGameUuidsIsMutable();
+            gameUuids_.addAll(other.gameUuids_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -553,6 +634,12 @@ public final class Test {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                com.google.protobuf.ByteString v = input.readBytes();
+                ensureGameUuidsIsMutable();
+                gameUuids_.add(v);
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -778,6 +865,90 @@ public final class Test {
         return this;
       }
 
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> gameUuids_ = emptyList(com.google.protobuf.ByteString.class);
+      private void ensureGameUuidsIsMutable() {
+        if (!gameUuids_.isModifiable()) {
+          gameUuids_ = makeMutableCopy(gameUuids_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <code>repeated bytes game_uuids = 5;</code>
+       * @return A list containing the gameUuids.
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getGameUuidsList() {
+        gameUuids_.makeImmutable();
+        return gameUuids_;
+      }
+      /**
+       * <code>repeated bytes game_uuids = 5;</code>
+       * @return The count of gameUuids.
+       */
+      public int getGameUuidsCount() {
+        return gameUuids_.size();
+      }
+      /**
+       * <code>repeated bytes game_uuids = 5;</code>
+       * @param index The index of the element to return.
+       * @return The gameUuids at the given index.
+       */
+      public com.google.protobuf.ByteString getGameUuids(int index) {
+        return gameUuids_.get(index);
+      }
+      /**
+       * <code>repeated bytes game_uuids = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The gameUuids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGameUuids(
+          int index, com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureGameUuidsIsMutable();
+        gameUuids_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes game_uuids = 5;</code>
+       * @param value The gameUuids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addGameUuids(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureGameUuidsIsMutable();
+        gameUuids_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes game_uuids = 5;</code>
+       * @param values The gameUuids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllGameUuids(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        ensureGameUuidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, gameUuids_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes game_uuids = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGameUuids() {
+        gameUuids_ = emptyList(com.google.protobuf.ByteString.class);
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:uuidhelper.test.Player)
     }
 
@@ -843,11 +1014,12 @@ public final class Test {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntest.proto\022\017uuidhelper.test\"\\\n\006Player\022" +
+      "\n\ntest.proto\022\017uuidhelper.test\"p\n\006Player\022" +
       "\025\n\rinternal_uuid\030\001 \001(\014\022\020\n\010username\030\002 \001(\t" +
       "\022\024\n\014session_uuid\030\003 \001(\014\022\023\n\013string_uuid\030\004 " +
-      "\001(\tBA\n\027li.xiam.uuidhelper.testP\000Z$xiam.l" +
-      "i/uuidhelper/internal/test/genb\006proto3"
+      "\001(\t\022\022\n\ngame_uuids\030\005 \003(\014BA\n\027li.xiam.uuidh" +
+      "elper.testP\000Z$xiam.li/uuidhelper/interna" +
+      "l/test/genb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -858,7 +1030,7 @@ public final class Test {
     internal_static_uuidhelper_test_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_uuidhelper_test_Player_descriptor,
-        new java.lang.String[] { "InternalUuid", "Username", "SessionUuid", "StringUuid", });
+        new java.lang.String[] { "InternalUuid", "Username", "SessionUuid", "StringUuid", "GameUuids", });
     descriptor.resolveAllFeaturesImmutable();
   }
 
