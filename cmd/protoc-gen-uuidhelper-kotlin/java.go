@@ -1,35 +1,45 @@
 package main
 
-//type JavaImportPackage string
-//
-//func (j JavaImportPackage) String() string {
-//	return string(j)
-//}
-//
-//func (j JavaImportPackage) Ident(class string) JavaImport {
-//	return JavaImport{Package: j, Class: class}
-//}
-//
-//func (j JavaImportPackage) IdentSub(class, subClass string) JavaImport {
-//	return JavaImport{Package: j, Class: class, SubClass: subClass, KtSubClass: subClass + "Kt"}
-//}
+import (
+	"fmt"
+	"google.golang.org/protobuf/compiler/protogen"
+	"google.golang.org/protobuf/reflect/protoreflect"
+	"path"
+	"xiam.li/uuidhelper/core"
+)
 
 type JavaImport struct {
-	//Package    JavaImportPackage
 	Class      string
 	SubClass   string
 	KtSubClass string
 }
 
-//func (j JavaImport) FQDN() string {
-//	fqdn := string(j.Package)
-//	fqdn += "." + j.Class
-//	if j.SubClass != "" {
-//		fqdn += "." + j.SubClass
-//	}
-//	return fqdn
-//}
+func getProtoFile(method *protogen.Message) *protogen.File {
+	file, ok := protoFiles[method.Desc.ParentFile()]
+	if !ok {
+		panic(fmt.Sprintf("File not found for method %v", method.Desc.FullName()))
+	}
+	return file
+}
 
-//func (j JavaImport) Is(other JavaImport) bool {
-//	return j.Package == other.Package && j.Class == other.Class && j.SubClass == other.SubClass
-//}
+func toJavaImport(message *protogen.Message) JavaImport {
+	protoFile := getProtoFile(message)
+	class, subClass := getJavaImport(protoFile, message.Desc)
+	return JavaImport{Class: class, SubClass: subClass, KtSubClass: subClass + "Kt"}
+}
+
+func getJavaImport(file *protogen.File, desc protoreflect.MessageDescriptor) (class, subClass string) {
+	javaClassname := file.GeneratedFilenamePrefix
+	if file.Proto.GetOptions().GetJavaOuterClassname() != "" {
+		javaClassname = file.Proto.GetOptions().GetJavaOuterClassname()
+	}
+
+	if file.Proto.GetOptions().GetJavaMultipleFiles() {
+		class = string(desc.Name())
+	} else {
+		class = core.SnakeToPascalCase(path.Base(javaClassname))
+		subClass = string(desc.Name())
+	}
+
+	return
+}
