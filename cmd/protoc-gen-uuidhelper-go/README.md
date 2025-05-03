@@ -28,10 +28,10 @@ After code-generation you will have, for `internal_uuid` and `session_uuid`:
 
 ```go
 func (m *Player) SetInternalUUID(u uuid.UUID) { m.SetInternalUuid(u[:]) }
-func (m *Player) GetInternalUUID() uuid.UUID  { return uuid.FromBytesOrNil(m.GetInternalUuid()) }
+func (m *Player) GetInternalUUID() uuid.UUID  { return uuid.Must(uuid.FromBytes(m.GetInternalUuid())) }
 
 func (m *Player) SetSessionUUID(u uuid.UUID) { m.SetSessionUuid(u[:]) }
-func (m *Player) GetSessionUUID() uuid.UUID  { return uuid.FromBytesOrNil(m.GetSessionUuid()) }
+func (m *Player) GetSessionUUID() uuid.UUID  { return uuid.Must(uuid.FromBytes(m.GetSessionUuid())) }
 ```
 
 ---
