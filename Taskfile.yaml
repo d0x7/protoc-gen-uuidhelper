@@ -9,7 +9,7 @@ tasks:
           echo "package main
       var version = \"$(gitversion)\"
       func (b backend) Version() string {
-        return version
+          return version
       }" > "$dir/version.go"
         fi
         done
@@ -46,7 +46,7 @@ tasks:
   install-kotlin:
     desc: Install the Kotlin plugin
     deps:
-      - build
+      - build-kotlin
     cmds:
       - cp protoc-gen-uuidhelper-kotlin ~/go/bin/protoc-gen-uuidhelper-kotlin
   install:
