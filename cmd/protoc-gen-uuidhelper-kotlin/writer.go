@@ -73,6 +73,8 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 	javaImport := toJavaImport(msg)
 
 	// DSL
+
+	// class.baseUUID read-only property
 	w.g.P("var ", javaImport.KtSubClass, ".Dsl.", methodName, ": UUID")
 	w.g.P("    get() = byteStringToUUID(this.", property, ")")
 	w.g.P("    set(value) {")
@@ -81,7 +83,10 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 	w.g.P()
 
 	// Java Accessor
-	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, "(): UUID = byteStringToUUID(this.", property, ")")
+
+	// class.baseUUID read-only property
+	w.g.P("val ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, ": UUID")
+	w.g.P("	get() = byteStringToUUID(this.", property, ")")
 	w.g.P()
 }
 
@@ -104,12 +109,41 @@ func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *pro
 
 	// DSL
 
-	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Get", methodName, "(index: Int): UUID {")
+	// class.baseUUIDs read-only property
+	w.g.P("/**")
+	w.g.P(" * Returns an unmodifiable list of ", base, " UUIDs.")
+	w.g.P(" * Note: This list is read-only. Use add", methodName, "(), set", methodName, "(), or clear", methodName, "() to modify.")
+	w.g.P(" */")
+	w.g.P("val ", javaImport.KtSubClass, ".Dsl.", methodName, ": List<UUID>")
+	w.g.P("	get() {")
+	w.g.P("		val list = this.", property)
+	w.g.P("		val result = mutableListOf<UUID>()")
+	w.g.P("		for (entry in list) {")
+	w.g.P("			result.add(byteStringToUUID(entry))")
+	w.g.P("		}")
+	w.g.P("		return Collections.unmodifiableList(result)")
+	w.g.P("	}")
+	w.g.P()
+
+	// class.baseUUIDs[index] getter function
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.get", methodName, "(index: Int): UUID {")
 	w.g.P("	return byteStringToUUID(this.", property, "[index])")
 	w.g.P("}")
 	w.g.P()
 
-	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Set", methodName, "(value: Collection<UUID>) {")
+	// class.baseUUIDs getter function
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.get", methodName, "(): List<UUID> {")
+	w.g.P("	val list = this.", property)
+	w.g.P("	val result = mutableListOf<UUID>()")
+	w.g.P("	for (i in 0 until list.size) {")
+	w.g.P("		result.add(byteStringToUUID(list[i]))")
+	w.g.P("	}")
+	w.g.P("	return Collections.unmodifiableList(result)")
+	w.g.P("}")
+	w.g.P()
+
+	// class.baseUUIDs setter function
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.set", methodName, "(value: Collection<UUID>) {")
 	w.g.P("	val list = mutableListOf<ByteString>()")
 	w.g.P("	for (i in 0 until value.size) {")
 	w.g.P("		list.add(uuidToByteString(value.elementAt(i)))")
@@ -119,25 +153,83 @@ func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *pro
 	w.g.P("}")
 	w.g.P()
 
-	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Add", methodName, "(value: UUID) {")
-	w.g.P("	", property, ".add(uuidToByteString(value))")
+	// class.baseUUIDs clear function
+	w.g.P("/**")
+	w.g.P(" * Clears the backing list of ", base, " UUIDs.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.clear", methodName, "() {")
+	w.g.P("	", property, ".clear()")
 	w.g.P("}")
 	w.g.P()
 
-	// Java Accessor
-	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, "(): List<UUID> {")
-	w.g.P("	val list = this.", property, "List")
-	w.g.P("	val result = mutableListOf<UUID>()")
-	w.g.P("	for (i in 0 until list.size) {")
-	w.g.P("		result.add(byteStringToUUID(list[i]))")
+	// class.baseUUIDs add function
+	w.g.P("/**")
+	w.g.P(" * Adds a ", base, " UUID to the backing list.")
+	w.g.P(" * @param values The ", base, " UUID to add.")
+	w.g.P(" * @see add", methodName, " for bulk addition.")
+	w.g.P(" * @see set", methodName, " for replacing the list.")
+	w.g.P(" * @see clear", methodName, " for clearing the list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.add", methodName, "(vararg values: UUID) {")
+	w.g.P("	for (value in values) {")
+	w.g.P("		", property, ".add(uuidToByteString(value))")
 	w.g.P("	}")
-	w.g.P("	return Collections.unmodifiableList(result)")
 	w.g.P("}")
 	w.g.P()
-	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".Get", methodName, "(index: Int): UUID {")
+
+	// class.baseUUIDs addAll function
+	w.g.P("/**")
+	w.g.P(" * Adds a collection of ", base, " UUIDs to the backing list.")
+	w.g.P(" * @param values The collection of ", base, " UUIDs to add.")
+	w.g.P(" * @see set", methodName, " for bulk addition.")
+	w.g.P(" * @see clear", methodName, " for clearing the list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.addAll", methodName, "(values: Collection<UUID>) {")
+	w.g.P("	for (value in values) {")
+	w.g.P("		", property, ".add(uuidToByteString(value))")
+	w.g.P("	}")
+	w.g.P("}")
+	w.g.P()
+
+	// Java Accessors
+
+	// class.baseUUIDs read-only property
+	w.g.P("/**")
+	w.g.P(" * Gets the list of ", base, " UUIDs.")
+	w.g.P(" * Note: This list is read-only. Use add", methodName, "(), set", methodName, "(), or clear", methodName, "() to modify.")
+	w.g.P(" */")
+	w.g.P("val ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, ": List<UUID>")
+	w.g.P("	get() {")
+	w.g.P("		val list = this.", property, "List")
+	w.g.P("		val result = mutableListOf<UUID>()")
+	w.g.P("		for (i in 0 until list.size) {")
+	w.g.P("			result.add(byteStringToUUID(list[i]))")
+	w.g.P("		}")
+	w.g.P("		return Collections.unmodifiableList(result)")
+	w.g.P("	}")
+	w.g.P()
+
+	// class.baseUUIDs[index] getter function
+	w.g.P("/**")
+	w.g.P(" * Gets a ", base, " UUID at the specified index.")
+	w.g.P(" * @param index The index of the ", base, " UUID to get.")
+	w.g.P(" * @return The ", base, " UUID at the specified index.")
+	w.g.P(" * @see ", methodName, " for the full list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".get", methodName, "(index: Int): UUID {")
 	w.g.P("	return byteStringToUUID(this.", property, "List[index])")
 	w.g.P("}")
 	w.g.P()
+
+	// class.baseUUIDs getter function
+	w.g.P("/**")
+	w.g.P(" * Gets the list of ", base, " UUIDs.")
+	w.g.P(" * Note: This list is read-only. Use add", methodName, "(), set", methodName, "(), or clear", methodName, "() to modify.")
+	w.g.P(" * @see ", methodName, " for the full list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".get", methodName, "(): List<UUID> {")
+	w.g.P("	return ", methodName)
+	w.g.P("}")
 }
 
 func (w *kotlinFileWriter) Close() {}
