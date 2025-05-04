@@ -7,13 +7,16 @@ import (
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/types/descriptorpb"
 	"google.golang.org/protobuf/types/pluginpb"
-	"log/slog"
 	"os"
 	"path/filepath"
 	"strings"
 )
 
 func Main(generator UUIDHelperBackend) {
+	MainWithFlags(&flag.FlagSet{}, generator)
+}
+
+func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 	var showVersion bool
 	flag.BoolVar(&showVersion, "version", false, "print the version and exit")
 	flag.BoolVar(&showVersion, "v", false, "print the version and exit")
@@ -23,9 +26,6 @@ func Main(generator UUIDHelperBackend) {
 		return
 	}
 
-	var (
-		flags flag.FlagSet
-	)
 	protogen.Options{
 		ParamFunc: flags.Set,
 	}.Run(func(gen *protogen.Plugin) error {
@@ -52,7 +52,6 @@ func Main(generator UUIDHelperBackend) {
 						needsGeneration = true
 						break
 					} else if isUUIDsField(field) {
-						slog.Info("Found repeated UUID field", "field", field.Desc.Name())
 						needsGeneration = true
 						break
 					}

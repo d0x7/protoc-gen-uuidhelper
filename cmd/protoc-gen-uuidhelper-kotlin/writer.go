@@ -10,6 +10,8 @@ type kotlinFileWriter struct {
 	gen  *protogen.Plugin
 	file *protogen.File
 	g    *protogen.GeneratedFile
+
+	useThreadLocalBufferPool bool
 }
 
 func (w *kotlinFileWriter) GenerateFileHeader() {
@@ -38,14 +40,26 @@ func (w *kotlinFileWriter) GenerateFileHeader() {
 	w.g.P("import java.util.*")
 	w.g.P("import java.nio.ByteBuffer")
 	w.g.P()
+
+	if w.useThreadLocalBufferPool {
+		w.g.P("private val bufferPool = ThreadLocal.withInitial { ByteBuffer.allocate(16) }")
+		w.g.P()
+	}
+
 	w.g.P("// Converts UUID to ByteString (protobuf `bytes`)")
 	w.g.P("private fun uuidToByteString(uuid: UUID): ByteString {")
-	w.g.P("	val buffer = ByteBuffer.allocate(16)")
+	if w.useThreadLocalBufferPool {
+		w.g.P("	val buffer = bufferPool.get()")
+		w.g.P("	buffer.clear()")
+	} else {
+		w.g.P("	val buffer = ByteBuffer.allocate(16)")
+	}
 	w.g.P("	buffer.putLong(uuid.mostSignificantBits)")
 	w.g.P("	buffer.putLong(uuid.leastSignificantBits)")
 	w.g.P("	buffer.flip()")
 	w.g.P("	return ByteString.copyFrom(buffer)")
 	w.g.P("}")
+
 	w.g.P()
 	w.g.P("// Converts ByteString to UUID")
 	w.g.P("private fun byteStringToUUID(bytes: ByteString): UUID {")
@@ -73,6 +87,14 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 	javaImport := toJavaImport(msg)
 
 	// DSL
+
+	// class.baseUUID read-only property
+	w.g.P("/**")
+	w.g.P(" * Gets or sets the ", base, " UUID.")
+	w.g.P(" *")
+	w.g.P(" * When getting, converts the underlying ByteString to a UUID.")
+	w.g.P(" * When setting, converts the UUID to a ByteString for Protobuf.")
+	w.g.P(" */")
 	w.g.P("var ", javaImport.KtSubClass, ".Dsl.", methodName, ": UUID")
 	w.g.P("    get() = byteStringToUUID(this.", property, ")")
 	w.g.P("    set(value) {")
@@ -81,7 +103,15 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 	w.g.P()
 
 	// Java Accessor
-	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, "(): UUID = byteStringToUUID(this.", property, ")")
+
+	// class.baseUUID read-only property
+	w.g.P("/**")
+	w.g.P(" * Gets the ", base, " UUID.")
+	w.g.P(" *")
+	w.g.P(" * Converts the underlying ByteString to a UUID.")
+	w.g.P(" */")
+	w.g.P("val ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, ": UUID")
+	w.g.P("	get() = byteStringToUUID(this.", property, ")")
 	w.g.P()
 }
 
@@ -104,39 +134,135 @@ func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *pro
 
 	// DSL
 
-	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Get", methodName, "(index: Int): UUID {")
+	// class.baseUUIDs read-only property
+	w.g.P("/**")
+	w.g.P(" * Gets the list of ", base, " UUIDs.")
+	w.g.P(" * Note: This list is read-only. Use add", methodName, "(), set", methodName, "(), or clear", methodName, "() to modify.")
+	w.g.P(" */")
+	w.g.P("val ", javaImport.KtSubClass, ".Dsl.", methodName, ": List<UUID>")
+	w.g.P("	get() = ", property, ".map { byteStringToUUID(it) }")
+	w.g.P()
+
+	// class.baseUUIDs getter function
+	w.g.P("/**")
+	w.g.P(" * Gets the list of ", base, " UUIDs.")
+	w.g.P(" *")
+	w.g.P(" * @return An unmodifiable list of all ", base, " UUIDs.")
+	w.g.P(" * @see ", methodName, " property for the same functionality.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.get", methodName, "(): List<UUID> = ", methodName)
+	w.g.P()
+
+	// class.baseUUIDs[index] getter function
+	w.g.P("/**")
+	w.g.P(" * Gets a ", base, " UUID at the specified index.")
+	w.g.P(" *")
+	w.g.P(" * @param index The index of the ", base, " UUID to get.")
+	w.g.P(" * @return The ", base, " UUID at the specified index.")
+	w.g.P(" * @throws IndexOutOfBoundsException if the index is out of range.")
+	w.g.P(" * @see ", methodName, " for the full list.")
+	w.g.P(" * @see set", methodName, " for bulk replacement.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.get", methodName, "(index: Int): UUID {")
+	w.g.P("	require(index in ", property, ".indices) {")
+	w.g.P("		\"Index $index out of bounds for list of size ${", property, ".size}\"")
+	w.g.P("	}")
 	w.g.P("	return byteStringToUUID(this.", property, "[index])")
 	w.g.P("}")
 	w.g.P()
 
-	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Set", methodName, "(value: Collection<UUID>) {")
-	w.g.P("	val list = mutableListOf<ByteString>()")
-	w.g.P("	for (i in 0 until value.size) {")
-	w.g.P("		list.add(uuidToByteString(value.elementAt(i)))")
-	w.g.P("	}")
+	// class.baseUUIDs setter function
+	w.g.P("/**")
+	w.g.P(" * Replaces all ", base, " UUIDs with the provided collection.")
+	w.g.P(" *")
+	w.g.P(" * This method clears the existing list and adds all UUIDs from the")
+	w.g.P(" * provided collection in order.")
+	w.g.P(" *")
+	w.g.P(" * @param value The collection of UUIDs to set.")
+	w.g.P(" * @see add", methodName, " for adding without clearing.")
+	w.g.P(" * @see addAll", methodName, " for bulk addition.")
+	w.g.P(" * @see clear", methodName, " for clearing the list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.set", methodName, "(value: Collection<UUID>) {")
+	w.g.P("	val list = value.map { uuidToByteString(it) }")
 	w.g.P("	", property, ".clear()")
 	w.g.P("	", property, ".addAll(list)")
 	w.g.P("}")
 	w.g.P()
 
-	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.Add", methodName, "(value: UUID) {")
-	w.g.P("	", property, ".add(uuidToByteString(value))")
+	// class.baseUUIDs clear function
+	w.g.P("/**")
+	w.g.P(" * Clears the backing list of ", base, " UUIDs.")
+	w.g.P(" *")
+	w.g.P(" * After calling this method, the list will be empty.")
+	w.g.P(" *")
+	w.g.P(" * @see add", methodName, " for adding new UUIDs.")
+	w.g.P(" * @see set", methodName, " for replacing the entire list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.clear", methodName, "() {")
+	w.g.P("	", property, ".clear()")
 	w.g.P("}")
 	w.g.P()
 
-	// Java Accessor
-	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, "(): List<UUID> {")
-	w.g.P("	val list = this.", property, "List")
-	w.g.P("	val result = mutableListOf<UUID>()")
-	w.g.P("	for (i in 0 until list.size) {")
-	w.g.P("		result.add(byteStringToUUID(list[i]))")
-	w.g.P("	}")
-	w.g.P("	return Collections.unmodifiableList(result)")
-	w.g.P("}")
+	// class.baseUUIDs add function
+	w.g.P("/**")
+	w.g.P(" * Adds one or more ", base, " UUIDs to the backing list.")
+	w.g.P(" * This method appends the provided UUIDs to the existing list without")
+	w.g.P(" * clearing it first.")
+	w.g.P(" *")
+	w.g.P(" * @param values The ", base, " UUIDs to add.")
+	w.g.P(" * @see addAll", methodName, " for adding a collection of UUIDs.")
+	w.g.P(" * @see set", methodName, " for replacing the entire list.")
+	w.g.P(" * @see clear", methodName, " for clearing the list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.add", methodName, "(vararg values: UUID) = values.forEach { ", property, ".add(uuidToByteString(it)) }")
 	w.g.P()
-	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".Get", methodName, "(index: Int): UUID {")
+
+	// class.baseUUIDs addAll function
+	w.g.P("/**")
+	w.g.P(" * Adds a collection of ", base, " UUIDs to the backing list.")
+	w.g.P(" *")
+	w.g.P(" * @param values The collection of ", base, " UUIDs to add.")
+	w.g.P(" * @see add", methodName, " for adding individual UUIDs.")
+	w.g.P(" * @see set", methodName, " for replacing the entire list.")
+	w.g.P(" * @see clear", methodName, " for clearing the list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.addAll", methodName, "(values: Collection<UUID>) = values.forEach { ", property, ".add(uuidToByteString(it)) }")
+	w.g.P()
+
+	// Java Accessors
+
+	// class.baseUUIDs read-only property
+	w.g.P("/**")
+	w.g.P(" * Gets the list of ", base, " UUIDs.")
+	w.g.P(" * Note: This list is read-only. To modify UUIDs, use the DSL builder methods.")
+	w.g.P(" */")
+	w.g.P("val ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, ": List<UUID>")
+	w.g.P("	get() = ", property, "List.map { byteStringToUUID(it) }")
+	w.g.P()
+
+	// class.baseUUIDs[index] getter function
+	w.g.P("/**")
+	w.g.P(" * Gets a ", base, " UUID at the specified index.")
+	w.g.P(" * @param index The index of the ", base, " UUID to get.")
+	w.g.P(" * @return The ", base, " UUID at the specified index.")
+	w.g.P(" * @see ", methodName, " for the full list.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".get", methodName, "(index: Int): UUID {")
+	w.g.P("	require(index in ", property, "List.indices) {")
+	w.g.P("		\"Index $index out of bounds for list of size ${", property, "List.size}\"")
+	w.g.P("	}")
 	w.g.P("	return byteStringToUUID(this.", property, "List[index])")
 	w.g.P("}")
+	w.g.P()
+
+	// class.baseUUIDs getter function
+	w.g.P("/**")
+	w.g.P(" * Gets the list of ", base, " UUIDs.")
+	w.g.P(" * Note: This list is read-only. To modify UUIDs, use the DSL builder methods.")
+	w.g.P(" * @return An unmodifiable list of all ", base, " UUIDs.")
+	w.g.P(" */")
+	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".get", methodName, "(): List<UUID> = ", methodName)
 	w.g.P()
 }
 

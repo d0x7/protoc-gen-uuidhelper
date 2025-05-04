@@ -56,8 +56,6 @@ func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen
 }
 
 func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protogen.Field) {
-	w.g.P("// Found repeated UUID field for message " + msg.Desc.Name() + "." + field.Desc.Name())
-
 	// original proto field name, e.g. "game_uuids"
 	name := string(field.Desc.Name())
 
@@ -70,6 +68,7 @@ func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protoge
 	reader := "Get" + camel + "UUIDs"
 	setter := camel + "Uuids"
 	writer := "Set" + camel + "UUIDs"
+	adder := "Add" + camel + "UUIDs"
 
 	// read helper
 	w.g.P("func (m *", msg.GoIdent, ") ", reader, "() []uuid.UUID {")
@@ -77,10 +76,12 @@ func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protoge
 	w.g.P("if len(uuids) == 0 {")
 	w.g.P("return nil")
 	w.g.P("}")
-	w.g.P("// Convert byte slice to UUID slice")
 	w.g.P("uuidsSlice := make([]uuid.UUID, len(uuids))")
-	w.g.P("for i := 0; i < len(uuids); i++ {")
-	w.g.P("uuidsSlice[i] = uuid.Must(uuid.FromBytes(uuids[i]))")
+	w.g.P("for i, uid := range uuids {")
+	w.g.P("if len(uid) != 16 {")
+	w.g.P("return nil")
+	w.g.P("}")
+	w.g.P("uuidsSlice[i] = uuid.Must(uuid.FromBytes(uid))")
 	w.g.P("}")
 	w.g.P("return uuidsSlice")
 	w.g.P("}")
@@ -92,12 +93,21 @@ func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protoge
 	w.g.P("m.", setter, " = nil")
 	w.g.P("return")
 	w.g.P("}")
-	w.g.P("// Convert UUID slice to byte slice")
 	w.g.P("uuids := make([][]byte, len(u))")
-	w.g.P("for i := 0; i < len(u); i++ {")
-	w.g.P("uuids[i] = u[i][:] // Convert UUID to byte slice")
+	w.g.P("for i, uid := range u {")
+	w.g.P("uuids[i] = uid[:]")
 	w.g.P("}")
 	w.g.P("m.", setter, " = uuids")
+	w.g.P("}")
+	w.g.P()
+
+	w.g.P("func (m *", msg.GoIdent, ") ", adder, "(u ...uuid.UUID) {")
+	w.g.P("if m.", setter, " == nil {")
+	w.g.P("m.", setter, " = make([][]byte, 0, len(u))")
+	w.g.P("}")
+	w.g.P("for _, id := range u {")
+	w.g.P("m.", setter, " = append(m.", setter, ", id[:])")
+	w.g.P("}")
 	w.g.P("}")
 	w.g.P()
 }
