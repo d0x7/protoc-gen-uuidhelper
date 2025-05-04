@@ -7,7 +7,6 @@ import (
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/types/descriptorpb"
 	"google.golang.org/protobuf/types/pluginpb"
-	"log/slog"
 	"os"
 	"path/filepath"
 	"strings"
@@ -52,7 +51,6 @@ func Main(generator UUIDHelperBackend) {
 						needsGeneration = true
 						break
 					} else if isUUIDsField(field) {
-						slog.Info("Found repeated UUID field", "field", field.Desc.Name())
 						needsGeneration = true
 						break
 					}
