@@ -17,14 +17,14 @@ func main() {
 	core.Main(&backend{})
 }
 
-func (b backend) Setup(gen *protogen.Plugin) {
+func (b *backend) Setup(gen *protogen.Plugin) {
 	protoFiles = make(map[protoreflect.FileDescriptor]*protogen.File, len(gen.Files))
 	for _, file := range gen.Files {
 		protoFiles[file.Desc] = file
 	}
 }
 
-func (b backend) OpenFile(gen *protogen.Plugin, file *protogen.File) core.UUIDFileWriter {
+func (b *backend) OpenFile(gen *protogen.Plugin, file *protogen.File) core.UUIDFileWriter {
 	// Retrieve Java package and class options
 	javaPackage := file.Proto.GetOptions().GetJavaPackage()
 	if javaPackage == "" {

@@ -8,7 +8,7 @@ tasks:
         if [ -d "$dir" ]; then
           echo "package main
       var version = \"$(gitversion)\"
-      func (b backend) Version() string {
+      func (b *backend) Version() string {
           return version
       }" > "$dir/version.go"
         fi

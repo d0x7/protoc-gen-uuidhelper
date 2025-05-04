@@ -13,6 +13,10 @@ import (
 )
 
 func Main(generator UUIDHelperBackend) {
+	MainWithFlags(&flag.FlagSet{}, generator)
+}
+
+func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 	var showVersion bool
 	flag.BoolVar(&showVersion, "version", false, "print the version and exit")
 	flag.BoolVar(&showVersion, "v", false, "print the version and exit")
@@ -22,9 +26,6 @@ func Main(generator UUIDHelperBackend) {
 		return
 	}
 
-	var (
-		flags flag.FlagSet
-	)
 	protogen.Options{
 		ParamFunc: flags.Set,
 	}.Run(func(gen *protogen.Plugin) error {
