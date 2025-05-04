@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"path"
@@ -9,12 +10,16 @@ import (
 )
 
 type backend struct {
+	useThreadLocalBufferPool bool
 }
 
 var protoFiles map[protoreflect.FileDescriptor]*protogen.File
 
 func main() {
-	core.Main(&backend{})
+	backend := backend{}
+	var flags flag.FlagSet
+	flags.BoolVar(&backend.useThreadLocalBufferPool, "threadLocalBuffer", false, "Use thread local buffer pool")
+	core.MainWithFlags(&flags, &backend)
 }
 
 func (b *backend) Setup(gen *protogen.Plugin) {
@@ -46,5 +51,5 @@ func (b *backend) OpenFile(gen *protogen.Plugin, file *protogen.File) core.UUIDF
 	outputFileName := path.Join(packagePath, javaClassname+".kt")
 
 	g := gen.NewGeneratedFile(outputFileName, "")
-	return &kotlinFileWriter{gen, file, g}
+	return &kotlinFileWriter{gen, file, g, b.useThreadLocalBufferPool}
 }

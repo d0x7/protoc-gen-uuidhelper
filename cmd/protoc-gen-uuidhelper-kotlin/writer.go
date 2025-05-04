@@ -10,6 +10,8 @@ type kotlinFileWriter struct {
 	gen  *protogen.Plugin
 	file *protogen.File
 	g    *protogen.GeneratedFile
+
+	useThreadLocalBufferPool bool
 }
 
 func (w *kotlinFileWriter) GenerateFileHeader() {
@@ -38,14 +40,26 @@ func (w *kotlinFileWriter) GenerateFileHeader() {
 	w.g.P("import java.util.*")
 	w.g.P("import java.nio.ByteBuffer")
 	w.g.P()
+
+	if w.useThreadLocalBufferPool {
+		w.g.P("private val bufferPool = ThreadLocal.withInitial { ByteBuffer.allocate(16) }")
+		w.g.P()
+	}
+
 	w.g.P("// Converts UUID to ByteString (protobuf `bytes`)")
 	w.g.P("private fun uuidToByteString(uuid: UUID): ByteString {")
-	w.g.P("	val buffer = ByteBuffer.allocate(16)")
+	if w.useThreadLocalBufferPool {
+		w.g.P("	val buffer = bufferPool.get()")
+		w.g.P("	buffer.clear()")
+	} else {
+		w.g.P("	val buffer = ByteBuffer.allocate(16)")
+	}
 	w.g.P("	buffer.putLong(uuid.mostSignificantBits)")
 	w.g.P("	buffer.putLong(uuid.leastSignificantBits)")
 	w.g.P("	buffer.flip()")
 	w.g.P("	return ByteString.copyFrom(buffer)")
 	w.g.P("}")
+
 	w.g.P()
 	w.g.P("// Converts ByteString to UUID")
 	w.g.P("private fun byteStringToUUID(bytes: ByteString): UUID {")

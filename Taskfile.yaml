@@ -63,7 +63,7 @@ tasks:
       - rm -rf internal/test/gen
       - mkdir -p internal/test/gen/go internal/test/gen/kotlin
       - fd -t f -e proto . internal/test -x protoc -I internal/test --go_out=internal/test/gen/go --go_opt=paths=source_relative --plugin=./protoc-gen-uuidhelper-go --uuidhelper-go_out=internal/test/gen/go --uuidhelper-go_opt=paths=source_relative {}
-      - fd -t f -e proto . internal/test -x protoc -I internal/test --java_out=internal/test/gen/kotlin --kotlin_out=internal/test/gen/kotlin --plugin=./protoc-gen-uuidhelper-kotlin --uuidhelper-kotlin_out=internal/test/gen/kotlin --uuidhelper-kotlin_opt=paths=source_relative {}
+      - fd -t f -e proto . internal/test -x protoc -I internal/test --java_out=internal/test/gen/kotlin --kotlin_out=internal/test/gen/kotlin --plugin=./protoc-gen-uuidhelper-kotlin --uuidhelper-kotlin_out=internal/test/gen/kotlin --uuidhelper-kotlin_opt=paths=source_relative,threadLocalBuffer=false {}
   test-go:
     desc: Run tests
     deps:
