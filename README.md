@@ -1,4 +1,4 @@
-# Protobuf UUID Helper Code Generator
+# Protobuf UUID Helper Plugin ![GitHub License](https://img.shields.io/github/license/d0x7/protoc-gen-uuidhelper?color=blue) ![GitHub branch status](https://img.shields.io/github/check-runs/d0x7/protoc-gen-uuidhelper/main) ![GitHub release](https://img.shields.io/github/v/tag/d0x7/protoc-gen-uuidhelper?label=release) [![Go Reference](https://img.shields.io/badge/-reference-blue?style=flat&logo=go&logoColor=white&labelColor=gray&color=%23027D9C)](https://pkg.go.dev/xiam.li/uuidhelper)
 
 This project provides a collection of `protoc` plugins that generate helper methods to access UUID fields in Protobuf messages across multiple languages (currently Kotlin and Go). These helpers simplify UUID parsing by providing idiomatic accessors for fields that represent UUIDs as byte arrays or strings.
 
