@@ -20,7 +20,7 @@ For every `repeated bytes foo_uuids = N;` field in your `.proto`, the plugin emi
 These functions wrap the underlying `[]byte` field accessors and convert to/from `uuid.UUID` automatically.
 
 > [!NOTE]
-> All method names for repeated fields are suffixed with "UUIDs", even when operating on single elements, for consistent naming.
+> All method names for repeated fields are suffixed with "UUIDs" — even when operating on single elements, for consistent naming.
 
 ### Example `.proto`
 
@@ -29,7 +29,7 @@ message Player {
   bytes internal_uuid = 1;
   string username     = 2;
   bytes session_uuid  = 3;
-  string string_uuid = 4;
+  string string_uuid  = 4;
   repeated bytes game_uuids = 5;
 }
 ```
@@ -88,7 +88,9 @@ To see an example of what the plugin generates for the above message, check out 
    go build -o protoc-gen-uuidhelper-go ./cmd/protoc-gen-uuidhelper-go
    ```
 
-   It's recommended to add the plugin to your `$PATH` so you can invoke it directly. To make this easier, there is a Taskfile.yaml, which requires [Task](https://taskfile.dev) to be installed. Then you can do
+   It's recommended to add the plugin to your `$PATH` so you can invoke it directly.
+
+   To make this easier, there is a `Taskfile.yaml`, which requires [Task](https://taskfile.dev) to be installed. Then you can do
 
    ```bash
    task install-go

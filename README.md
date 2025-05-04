@@ -5,66 +5,15 @@ This project provides a collection of `protoc` plugins that generate helper meth
 ## Features
 
 - **Language Support**:
-    - ✅ Go: Generates methods like `func (m *OnlinePlayer) GetPlayerUUID() uuid.UUID`
-    - ✅ Kotlin: Generates extension functions like `player.getPlayerUUID()`
+    - ✅ Go: Generates methods like `func (m *OnlinePlayer) GetSessionUUID() uuid.UUID`
+    - ✅ Kotlin: Generates DSL extensions and functions like `player.getSessionUUID()`
   - 🧪 Extensible: Easily add support for more languages via a clean plugin structure
 
 - **Field Detection**:
   - Automatically detects UUID fields based on the naming pattern `*_uuid` and protobuf type `bytes`
+  - Also supports `repeated bytes *_uuids` fields
 
-## Example
-
-Given this Protobuf message:
-
-```proto
-message Player {
-  bytes internal_uuid = 1;
-  string username     = 2;
-  bytes session_uuid  = 3;
-  string  string_uuid = 4;
-}
-```
-
-The Kotlin generator outputs:
-
-```kotlin
-var PlayerKt.Dsl.InternalUUID: UUID
-    get() = byteStringToUUID(this.internalUuid)
-    set(value) {
-        this.internalUuid = uuidToByteString(value)
-    }
-
-fun Test.Player.InternalUUID(): UUID = byteStringToUUID(this.internalUuid)
-
-var PlayerKt.Dsl.SessionUUID: UUID
-    get() = byteStringToUUID(this.sessionUuid)
-    set(value) {
-        this.sessionUuid = uuidToByteString(value)
-    }
-
-fun Test.Player.SessionUUID(): UUID = byteStringToUUID(this.sessionUuid)
-```
-
-The Go generator outputs:
-
-```go
-func (m *Player) GetInternalUUID() uuid.UUID {
-return uuid.Must(uuid.FromBytes(m.GetInternalUuid()))
-}
-
-func (m *Player) SetInternalUUID(u uuid.UUID) {
-m.InternalUuid = u[:]
-}
-
-func (m *Player) GetSessionUUID() uuid.UUID {
-return uuid.Must(uuid.FromBytes(m.GetSessionUuid()))
-}
-
-func (m *Player) SetSessionUUID(u uuid.UUID) {
-m.SessionUuid = u[:]
-}
-
-```
+To see an example of what code is generated, see either the [Go](cmd/protoc-gen-uuidhelper-go/README.md) or [Kotlin](cmd/protoc-gen-uuidhelper-kotlin/README.md) plugin's README.
 
 ## Installation
 
@@ -75,15 +24,32 @@ Follow the instructions in the respective folder to build and use the plugin:
 - [Go Plugin](cmd/protoc-gen-uuidhelper-go/README.md)
 - [Kotlin Plugin](cmd/protoc-gen-uuidhelper-kotlin/README.md)
 
-## Adding a New Language
+All plugins can usually be built using the same command:
+
+```bash
+go build -o protoc-gen-uuidhelper-<lang> ./cmd/protoc-gen-uuidhelper-<lang>
+```
+
+It's recommended to add the plugin to your `$PATH` so you can invoke it directly.
+
+To make this easier, there is a `Taskfile.yaml`, which requires [Task](https://taskfile.dev) to be installed. Then you can do
+
+```bash
+task install-<lang>
+```
+
+to install the plugin to your `$PATH`, or use the `install` task to install all available plugins.
+
+## Adding a new language
 
 To add support for a new language, follow these steps:
 
-1. **Create a New Plugin Directory**  
+1. **Create a New Plugin Directory**
+
    Create a new folder under `cmd/` named `protoc-gen-uuidhelper-<lang>` (e.g., `protoc-gen-uuidhelper-python`).
 
+2. **Implement the Plugin**
 
-2. **Implement the Plugin**  
    Inside the new folder, create a `main.go` file that implements the following:
     - A backend struct the [`UUIDHelperBackend`](core/generator.go) interface.
       - Please check out existing implementations for [Go](cmd/protoc-gen-uuidhelper-go/plugin.go) and [Kotlin](cmd/protoc-gen-uuidhelper-kotlin/plugin.go) for reference.
@@ -91,20 +57,21 @@ To add support for a new language, follow these steps:
     - A `main` function that then calls the `Main` method on the [`core`](core/generator.go) package with the backend struct.
     - A writer struct that implements the [`UUIDHelperWriter`](core/generator.go) interface.
       - Please check out existing implementations for [Go](cmd/protoc-gen-uuidhelper-go/writer.go) and [Kotlin](cmd/protoc-gen-uuidhelper-kotlin/writer.go) for reference.
-      - The writer has to implement what should be generated for the file header (e.g. package, imports, etc.) as well as what methods to generate for each UUID field.
+      - The writer has to implement what should be generated for the file header (e.g., package, imports, etc.) as well as what methods to generate for each UUID field.
 
-    Note: The writer will only be called for those fields that actually are considered "UUID-Fields", therefore you don't have to filter the fields yourself, as that's already done by the core implementation.
+    For generating the methods, there are various helper methods in the `core` package that can be used e.g., convert a fields name from Protobuf' snake_case to the target language's camelCase or PascalCase.
 
-    For generating the methods, there are various helper methods in the `core` package that can be used e.g. convert a fields name from Protobuf' snake_case to the target language's camelCase or PascalCase.
+    Refer to the Go implementation in `cmd/protoc-gen-uuidhelper-go/plugin.go` for a simple example (the kotlin plugin is a lot more complex) of how to structure the plugin.
 
-    Refer to the Go implementation in `cmd/protoc-gen-uuidhelper-go/plugin.go` for an example of how to structure the plugin.
+> [!TIP]
+> The writer will only be called for those fields that actually are considered "UUID-Fields" — therefore you don't have to filter the fields yourself, as that's already done by the core implementation.
 
+3. **Build the Plugin**
 
-3. **Build the Plugin**  
    Build the plugin using the following command:
    ```bash
    go build -o protoc-gen-uuidhelper-<lang> ./cmd/protoc-gen-uuidhelper-<lang>
-    ```
+   ```
 
 ## License
 

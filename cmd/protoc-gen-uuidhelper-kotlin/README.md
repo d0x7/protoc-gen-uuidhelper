@@ -30,7 +30,7 @@ For every `repeated bytes foo_uuids = N;` field in your `.proto`, the plugin emi
 These extensions and functions wrap the underlying `ByteString` field accessors and convert to/from `UUID` automatically.
 
 > [!NOTE]
-> All method names for repeated fields are suffixed with "UUIDs", even when operating on single elements, for consistent naming.
+> All method names for repeated fields are suffixed with "UUIDs" — even when operating on single elements, for consistent naming.
 
 ### Example `.proto`
 
@@ -101,14 +101,15 @@ To see an example of what the plugin generates for the above message, check out 
     go build -o protoc-gen-uuidhelper-kotlin ./cmd/protoc-gen-uuidhelper-kotlin
     ```
 
-    It's recommended to add the plugin to your `$PATH` so you can invoke it directly. To make this easier, there is a Taskfile.yaml, which requires [Task](https://taskfile.dev) to be installed. Then you can do
+    It's recommended to add the plugin to your `$PATH` so you can invoke it directly.
+
+    To make this easier, there is a `Taskfile.yaml`, which requires [Task](https://taskfile.dev) to be installed. Then you can do
     
     ```bash
     task install-kotlin
     ```
     
     to install the plugin to your `$PATH`, or use the `install` task to install all available plugins.
-
 
 2. **Invoke `protoc`**
 
