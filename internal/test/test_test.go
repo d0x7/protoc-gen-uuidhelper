@@ -30,10 +30,10 @@ func TestUUID(t *testing.T) {
 }
 
 func TestUUIDs(t *testing.T) {
-	uuids := []uuid.UUID{uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom())}
+	uuids := []uuid.UUID{uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom())}
 	player := &gen.Player{}
 	player.SetGameUUIDs(uuids[:2])
-	player.AddGameUUIDs(uuids[2])
+	player.AddGameUUIDs(uuids[2], uuids[3])
 
 	bytes, err := proto.Marshal(player)
 	if err != nil {
