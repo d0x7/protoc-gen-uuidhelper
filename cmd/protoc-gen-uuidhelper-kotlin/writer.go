@@ -86,6 +86,12 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 
 	javaImport := toJavaImport(msg)
 
+	// Adjust namespace for Kotlin DSL methods
+	ktNamespace := javaImport.KtSubClass
+	if w.file.Proto.GetOptions().GetJavaMultipleFiles() {
+		ktNamespace = javaImport.Class + "." + javaImport.KtSubClass
+	}
+
 	// DSL
 
 	// class.baseUUID read-only property
@@ -95,7 +101,7 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 	w.g.P(" * When getting, converts the underlying ByteString to a UUID.")
 	w.g.P(" * When setting, converts the UUID to a ByteString for Protobuf.")
 	w.g.P(" */")
-	w.g.P("var ", javaImport.KtSubClass, ".Dsl.", methodName, ": UUID")
+	w.g.P("var ", ktNamespace, ".Dsl.", methodName, ": UUID")
 	w.g.P("    get() = byteStringToUUID(this.", property, ")")
 	w.g.P("    set(value) {")
 	w.g.P("        this.", property, " = uuidToByteString(value)")
@@ -104,14 +110,20 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 
 	// Java Accessor
 
+	// Adjust namespace for Java accessors
+	javaNamespace := javaImport.Class
+	if w.file.Proto.GetOptions().GetJavaMultipleFiles() {
+		javaNamespace = javaImport.Class + "." + javaImport.SubClass
+	}
+
 	// class.baseUUID read-only property
 	w.g.P("/**")
 	w.g.P(" * Gets the ", base, " UUID.")
 	w.g.P(" *")
 	w.g.P(" * Converts the underlying ByteString to a UUID.")
 	w.g.P(" */")
-	w.g.P("val ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, ": UUID")
-	w.g.P("	get() = byteStringToUUID(this.", property, ")")
+	w.g.P("val ", javaNamespace, ".", methodName, ": UUID")
+	w.g.P("\tget() = byteStringToUUID(this.", property, ")")
 	w.g.P()
 }
 
