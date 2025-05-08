@@ -274,4 +274,9 @@ func (w *kotlinFileWriter) GenerateListField(msg *protogen.Message, field *proto
 	w.g.P()
 }
 
+func (w *kotlinFileWriter) GenerateMapField(msg *protogen.Message, field *protogen.Field) {
+	w.g.P("// Field '", field.Desc.Name(), "': Maps is not supported in Kotlin yet.")
+	w.g.P()
+}
+
 func (w *kotlinFileWriter) Close() {}

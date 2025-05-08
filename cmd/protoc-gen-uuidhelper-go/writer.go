@@ -2,6 +2,7 @@ package main
 
 import (
 	"google.golang.org/protobuf/compiler/protogen"
+	"google.golang.org/protobuf/reflect/protoreflect"
 	"strings"
 	"xiam.li/uuidhelper/core"
 )
@@ -147,6 +148,69 @@ func (w *goFileWriter) GenerateListField(msg *protogen.Message, field *protogen.
 	w.g.P("}")
 	w.g.P("}")
 	w.g.P()
+}
+
+func (w *goFileWriter) GenerateMapField(msg *protogen.Message, field *protogen.Field) {
+	var methodName string
+	name := string(field.Desc.Name())
+	if strings.HasSuffix(name, "_uuids") {
+		methodName = core.SnakeToCamelCase(strings.TrimSuffix(name, "_uuids")) + "UUIDs"
+	} else {
+		methodName = core.SnakeToCamelCase(strings.TrimSuffix(name, "_uuids")) + "UUID"
+	}
+
+	accessor := "m." + core.DescriptorToCamelCase(field.Desc)
+	keyGoType := w.mapKeyGoType(field)
+
+	// read helper
+	w.g.P("func (m *", msg.GoIdent, ") Get", methodName, "() map[", keyGoType, "]uuid.UUID {")
+	w.g.P("    if ", accessor, " == nil {")
+	w.g.P("        return nil")
+	w.g.P("    }")
+	w.g.P("    uuids := make(map[", keyGoType, "]uuid.UUID, len(", accessor, "))")
+	w.g.P("    for k, v := range ", accessor, " {")
+	w.g.P("        if len(v) != 16 {")
+	w.g.P("            return nil")
+	w.g.P("        }")
+	w.g.P("        uuids[k] = uuid.Must(uuid.FromBytes(v))")
+	w.g.P("    }")
+	w.g.P("    return uuids")
+	w.g.P("}")
+	w.g.P()
+
+	// write helper
+	w.g.P("func (m *", msg.GoIdent, ") Set", methodName, "(u map[", keyGoType, "]uuid.UUID) {")
+	w.g.P("    if len(u) == 0 {")
+	w.g.P("        ", accessor, " = nil")
+	w.g.P("        return")
+	w.g.P("    }")
+	w.g.P("    protoMap := make(map[", keyGoType, "][]byte, len(u))")
+	w.g.P("    for k, uid := range u {")
+	w.g.P("        protoMap[k] = uid[:]")
+	w.g.P("    }")
+	w.g.P("    ", accessor, " = protoMap")
+	w.g.P("}")
+	w.g.P()
+}
+
+// mapKeyGoType returns the Go type for a protobuf map key
+func (w *goFileWriter) mapKeyGoType(field *protogen.Field) string {
+	key := field.Desc.MapKey()
+	switch key.Kind() {
+	case protoreflect.Int32Kind, protoreflect.Sint32Kind, protoreflect.Sfixed32Kind:
+		return "int32"
+	case protoreflect.Uint32Kind, protoreflect.Fixed32Kind:
+		return "uint32"
+	case protoreflect.Int64Kind, protoreflect.Sint64Kind, protoreflect.Sfixed64Kind:
+		return "int64"
+	case protoreflect.Uint64Kind, protoreflect.Fixed64Kind:
+		return "uint64"
+	case protoreflect.BoolKind:
+		return "bool"
+	default:
+		// Fallback for unexpected types
+		return "string"
+	}
 }
 
 func (w *goFileWriter) Close() {}

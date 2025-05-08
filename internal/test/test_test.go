@@ -55,6 +55,29 @@ func TestUUIDs(t *testing.T) {
 	}
 }
 
+func TestMaps(t *testing.T) {
+	player := &gen.Player{}
+
+	player.GetMapStringUUIDs()
+	player.SetMapStringUUIDs(map[string]uuid.UUID{
+		"key1": uuid.Must(uuid.NewRandom()),
+		"key2": uuid.Must(uuid.NewRandom()),
+	})
+	player.GetMapStringUUIDs()
+
+	newPlayer := transmit(t, player)
+
+	// Check if GetMapStringUUIDs of both players are equal
+	if len(player.GetMapStringUUIDs()) != len(newPlayer.GetMapStringUUIDs()) {
+		t.Fatalf("Map UUIDs length mismatch: expected %d, got %d", len(player.GetMapStringUUIDs()), len(newPlayer.GetMapStringUUIDs()))
+	}
+	for k, v := range player.GetMapStringUUIDs() {
+		if newPlayer.GetMapStringUUIDs()[k] != v {
+			t.Fatalf("Map UUID mismatch at key %s: expected %v, got %v", k, v, newPlayer.GetMapStringUUIDs()[k])
+		}
+	}
+}
+
 func TestOptionalUUID(t *testing.T) {
 	player := &gen.Player{}
 
