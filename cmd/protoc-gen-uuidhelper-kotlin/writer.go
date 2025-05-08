@@ -143,16 +143,6 @@ func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *pro
 	w.g.P("	get() = ", property, ".map { byteStringToUUID(it) }")
 	w.g.P()
 
-	// class.baseUUIDs getter function
-	w.g.P("/**")
-	w.g.P(" * Gets the list of ", base, " UUIDs.")
-	w.g.P(" *")
-	w.g.P(" * @return An unmodifiable list of all ", base, " UUIDs.")
-	w.g.P(" * @see ", methodName, " property for the same functionality.")
-	w.g.P(" */")
-	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.get", methodName, "(): List<UUID> = ", methodName)
-	w.g.P()
-
 	// class.baseUUIDs[index] getter function
 	w.g.P("/**")
 	w.g.P(" * Gets a ", base, " UUID at the specified index.")
@@ -163,7 +153,7 @@ func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *pro
 	w.g.P(" * @see ", methodName, " for the full list.")
 	w.g.P(" * @see set", methodName, " for bulk replacement.")
 	w.g.P(" */")
-	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.get", methodName, "(index: Int): UUID {")
+	w.g.P("fun ", javaImport.KtSubClass, ".Dsl.get", methodName, "At(index: Int): UUID {")
 	w.g.P("	require(index in ", property, ".indices) {")
 	w.g.P("		\"Index $index out of bounds for list of size ${", property, ".size}\"")
 	w.g.P("	}")
@@ -248,21 +238,12 @@ func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *pro
 	w.g.P(" * @return The ", base, " UUID at the specified index.")
 	w.g.P(" * @see ", methodName, " for the full list.")
 	w.g.P(" */")
-	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".get", methodName, "(index: Int): UUID {")
+	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".get", methodName, "At(index: Int): UUID {")
 	w.g.P("	require(index in ", property, "List.indices) {")
 	w.g.P("		\"Index $index out of bounds for list of size ${", property, "List.size}\"")
 	w.g.P("	}")
 	w.g.P("	return byteStringToUUID(this.", property, "List[index])")
 	w.g.P("}")
-	w.g.P()
-
-	// class.baseUUIDs getter function
-	w.g.P("/**")
-	w.g.P(" * Gets the list of ", base, " UUIDs.")
-	w.g.P(" * Note: This list is read-only. To modify UUIDs, use the DSL builder methods.")
-	w.g.P(" * @return An unmodifiable list of all ", base, " UUIDs.")
-	w.g.P(" */")
-	w.g.P("fun ", javaImport.Class, ".", javaImport.SubClass, ".get", methodName, "(): List<UUID> = ", methodName)
 	w.g.P()
 }
 

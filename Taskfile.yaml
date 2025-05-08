@@ -3,11 +3,14 @@ version: 3
 tasks:
   update-version:
     desc: Update the version in all protoc-gen-uuidhelper-* plugin folders
+    vars:
+      VERSION:
+        sh: gitversion
     cmd: |
       for dir in ./cmd/protoc-gen-uuidhelper-*; do
         if [ -d "$dir" ]; then
           echo "package main
-      var version = \"$(gitversion)\"
+      var version = \"{{.VERSION}}\"
       func (b *backend) Version() string {
           return version
       }" > "$dir/version.go"
