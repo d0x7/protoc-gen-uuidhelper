@@ -7,13 +7,21 @@ option java_package = "li.xiam.uuidhelper.test";
 option java_multiple_files = false;
 
 message Player {
+  // Single UUIDs
   bytes internal_uuid = 1;
   string username = 2;
   bytes session_uuid = 3;
   string string_uuid = 4;
+
+  // List UUIDs
   repeated bytes game_uuids = 5;
+
+  // Oneof UUIDs
   oneof versioned_uuid {
     bytes v1_uuid = 6;
     bytes v2_uuid = 7;
   }
+
+  // Optional UUID
+  optional bytes opt_uuid = 10;
 }

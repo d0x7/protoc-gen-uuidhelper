@@ -43,7 +43,23 @@ func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen
 	setter := camel + "Uuid"
 	writer := "Set" + camel + "UUID"
 
-	if oneof := field.Oneof; oneof != nil {
+	if field.Desc.HasOptionalKeyword() { // optional field
+		// read helper
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
+		w.g.P("    if bytes := m.", getter, "(); bytes == nil {")
+		w.g.P("        return uuid.Nil")
+		w.g.P("    } else {")
+		w.g.P("        return uuid.Must(uuid.FromBytes(bytes))")
+		w.g.P("    }")
+		w.g.P("}")
+		w.g.P()
+
+		// write helper
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u uuid.UUID) {")
+		w.g.P("    m.", setter, " = u[:]")
+		w.g.P("}")
+		w.g.P()
+	} else if oneof := field.Oneof; oneof != nil { // oneof field
 		oneOfSetter := core.DescriptorToCamelCase(oneof.Desc)
 
 		// read helper
@@ -61,21 +77,19 @@ func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen
 		w.g.P("m.", oneOfSetter, " = &", msg.GoIdent, "_", setter, "{", setter, ": u[:]}") // oneof field
 		w.g.P("}")
 		w.g.P()
+	} else { // Not an optional or an oneof field
+		// read helper
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
+		w.g.P("    return uuid.Must(uuid.FromBytes(m.", getter, "()))")
+		w.g.P("}")
+		w.g.P()
 
-		return
+		// write helper
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u uuid.UUID) {")
+		w.g.P("    m.", setter, " = u[:]")
+		w.g.P("}")
+		w.g.P()
 	}
-
-	// read helper
-	w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
-	w.g.P("    return uuid.Must(uuid.FromBytes(m.", getter, "()))")
-	w.g.P("}")
-	w.g.P()
-
-	// write helper
-	w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u uuid.UUID) {")
-	w.g.P("    m.", setter, " = u[:]")
-	w.g.P("}")
-	w.g.P()
 }
 
 func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protogen.Field) {

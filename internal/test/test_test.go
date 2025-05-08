@@ -52,3 +52,27 @@ func TestUUIDs(t *testing.T) {
 		}
 	}
 }
+
+func TestOptionalUUID(t *testing.T) {
+	player := &gen.Player{}
+
+	player.GetOptUUID()
+	player.SetOptUUID(uuid.Must(uuid.NewRandom()))
+	player.GetOptUUID()
+	player.SetOptUUID(uuid.Nil) // TODO: Check if the behavior is correct; when setting the UUID to uuid.Nil, it might be preferable to set it to nil instead of an empty byte slice
+	player.GetOptUUID()
+
+	bytes, err := proto.Marshal(player)
+	if err != nil {
+		t.Fatalf("Failed to marshal player: %v", err)
+	}
+	newPlayer := &gen.Player{}
+	if err := proto.Unmarshal(bytes, newPlayer); err != nil {
+		t.Fatalf("Failed to unmarshal player: %v", err)
+	}
+
+	// Check if GetOptUUID of both players are equal
+	if newPlayer.GetOptUUID() != player.GetOptUUID() {
+		t.Fatalf("Optional UUID mismatch: expected %v, got %v", player.GetOptUUID(), newPlayer.GetOptUUID())
+	}
+}
