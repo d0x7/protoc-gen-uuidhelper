@@ -23,6 +23,9 @@ type UUIDFileWriter interface {
 	// GenerateListField will be called for each repeated UUID field found in a message
 	GenerateListField(msg *protogen.Message, field *protogen.Field)
 
+	// GenerateMapField will be called for each map<key, bytes> field found in a message
+	GenerateMapField(msg *protogen.Message, field *protogen.Field)
+
 	// Close will be called after all UUIDs are handled; should return the generated file
 	Close()
 }

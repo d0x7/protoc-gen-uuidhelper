@@ -37,6 +37,8 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 				writer.GenerateSingleField(msg, field)
 			} else if isUUIDsField(field) {
 				writer.GenerateListField(msg, field)
+			} else if isUUIDMap(field) {
+				writer.GenerateMapField(msg, field)
 			} else if isEmbeddedUUIDField(field) {
 				generateMessage(writer, field.Message)
 			}
@@ -94,6 +96,14 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 		}
 		return nil
 	})
+}
+
+func isUUIDMap(field *protogen.Field) bool {
+	return (strings.HasSuffix(string(field.Desc.Name()), "_uuid") ||
+		strings.HasSuffix(string(field.Desc.Name()), "_uuids")) &&
+		field.Desc.Kind() == protoreflect.MessageKind &&
+		field.Desc.IsMap() &&
+		field.Desc.MapValue().Kind() == protoreflect.BytesKind
 }
 
 func isEmbeddedUUIDField(field *protogen.Field) bool {
