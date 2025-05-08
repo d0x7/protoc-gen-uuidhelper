@@ -7,12 +7,7 @@ import (
 	gen "xiam.li/uuidhelper/internal/test/gen/go"
 )
 
-func TestUUID(t *testing.T) {
-	sess, internal := uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom())
-	player := &gen.Player{}
-	player.SetSessionUUID(sess)
-	player.SetInternalUUID(internal)
-
+func transmit(t *testing.T, player *gen.Player) *gen.Player {
 	bytes, err := proto.Marshal(player)
 	if err != nil {
 		t.Fatalf("Failed to marshal player: %v", err)
@@ -21,6 +16,18 @@ func TestUUID(t *testing.T) {
 	if err := proto.Unmarshal(bytes, newPlayer); err != nil {
 		t.Fatalf("Failed to unmarshal player: %v", err)
 	}
+	return newPlayer
+}
+
+func TestUUID(t *testing.T) {
+	sess, internal := uuid.Must(uuid.NewRandom()), uuid.Must(uuid.NewRandom())
+	player := &gen.Player{}
+	player.SetSessionUUID(sess)
+	player.SetInternalUUID(internal)
+
+	newPlayer := transmit(t, player)
+
+	// Check if GetSessionUUID and GetInternalUUID of both players are equal
 	if newPlayer.GetSessionUUID() != sess {
 		t.Fatalf("Session UUID mismatch: expected %v, got %v", sess, newPlayer.GetSessionUUID())
 	}
@@ -35,14 +42,9 @@ func TestUUIDs(t *testing.T) {
 	player.SetGameUUIDs(uuids[:2])
 	player.AddGameUUIDs(uuids[2], uuids[3])
 
-	bytes, err := proto.Marshal(player)
-	if err != nil {
-		t.Fatalf("Failed to marshal player: %v", err)
-	}
-	newPlayer := &gen.Player{}
-	if err := proto.Unmarshal(bytes, newPlayer); err != nil {
-		t.Fatalf("Failed to unmarshal player: %v", err)
-	}
+	newPlayer := transmit(t, player)
+
+	// Check if GetGameUUIDs of both players are equal
 	if len(newPlayer.GetGameUUIDs()) != len(uuids) {
 		t.Fatalf("UUIDs length mismatch: expected %d, got %d", len(uuids), len(newPlayer.GetGameUUIDs()))
 	}
