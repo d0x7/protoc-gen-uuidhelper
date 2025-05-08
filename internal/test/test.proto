@@ -22,6 +22,20 @@ message Player {
     bytes v2_uuid = 7;
   }
 
+  // Nested UUID
+  message NestedMsg {
+    bytes nested_uuid = 1;
+  }
+  NestedMsg nested = 8;
+  optional NestedMsg optional_nested = 9;
+
   // Optional UUID
   optional bytes opt_uuid = 10;
+
+  Child child = 35;
+}
+
+message Child {
+  bytes child_uuid = 1;
+  repeated bytes child_uuids = 2;
 }
