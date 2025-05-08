@@ -78,3 +78,17 @@ func TestOptionalUUID(t *testing.T) {
 		t.Fatalf("Optional UUID mismatch: expected %v, got %v", player.GetOptUUID(), newPlayer.GetOptUUID())
 	}
 }
+
+func TestNestedUUID(t *testing.T) {
+	player := &gen.Player{}
+
+	player.Nested = &gen.Player_NestedMsg{}
+	player.GetNested().SetNestedUUID(uuid.Must(uuid.NewRandom()))
+
+	newPlayer := transmit(t, player)
+
+	// Check if GetNestedUUID of both players are equal
+	if newPlayer.GetNested().GetNestedUUID() != player.GetNested().GetNestedUUID() {
+		t.Fatalf("Nested UUID mismatch: expected %v, got %v", player.GetNested().GetNestedUUID(), newPlayer.GetNested().GetNestedUUID())
+	}
+}

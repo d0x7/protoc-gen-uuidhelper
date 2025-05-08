@@ -26,6 +26,24 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 		return
 	}
 
+	alreadyGenerated := make(map[string]struct{})
+	var generateMessage func(writer UUIDFileWriter, msg *protogen.Message)
+	generateMessage = func(writer UUIDFileWriter, msg *protogen.Message) {
+		if _, already := alreadyGenerated[string(msg.Desc.Name())]; already {
+			return
+		}
+		for _, field := range msg.Fields {
+			if isUUIDField(field) {
+				writer.GenerateSingleField(msg, field)
+			} else if isUUIDsField(field) {
+				writer.GenerateListField(msg, field)
+			} else if isEmbeddedUUIDField(field) {
+				generateMessage(writer, field.Message)
+			}
+		}
+		alreadyGenerated[string(msg.Desc.Name())] = struct{}{}
+	}
+
 	protogen.Options{
 		ParamFunc: flags.Set,
 	}.Run(func(gen *protogen.Plugin) error {
@@ -69,19 +87,17 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 			writer.GenerateFileHeader()
 
 			for _, msg := range file.Messages {
-				for _, field := range msg.Fields {
-					if isUUIDField(field) {
-						writer.GenerateSingleField(msg, field)
-					} else if isUUIDsField(field) {
-						writer.GenerateListField(msg, field)
-					}
-				}
+				generateMessage(writer, msg)
 			}
 
 			writer.Close()
 		}
 		return nil
 	})
+}
+
+func isEmbeddedUUIDField(field *protogen.Field) bool {
+	return field.Desc.Kind() == protoreflect.MessageKind && field.Message != nil
 }
 
 func isUUIDsField(field *protogen.Field) bool {
