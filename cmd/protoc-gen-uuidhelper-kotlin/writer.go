@@ -69,7 +69,7 @@ func (w *kotlinFileWriter) GenerateFileHeader() {
 	w.g.P()
 }
 
-func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen.Field) {
+func (w *kotlinFileWriter) GenerateSingleField(msg *protogen.Message, field *protogen.Field) {
 	// original proto field name, e.g. "session_uuid"
 	name := string(field.Desc.Name())
 
@@ -142,7 +142,7 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 
 }
 
-func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protogen.Field) {
+func (w *kotlinFileWriter) GenerateListField(msg *protogen.Message, field *protogen.Field) {
 	// original proto field name, e.g. "game_uuids"
 	name := string(field.Desc.Name())
 

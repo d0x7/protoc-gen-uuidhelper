@@ -28,7 +28,7 @@ func (w *goFileWriter) GenerateFileHeader() {
 	w.g.P("import \"github.com/google/uuid\"")
 }
 
-func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen.Field) {
+func (w *goFileWriter) GenerateSingleField(msg *protogen.Message, field *protogen.Field) {
 
 	// original proto field name, e.g. "session_uuid"
 	name := string(field.Desc.Name())
@@ -92,7 +92,7 @@ func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen
 	}
 }
 
-func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protogen.Field) {
+func (w *goFileWriter) GenerateListField(msg *protogen.Message, field *protogen.Field) {
 	// original proto field name, e.g. "game_uuids"
 	name := string(field.Desc.Name())
 

@@ -71,9 +71,9 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 			for _, msg := range file.Messages {
 				for _, field := range msg.Fields {
 					if isUUIDField(field) {
-						writer.GenerateUUIDHelper(msg, field)
+						writer.GenerateSingleField(msg, field)
 					} else if isUUIDsField(field) {
-						writer.GenerateUUIDsHelper(msg, field)
+						writer.GenerateListField(msg, field)
 					}
 				}
 			}
