@@ -29,6 +29,10 @@ public object PlayerKt {
     internal fun _build(): li.xiam.uuidhelper.test.Test.Player = _builder.build()
 
     /**
+     * ```
+     * Single UUIDs
+     * ```
+     *
      * `bytes internal_uuid = 1;`
      */
     public var internalUuid: com.google.protobuf.ByteString
@@ -39,6 +43,10 @@ public object PlayerKt {
         _builder.internalUuid = value
       }
     /**
+     * ```
+     * Single UUIDs
+     * ```
+     *
      * `bytes internal_uuid = 1;`
      */
     public fun clearInternalUuid() {
@@ -103,6 +111,10 @@ public object PlayerKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class GameUuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
+     * ```
+     * List UUIDs
+     * ```
+     *
      * `repeated bytes game_uuids = 5;`
      */
      public val gameUuids: com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>
@@ -111,6 +123,10 @@ public object PlayerKt {
         _builder.gameUuidsList
       )
     /**
+     * ```
+     * List UUIDs
+     * ```
+     *
      * `repeated bytes game_uuids = 5;`
      * @param value The gameUuids to add.
      */
@@ -119,6 +135,10 @@ public object PlayerKt {
     public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.add(value: com.google.protobuf.ByteString) {
       _builder.addGameUuids(value)
     }/**
+     * ```
+     * List UUIDs
+     * ```
+     *
      * `repeated bytes game_uuids = 5;`
      * @param value The gameUuids to add.
      */
@@ -128,6 +148,10 @@ public object PlayerKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.plusAssign(value: com.google.protobuf.ByteString) {
       add(value)
     }/**
+     * ```
+     * List UUIDs
+     * ```
+     *
      * `repeated bytes game_uuids = 5;`
      * @param values The gameUuids to add.
      */
@@ -136,6 +160,10 @@ public object PlayerKt {
     public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.addAll(values: kotlin.collections.Iterable<com.google.protobuf.ByteString>) {
       _builder.addAllGameUuids(values)
     }/**
+     * ```
+     * List UUIDs
+     * ```
+     *
      * `repeated bytes game_uuids = 5;`
      * @param values The gameUuids to add.
      */
@@ -145,6 +173,10 @@ public object PlayerKt {
     public inline operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.plusAssign(values: kotlin.collections.Iterable<com.google.protobuf.ByteString>) {
       addAll(values)
     }/**
+     * ```
+     * List UUIDs
+     * ```
+     *
      * `repeated bytes game_uuids = 5;`
      * @param index The index to set the value at.
      * @param value The gameUuids to set.
@@ -154,6 +186,10 @@ public object PlayerKt {
     public operator fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.set(index: kotlin.Int, value: com.google.protobuf.ByteString) {
       _builder.setGameUuids(index, value)
     }/**
+     * ```
+     * List UUIDs
+     * ```
+     *
      * `repeated bytes game_uuids = 5;`
      */
     @kotlin.jvm.JvmSynthetic
@@ -208,6 +244,1611 @@ public object PlayerKt {
     public fun hasV2Uuid(): kotlin.Boolean {
       return _builder.hasV2Uuid()
     }
+
+    /**
+     * `.uuidhelper.test.Player.NestedMsg nested = 8;`
+     */
+    public var nested: li.xiam.uuidhelper.test.Test.Player.NestedMsg
+      @JvmName("getNested")
+      get() = _builder.nested
+      @JvmName("setNested")
+      set(value) {
+        _builder.nested = value
+      }
+    /**
+     * `.uuidhelper.test.Player.NestedMsg nested = 8;`
+     */
+    public fun clearNested() {
+      _builder.clearNested()
+    }
+    /**
+     * `.uuidhelper.test.Player.NestedMsg nested = 8;`
+     * @return Whether the nested field is set.
+     */
+    public fun hasNested(): kotlin.Boolean {
+      return _builder.hasNested()
+    }
+
+    public val PlayerKt.Dsl.nestedOrNull: li.xiam.uuidhelper.test.Test.Player.NestedMsg?
+      get() = _builder.nestedOrNull
+
+    /**
+     * `optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;`
+     */
+    public var optionalNested: li.xiam.uuidhelper.test.Test.Player.NestedMsg
+      @JvmName("getOptionalNested")
+      get() = _builder.optionalNested
+      @JvmName("setOptionalNested")
+      set(value) {
+        _builder.optionalNested = value
+      }
+    /**
+     * `optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;`
+     */
+    public fun clearOptionalNested() {
+      _builder.clearOptionalNested()
+    }
+    /**
+     * `optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;`
+     * @return Whether the optionalNested field is set.
+     */
+    public fun hasOptionalNested(): kotlin.Boolean {
+      return _builder.hasOptionalNested()
+    }
+
+    public val PlayerKt.Dsl.optionalNestedOrNull: li.xiam.uuidhelper.test.Test.Player.NestedMsg?
+      get() = _builder.optionalNestedOrNull
+
+    /**
+     * ```
+     * Optional UUID
+     * ```
+     *
+     * `optional bytes opt_uuid = 10;`
+     */
+    public var optUuid: com.google.protobuf.ByteString
+      @JvmName("getOptUuid")
+      get() = _builder.optUuid
+      @JvmName("setOptUuid")
+      set(value) {
+        _builder.optUuid = value
+      }
+    /**
+     * ```
+     * Optional UUID
+     * ```
+     *
+     * `optional bytes opt_uuid = 10;`
+     */
+    public fun clearOptUuid() {
+      _builder.clearOptUuid()
+    }
+    /**
+     * ```
+     * Optional UUID
+     * ```
+     *
+     * `optional bytes opt_uuid = 10;`
+     * @return Whether the optUuid field is set.
+     */
+    public fun hasOptUuid(): kotlin.Boolean {
+      return _builder.hasOptUuid()
+    }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapInt32UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * ```
+     * Map UUIDs
+     * ```
+     *
+     * `map<int32, bytes> map_int32_uuid = 11;`
+     */
+     public val mapInt32Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapInt32UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapInt32UuidMap
+      )
+    /**
+     * ```
+     * Map UUIDs
+     * ```
+     *
+     * `map<int32, bytes> map_int32_uuid = 11;`
+     */
+    @JvmName("putMapInt32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapInt32Uuid(key, value)
+       }
+    /**
+     * ```
+     * Map UUIDs
+     * ```
+     *
+     * `map<int32, bytes> map_int32_uuid = 11;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapInt32Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * ```
+     * Map UUIDs
+     * ```
+     *
+     * `map<int32, bytes> map_int32_uuid = 11;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapInt32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapInt32Uuid(key)
+       }
+    /**
+     * ```
+     * Map UUIDs
+     * ```
+     *
+     * `map<int32, bytes> map_int32_uuid = 11;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapInt32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapInt32Uuid(map)
+       }
+    /**
+     * ```
+     * Map UUIDs
+     * ```
+     *
+     * `map<int32, bytes> map_int32_uuid = 11;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapInt32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidProxy>
+      .clear() {
+         _builder.clearMapInt32Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapInt64UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<int64, bytes> map_int64_uuid = 12;`
+     */
+     public val mapInt64Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapInt64UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapInt64UuidMap
+      )
+    /**
+     * `map<int64, bytes> map_int64_uuid = 12;`
+     */
+    @JvmName("putMapInt64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapInt64Uuid(key, value)
+       }
+    /**
+     * `map<int64, bytes> map_int64_uuid = 12;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapInt64Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<int64, bytes> map_int64_uuid = 12;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapInt64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapInt64Uuid(key)
+       }
+    /**
+     * `map<int64, bytes> map_int64_uuid = 12;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapInt64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapInt64Uuid(map)
+       }
+    /**
+     * `map<int64, bytes> map_int64_uuid = 12;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapInt64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidProxy>
+      .clear() {
+         _builder.clearMapInt64Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapUint32UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<uint32, bytes> map_uint32_uuid = 13;`
+     */
+     public val mapUint32Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapUint32UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapUint32UuidMap
+      )
+    /**
+     * `map<uint32, bytes> map_uint32_uuid = 13;`
+     */
+    @JvmName("putMapUint32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapUint32Uuid(key, value)
+       }
+    /**
+     * `map<uint32, bytes> map_uint32_uuid = 13;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapUint32Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<uint32, bytes> map_uint32_uuid = 13;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapUint32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapUint32Uuid(key)
+       }
+    /**
+     * `map<uint32, bytes> map_uint32_uuid = 13;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapUint32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapUint32Uuid(map)
+       }
+    /**
+     * `map<uint32, bytes> map_uint32_uuid = 13;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapUint32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidProxy>
+      .clear() {
+         _builder.clearMapUint32Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapUint64UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<uint64, bytes> map_uint64_uuid = 14;`
+     */
+     public val mapUint64Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapUint64UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapUint64UuidMap
+      )
+    /**
+     * `map<uint64, bytes> map_uint64_uuid = 14;`
+     */
+    @JvmName("putMapUint64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapUint64Uuid(key, value)
+       }
+    /**
+     * `map<uint64, bytes> map_uint64_uuid = 14;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapUint64Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<uint64, bytes> map_uint64_uuid = 14;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapUint64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapUint64Uuid(key)
+       }
+    /**
+     * `map<uint64, bytes> map_uint64_uuid = 14;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapUint64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapUint64Uuid(map)
+       }
+    /**
+     * `map<uint64, bytes> map_uint64_uuid = 14;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapUint64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidProxy>
+      .clear() {
+         _builder.clearMapUint64Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapSint32UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<sint32, bytes> map_sint32_uuid = 15;`
+     */
+     public val mapSint32Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapSint32UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapSint32UuidMap
+      )
+    /**
+     * `map<sint32, bytes> map_sint32_uuid = 15;`
+     */
+    @JvmName("putMapSint32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapSint32Uuid(key, value)
+       }
+    /**
+     * `map<sint32, bytes> map_sint32_uuid = 15;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapSint32Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<sint32, bytes> map_sint32_uuid = 15;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapSint32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapSint32Uuid(key)
+       }
+    /**
+     * `map<sint32, bytes> map_sint32_uuid = 15;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapSint32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapSint32Uuid(map)
+       }
+    /**
+     * `map<sint32, bytes> map_sint32_uuid = 15;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapSint32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidProxy>
+      .clear() {
+         _builder.clearMapSint32Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapSint64UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<sint64, bytes> map_sint64_uuid = 16;`
+     */
+     public val mapSint64Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapSint64UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapSint64UuidMap
+      )
+    /**
+     * `map<sint64, bytes> map_sint64_uuid = 16;`
+     */
+    @JvmName("putMapSint64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapSint64Uuid(key, value)
+       }
+    /**
+     * `map<sint64, bytes> map_sint64_uuid = 16;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapSint64Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<sint64, bytes> map_sint64_uuid = 16;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapSint64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapSint64Uuid(key)
+       }
+    /**
+     * `map<sint64, bytes> map_sint64_uuid = 16;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapSint64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapSint64Uuid(map)
+       }
+    /**
+     * `map<sint64, bytes> map_sint64_uuid = 16;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapSint64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidProxy>
+      .clear() {
+         _builder.clearMapSint64Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapFixed32UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuid = 17;`
+     */
+     public val mapFixed32Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapFixed32UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapFixed32UuidMap
+      )
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuid = 17;`
+     */
+    @JvmName("putMapFixed32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapFixed32Uuid(key, value)
+       }
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuid = 17;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapFixed32Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuid = 17;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapFixed32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapFixed32Uuid(key)
+       }
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuid = 17;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapFixed32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapFixed32Uuid(map)
+       }
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuid = 17;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapFixed32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidProxy>
+      .clear() {
+         _builder.clearMapFixed32Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapFixed64UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuid = 18;`
+     */
+     public val mapFixed64Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapFixed64UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapFixed64UuidMap
+      )
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuid = 18;`
+     */
+    @JvmName("putMapFixed64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapFixed64Uuid(key, value)
+       }
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuid = 18;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapFixed64Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuid = 18;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapFixed64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapFixed64Uuid(key)
+       }
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuid = 18;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapFixed64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapFixed64Uuid(map)
+       }
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuid = 18;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapFixed64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidProxy>
+      .clear() {
+         _builder.clearMapFixed64Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapSfixed32UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuid = 19;`
+     */
+     public val mapSfixed32Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapSfixed32UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapSfixed32UuidMap
+      )
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuid = 19;`
+     */
+    @JvmName("putMapSfixed32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapSfixed32Uuid(key, value)
+       }
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuid = 19;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapSfixed32Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuid = 19;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapSfixed32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapSfixed32Uuid(key)
+       }
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuid = 19;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapSfixed32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapSfixed32Uuid(map)
+       }
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuid = 19;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapSfixed32Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidProxy>
+      .clear() {
+         _builder.clearMapSfixed32Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapSfixed64UuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuid = 20;`
+     */
+     public val mapSfixed64Uuid: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapSfixed64UuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapSfixed64UuidMap
+      )
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuid = 20;`
+     */
+    @JvmName("putMapSfixed64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapSfixed64Uuid(key, value)
+       }
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuid = 20;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapSfixed64Uuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuid = 20;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapSfixed64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapSfixed64Uuid(key)
+       }
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuid = 20;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapSfixed64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapSfixed64Uuid(map)
+       }
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuid = 20;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapSfixed64Uuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidProxy>
+      .clear() {
+         _builder.clearMapSfixed64Uuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapBoolUuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<bool, bytes> map_bool_uuid = 21;`
+     */
+     public val mapBoolUuid: com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapBoolUuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapBoolUuidMap
+      )
+    /**
+     * `map<bool, bytes> map_bool_uuid = 21;`
+     */
+    @JvmName("putMapBoolUuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidProxy>
+      .put(key: kotlin.Boolean, value: com.google.protobuf.ByteString) {
+         _builder.putMapBoolUuid(key, value)
+       }
+    /**
+     * `map<bool, bytes> map_bool_uuid = 21;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapBoolUuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidProxy>
+      .set(key: kotlin.Boolean, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<bool, bytes> map_bool_uuid = 21;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapBoolUuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidProxy>
+      .remove(key: kotlin.Boolean) {
+         _builder.removeMapBoolUuid(key)
+       }
+    /**
+     * `map<bool, bytes> map_bool_uuid = 21;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapBoolUuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Boolean, com.google.protobuf.ByteString>) {
+         _builder.putAllMapBoolUuid(map)
+       }
+    /**
+     * `map<bool, bytes> map_bool_uuid = 21;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapBoolUuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidProxy>
+      .clear() {
+         _builder.clearMapBoolUuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapStringUuidProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<string, bytes> map_string_uuid = 22;`
+     */
+     public val mapStringUuid: com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapStringUuidMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapStringUuidMap
+      )
+    /**
+     * `map<string, bytes> map_string_uuid = 22;`
+     */
+    @JvmName("putMapStringUuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidProxy>
+      .put(key: kotlin.String, value: com.google.protobuf.ByteString) {
+         _builder.putMapStringUuid(key, value)
+       }
+    /**
+     * `map<string, bytes> map_string_uuid = 22;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapStringUuid")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidProxy>
+      .set(key: kotlin.String, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<string, bytes> map_string_uuid = 22;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapStringUuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidProxy>
+      .remove(key: kotlin.String) {
+         _builder.removeMapStringUuid(key)
+       }
+    /**
+     * `map<string, bytes> map_string_uuid = 22;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapStringUuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.String, com.google.protobuf.ByteString>) {
+         _builder.putAllMapStringUuid(map)
+       }
+    /**
+     * `map<string, bytes> map_string_uuid = 22;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapStringUuid")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidProxy>
+      .clear() {
+         _builder.clearMapStringUuid()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapInt32UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<int32, bytes> map_int32_uuids = 23;`
+     */
+     public val mapInt32Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapInt32UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapInt32UuidsMap
+      )
+    /**
+     * `map<int32, bytes> map_int32_uuids = 23;`
+     */
+    @JvmName("putMapInt32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidsProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapInt32Uuids(key, value)
+       }
+    /**
+     * `map<int32, bytes> map_int32_uuids = 23;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapInt32Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidsProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<int32, bytes> map_int32_uuids = 23;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapInt32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidsProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapInt32Uuids(key)
+       }
+    /**
+     * `map<int32, bytes> map_int32_uuids = 23;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapInt32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapInt32Uuids(map)
+       }
+    /**
+     * `map<int32, bytes> map_int32_uuids = 23;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapInt32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapInt32UuidsProxy>
+      .clear() {
+         _builder.clearMapInt32Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapInt64UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<int64, bytes> map_int64_uuids = 24;`
+     */
+     public val mapInt64Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapInt64UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapInt64UuidsMap
+      )
+    /**
+     * `map<int64, bytes> map_int64_uuids = 24;`
+     */
+    @JvmName("putMapInt64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidsProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapInt64Uuids(key, value)
+       }
+    /**
+     * `map<int64, bytes> map_int64_uuids = 24;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapInt64Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidsProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<int64, bytes> map_int64_uuids = 24;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapInt64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidsProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapInt64Uuids(key)
+       }
+    /**
+     * `map<int64, bytes> map_int64_uuids = 24;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapInt64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapInt64Uuids(map)
+       }
+    /**
+     * `map<int64, bytes> map_int64_uuids = 24;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapInt64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapInt64UuidsProxy>
+      .clear() {
+         _builder.clearMapInt64Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapUint32UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<uint32, bytes> map_uint32_uuids = 25;`
+     */
+     public val mapUint32Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapUint32UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapUint32UuidsMap
+      )
+    /**
+     * `map<uint32, bytes> map_uint32_uuids = 25;`
+     */
+    @JvmName("putMapUint32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidsProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapUint32Uuids(key, value)
+       }
+    /**
+     * `map<uint32, bytes> map_uint32_uuids = 25;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapUint32Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidsProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<uint32, bytes> map_uint32_uuids = 25;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapUint32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidsProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapUint32Uuids(key)
+       }
+    /**
+     * `map<uint32, bytes> map_uint32_uuids = 25;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapUint32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapUint32Uuids(map)
+       }
+    /**
+     * `map<uint32, bytes> map_uint32_uuids = 25;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapUint32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapUint32UuidsProxy>
+      .clear() {
+         _builder.clearMapUint32Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapUint64UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<uint64, bytes> map_uint64_uuids = 26;`
+     */
+     public val mapUint64Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapUint64UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapUint64UuidsMap
+      )
+    /**
+     * `map<uint64, bytes> map_uint64_uuids = 26;`
+     */
+    @JvmName("putMapUint64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidsProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapUint64Uuids(key, value)
+       }
+    /**
+     * `map<uint64, bytes> map_uint64_uuids = 26;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapUint64Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidsProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<uint64, bytes> map_uint64_uuids = 26;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapUint64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidsProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapUint64Uuids(key)
+       }
+    /**
+     * `map<uint64, bytes> map_uint64_uuids = 26;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapUint64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapUint64Uuids(map)
+       }
+    /**
+     * `map<uint64, bytes> map_uint64_uuids = 26;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapUint64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapUint64UuidsProxy>
+      .clear() {
+         _builder.clearMapUint64Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapSint32UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<sint32, bytes> map_sint32_uuids = 27;`
+     */
+     public val mapSint32Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapSint32UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapSint32UuidsMap
+      )
+    /**
+     * `map<sint32, bytes> map_sint32_uuids = 27;`
+     */
+    @JvmName("putMapSint32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidsProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapSint32Uuids(key, value)
+       }
+    /**
+     * `map<sint32, bytes> map_sint32_uuids = 27;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapSint32Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidsProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<sint32, bytes> map_sint32_uuids = 27;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapSint32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidsProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapSint32Uuids(key)
+       }
+    /**
+     * `map<sint32, bytes> map_sint32_uuids = 27;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapSint32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapSint32Uuids(map)
+       }
+    /**
+     * `map<sint32, bytes> map_sint32_uuids = 27;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapSint32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSint32UuidsProxy>
+      .clear() {
+         _builder.clearMapSint32Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapSint64UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<sint64, bytes> map_sint64_uuids = 28;`
+     */
+     public val mapSint64Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapSint64UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapSint64UuidsMap
+      )
+    /**
+     * `map<sint64, bytes> map_sint64_uuids = 28;`
+     */
+    @JvmName("putMapSint64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidsProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapSint64Uuids(key, value)
+       }
+    /**
+     * `map<sint64, bytes> map_sint64_uuids = 28;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapSint64Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidsProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<sint64, bytes> map_sint64_uuids = 28;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapSint64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidsProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapSint64Uuids(key)
+       }
+    /**
+     * `map<sint64, bytes> map_sint64_uuids = 28;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapSint64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapSint64Uuids(map)
+       }
+    /**
+     * `map<sint64, bytes> map_sint64_uuids = 28;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapSint64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSint64UuidsProxy>
+      .clear() {
+         _builder.clearMapSint64Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapFixed32UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuids = 29;`
+     */
+     public val mapFixed32Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapFixed32UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapFixed32UuidsMap
+      )
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuids = 29;`
+     */
+    @JvmName("putMapFixed32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidsProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapFixed32Uuids(key, value)
+       }
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuids = 29;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapFixed32Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidsProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuids = 29;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapFixed32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidsProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapFixed32Uuids(key)
+       }
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuids = 29;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapFixed32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapFixed32Uuids(map)
+       }
+    /**
+     * `map<fixed32, bytes> map_fixed32_uuids = 29;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapFixed32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapFixed32UuidsProxy>
+      .clear() {
+         _builder.clearMapFixed32Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapFixed64UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuids = 30;`
+     */
+     public val mapFixed64Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapFixed64UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapFixed64UuidsMap
+      )
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuids = 30;`
+     */
+    @JvmName("putMapFixed64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidsProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapFixed64Uuids(key, value)
+       }
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuids = 30;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapFixed64Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidsProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuids = 30;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapFixed64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidsProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapFixed64Uuids(key)
+       }
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuids = 30;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapFixed64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapFixed64Uuids(map)
+       }
+    /**
+     * `map<fixed64, bytes> map_fixed64_uuids = 30;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapFixed64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapFixed64UuidsProxy>
+      .clear() {
+         _builder.clearMapFixed64Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapSfixed32UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuids = 31;`
+     */
+     public val mapSfixed32Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapSfixed32UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapSfixed32UuidsMap
+      )
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuids = 31;`
+     */
+    @JvmName("putMapSfixed32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidsProxy>
+      .put(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         _builder.putMapSfixed32Uuids(key, value)
+       }
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuids = 31;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapSfixed32Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidsProxy>
+      .set(key: kotlin.Int, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuids = 31;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapSfixed32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidsProxy>
+      .remove(key: kotlin.Int) {
+         _builder.removeMapSfixed32Uuids(key)
+       }
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuids = 31;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapSfixed32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Int, com.google.protobuf.ByteString>) {
+         _builder.putAllMapSfixed32Uuids(map)
+       }
+    /**
+     * `map<sfixed32, bytes> map_sfixed32_uuids = 31;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapSfixed32Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Int, com.google.protobuf.ByteString, MapSfixed32UuidsProxy>
+      .clear() {
+         _builder.clearMapSfixed32Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapSfixed64UuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuids = 32;`
+     */
+     public val mapSfixed64Uuids: com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapSfixed64UuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapSfixed64UuidsMap
+      )
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuids = 32;`
+     */
+    @JvmName("putMapSfixed64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidsProxy>
+      .put(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         _builder.putMapSfixed64Uuids(key, value)
+       }
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuids = 32;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapSfixed64Uuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidsProxy>
+      .set(key: kotlin.Long, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuids = 32;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapSfixed64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidsProxy>
+      .remove(key: kotlin.Long) {
+         _builder.removeMapSfixed64Uuids(key)
+       }
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuids = 32;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapSfixed64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Long, com.google.protobuf.ByteString>) {
+         _builder.putAllMapSfixed64Uuids(map)
+       }
+    /**
+     * `map<sfixed64, bytes> map_sfixed64_uuids = 32;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapSfixed64Uuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Long, com.google.protobuf.ByteString, MapSfixed64UuidsProxy>
+      .clear() {
+         _builder.clearMapSfixed64Uuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapBoolUuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<bool, bytes> map_bool_uuids = 33;`
+     */
+     public val mapBoolUuids: com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapBoolUuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapBoolUuidsMap
+      )
+    /**
+     * `map<bool, bytes> map_bool_uuids = 33;`
+     */
+    @JvmName("putMapBoolUuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidsProxy>
+      .put(key: kotlin.Boolean, value: com.google.protobuf.ByteString) {
+         _builder.putMapBoolUuids(key, value)
+       }
+    /**
+     * `map<bool, bytes> map_bool_uuids = 33;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapBoolUuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidsProxy>
+      .set(key: kotlin.Boolean, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<bool, bytes> map_bool_uuids = 33;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapBoolUuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidsProxy>
+      .remove(key: kotlin.Boolean) {
+         _builder.removeMapBoolUuids(key)
+       }
+    /**
+     * `map<bool, bytes> map_bool_uuids = 33;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapBoolUuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.Boolean, com.google.protobuf.ByteString>) {
+         _builder.putAllMapBoolUuids(map)
+       }
+    /**
+     * `map<bool, bytes> map_bool_uuids = 33;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapBoolUuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.Boolean, com.google.protobuf.ByteString, MapBoolUuidsProxy>
+      .clear() {
+         _builder.clearMapBoolUuids()
+       }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MapStringUuidsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * `map<string, bytes> map_string_uuids = 34;`
+     */
+     public val mapStringUuids: com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getMapStringUuidsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.mapStringUuidsMap
+      )
+    /**
+     * `map<string, bytes> map_string_uuids = 34;`
+     */
+    @JvmName("putMapStringUuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidsProxy>
+      .put(key: kotlin.String, value: com.google.protobuf.ByteString) {
+         _builder.putMapStringUuids(key, value)
+       }
+    /**
+     * `map<string, bytes> map_string_uuids = 34;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setMapStringUuids")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidsProxy>
+      .set(key: kotlin.String, value: com.google.protobuf.ByteString) {
+         put(key, value)
+       }
+    /**
+     * `map<string, bytes> map_string_uuids = 34;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeMapStringUuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidsProxy>
+      .remove(key: kotlin.String) {
+         _builder.removeMapStringUuids(key)
+       }
+    /**
+     * `map<string, bytes> map_string_uuids = 34;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllMapStringUuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.String, com.google.protobuf.ByteString>) {
+         _builder.putAllMapStringUuids(map)
+       }
+    /**
+     * `map<string, bytes> map_string_uuids = 34;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearMapStringUuids")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, com.google.protobuf.ByteString, MapStringUuidsProxy>
+      .clear() {
+         _builder.clearMapStringUuids()
+       }
+
+    /**
+     * `.uuidhelper.test.Child child = 35;`
+     */
+    public var child: li.xiam.uuidhelper.test.Test.Child
+      @JvmName("getChild")
+      get() = _builder.child
+      @JvmName("setChild")
+      set(value) {
+        _builder.child = value
+      }
+    /**
+     * `.uuidhelper.test.Child child = 35;`
+     */
+    public fun clearChild() {
+      _builder.clearChild()
+    }
+    /**
+     * `.uuidhelper.test.Child child = 35;`
+     * @return Whether the child field is set.
+     */
+    public fun hasChild(): kotlin.Boolean {
+      return _builder.hasChild()
+    }
+
+    public val PlayerKt.Dsl.childOrNull: li.xiam.uuidhelper.test.Test.Child?
+      get() = _builder.childOrNull
     public val versionedUuidCase: li.xiam.uuidhelper.test.Test.Player.VersionedUuidCase
     @kotlin.jvm.JvmName("getVersionedUuidCase")
       get() = _builder.getVersionedUuidCase()
@@ -216,8 +1857,65 @@ public object PlayerKt {
       _builder.clearVersionedUuid()
     }
   }
+  @kotlin.jvm.JvmName("-initializenestedMsg")
+  public inline fun nestedMsg(block: li.xiam.uuidhelper.test.PlayerKt.NestedMsgKt.Dsl.() -> kotlin.Unit): li.xiam.uuidhelper.test.Test.Player.NestedMsg =
+    li.xiam.uuidhelper.test.PlayerKt.NestedMsgKt.Dsl._create(li.xiam.uuidhelper.test.Test.Player.NestedMsg.newBuilder()).apply { block() }._build()
+  /**
+   * ```
+   * Nested UUID
+   * ```
+   *
+   * Protobuf type `uuidhelper.test.Player.NestedMsg`
+   */
+  public object NestedMsgKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+    @kotlin.PublishedApi
+        internal fun _create(builder: li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+  @kotlin.PublishedApi
+      internal fun _build(): li.xiam.uuidhelper.test.Test.Player.NestedMsg = _builder.build()
+
+      /**
+       * `bytes nested_uuid = 1;`
+       */
+      public var nestedUuid: com.google.protobuf.ByteString
+        @JvmName("getNestedUuid")
+        get() = _builder.nestedUuid
+        @JvmName("setNestedUuid")
+        set(value) {
+          _builder.nestedUuid = value
+        }
+      /**
+       * `bytes nested_uuid = 1;`
+       */
+      public fun clearNestedUuid() {
+        _builder.clearNestedUuid()
+      }
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun li.xiam.uuidhelper.test.Test.Player.copy(block: `li.xiam.uuidhelper.test`.PlayerKt.Dsl.() -> kotlin.Unit): li.xiam.uuidhelper.test.Test.Player =
   `li.xiam.uuidhelper.test`.PlayerKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+@kotlin.jvm.JvmSynthetic
+public inline fun li.xiam.uuidhelper.test.Test.Player.NestedMsg.copy(block: `li.xiam.uuidhelper.test`.PlayerKt.NestedMsgKt.Dsl.() -> kotlin.Unit): li.xiam.uuidhelper.test.Test.Player.NestedMsg =
+  `li.xiam.uuidhelper.test`.PlayerKt.NestedMsgKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val li.xiam.uuidhelper.test.Test.PlayerOrBuilder.nestedOrNull: li.xiam.uuidhelper.test.Test.Player.NestedMsg?
+  get() = if (hasNested()) getNested() else null
+
+public val li.xiam.uuidhelper.test.Test.PlayerOrBuilder.optionalNestedOrNull: li.xiam.uuidhelper.test.Test.Player.NestedMsg?
+  get() = if (hasOptionalNested()) getOptionalNested() else null
+
+public val li.xiam.uuidhelper.test.Test.PlayerOrBuilder.childOrNull: li.xiam.uuidhelper.test.Test.Child?
+  get() = if (hasChild()) getChild() else null
 
