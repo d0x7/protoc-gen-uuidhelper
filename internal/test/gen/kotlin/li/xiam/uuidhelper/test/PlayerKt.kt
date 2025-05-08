@@ -160,7 +160,62 @@ public object PlayerKt {
     @kotlin.jvm.JvmName("clearGameUuids")
     public fun com.google.protobuf.kotlin.DslList<com.google.protobuf.ByteString, GameUuidsProxy>.clear() {
       _builder.clearGameUuids()
-    }}
+    }
+    /**
+     * `bytes v1_uuid = 6;`
+     */
+    public var v1Uuid: com.google.protobuf.ByteString
+      @JvmName("getV1Uuid")
+      get() = _builder.v1Uuid
+      @JvmName("setV1Uuid")
+      set(value) {
+        _builder.v1Uuid = value
+      }
+    /**
+     * `bytes v1_uuid = 6;`
+     */
+    public fun clearV1Uuid() {
+      _builder.clearV1Uuid()
+    }
+    /**
+     * `bytes v1_uuid = 6;`
+     * @return Whether the v1Uuid field is set.
+     */
+    public fun hasV1Uuid(): kotlin.Boolean {
+      return _builder.hasV1Uuid()
+    }
+
+    /**
+     * `bytes v2_uuid = 7;`
+     */
+    public var v2Uuid: com.google.protobuf.ByteString
+      @JvmName("getV2Uuid")
+      get() = _builder.v2Uuid
+      @JvmName("setV2Uuid")
+      set(value) {
+        _builder.v2Uuid = value
+      }
+    /**
+     * `bytes v2_uuid = 7;`
+     */
+    public fun clearV2Uuid() {
+      _builder.clearV2Uuid()
+    }
+    /**
+     * `bytes v2_uuid = 7;`
+     * @return Whether the v2Uuid field is set.
+     */
+    public fun hasV2Uuid(): kotlin.Boolean {
+      return _builder.hasV2Uuid()
+    }
+    public val versionedUuidCase: li.xiam.uuidhelper.test.Test.Player.VersionedUuidCase
+    @kotlin.jvm.JvmName("getVersionedUuidCase")
+      get() = _builder.getVersionedUuidCase()
+
+    public fun clearVersionedUuid() {
+      _builder.clearVersionedUuid()
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun li.xiam.uuidhelper.test.Test.Player.copy(block: `li.xiam.uuidhelper.test`.PlayerKt.Dsl.() -> kotlin.Unit): li.xiam.uuidhelper.test.Test.Player =

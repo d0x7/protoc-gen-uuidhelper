@@ -81,6 +81,30 @@ public final class Test {
      * @return The gameUuids at the given index.
      */
     com.google.protobuf.ByteString getGameUuids(int index);
+
+    /**
+     * <code>bytes v1_uuid = 6;</code>
+     * @return Whether the v1Uuid field is set.
+     */
+    boolean hasV1Uuid();
+    /**
+     * <code>bytes v1_uuid = 6;</code>
+     * @return The v1Uuid.
+     */
+    com.google.protobuf.ByteString getV1Uuid();
+
+    /**
+     * <code>bytes v2_uuid = 7;</code>
+     * @return Whether the v2Uuid field is set.
+     */
+    boolean hasV2Uuid();
+    /**
+     * <code>bytes v2_uuid = 7;</code>
+     * @return The v2Uuid.
+     */
+    com.google.protobuf.ByteString getV2Uuid();
+
+    li.xiam.uuidhelper.test.Test.Player.VersionedUuidCase getVersionedUuidCase();
   }
   /**
    * Protobuf type {@code uuidhelper.test.Player}
@@ -122,6 +146,48 @@ public final class Test {
       return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               li.xiam.uuidhelper.test.Test.Player.class, li.xiam.uuidhelper.test.Test.Player.Builder.class);
+    }
+
+    private int versionedUuidCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object versionedUuid_;
+    public enum VersionedUuidCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      V1_UUID(6),
+      V2_UUID(7),
+      VERSIONEDUUID_NOT_SET(0);
+      private final int value;
+      private VersionedUuidCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static VersionedUuidCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static VersionedUuidCase forNumber(int value) {
+        switch (value) {
+          case 6: return V1_UUID;
+          case 7: return V2_UUID;
+          case 0: return VERSIONEDUUID_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public VersionedUuidCase
+    getVersionedUuidCase() {
+      return VersionedUuidCase.forNumber(
+          versionedUuidCase_);
     }
 
     public static final int INTERNAL_UUID_FIELD_NUMBER = 1;
@@ -253,6 +319,48 @@ public final class Test {
       return gameUuids_.get(index);
     }
 
+    public static final int V1_UUID_FIELD_NUMBER = 6;
+    /**
+     * <code>bytes v1_uuid = 6;</code>
+     * @return Whether the v1Uuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasV1Uuid() {
+      return versionedUuidCase_ == 6;
+    }
+    /**
+     * <code>bytes v1_uuid = 6;</code>
+     * @return The v1Uuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getV1Uuid() {
+      if (versionedUuidCase_ == 6) {
+        return (com.google.protobuf.ByteString) versionedUuid_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int V2_UUID_FIELD_NUMBER = 7;
+    /**
+     * <code>bytes v2_uuid = 7;</code>
+     * @return Whether the v2Uuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasV2Uuid() {
+      return versionedUuidCase_ == 7;
+    }
+    /**
+     * <code>bytes v2_uuid = 7;</code>
+     * @return The v2Uuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getV2Uuid() {
+      if (versionedUuidCase_ == 7) {
+        return (com.google.protobuf.ByteString) versionedUuid_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -281,6 +389,14 @@ public final class Test {
       }
       for (int i = 0; i < gameUuids_.size(); i++) {
         output.writeBytes(5, gameUuids_.get(i));
+      }
+      if (versionedUuidCase_ == 6) {
+        output.writeBytes(
+            6, (com.google.protobuf.ByteString) versionedUuid_);
+      }
+      if (versionedUuidCase_ == 7) {
+        output.writeBytes(
+            7, (com.google.protobuf.ByteString) versionedUuid_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -314,6 +430,16 @@ public final class Test {
         size += dataSize;
         size += 1 * getGameUuidsList().size();
       }
+      if (versionedUuidCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              6, (com.google.protobuf.ByteString) versionedUuid_);
+      }
+      if (versionedUuidCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              7, (com.google.protobuf.ByteString) versionedUuid_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -339,6 +465,19 @@ public final class Test {
           .equals(other.getStringUuid())) return false;
       if (!getGameUuidsList()
           .equals(other.getGameUuidsList())) return false;
+      if (!getVersionedUuidCase().equals(other.getVersionedUuidCase())) return false;
+      switch (versionedUuidCase_) {
+        case 6:
+          if (!getV1Uuid()
+              .equals(other.getV1Uuid())) return false;
+          break;
+        case 7:
+          if (!getV2Uuid()
+              .equals(other.getV2Uuid())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -361,6 +500,18 @@ public final class Test {
       if (getGameUuidsCount() > 0) {
         hash = (37 * hash) + GAME_UUIDS_FIELD_NUMBER;
         hash = (53 * hash) + getGameUuidsList().hashCode();
+      }
+      switch (versionedUuidCase_) {
+        case 6:
+          hash = (37 * hash) + V1_UUID_FIELD_NUMBER;
+          hash = (53 * hash) + getV1Uuid().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + V2_UUID_FIELD_NUMBER;
+          hash = (53 * hash) + getV2Uuid().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -498,6 +649,8 @@ public final class Test {
         sessionUuid_ = com.google.protobuf.ByteString.EMPTY;
         stringUuid_ = "";
         gameUuids_ = emptyList(com.google.protobuf.ByteString.class);
+        versionedUuidCase_ = 0;
+        versionedUuid_ = null;
         return this;
       }
 
@@ -525,6 +678,7 @@ public final class Test {
       public li.xiam.uuidhelper.test.Test.Player buildPartial() {
         li.xiam.uuidhelper.test.Test.Player result = new li.xiam.uuidhelper.test.Test.Player(this);
         if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
@@ -547,6 +701,11 @@ public final class Test {
           gameUuids_.makeImmutable();
           result.gameUuids_ = gameUuids_;
         }
+      }
+
+      private void buildPartialOneofs(li.xiam.uuidhelper.test.Test.Player result) {
+        result.versionedUuidCase_ = versionedUuidCase_;
+        result.versionedUuid_ = this.versionedUuid_;
       }
 
       @java.lang.Override
@@ -587,6 +746,19 @@ public final class Test {
             gameUuids_.addAll(other.gameUuids_);
           }
           onChanged();
+        }
+        switch (other.getVersionedUuidCase()) {
+          case V1_UUID: {
+            setV1Uuid(other.getV1Uuid());
+            break;
+          }
+          case V2_UUID: {
+            setV2Uuid(other.getV2Uuid());
+            break;
+          }
+          case VERSIONEDUUID_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -640,6 +812,16 @@ public final class Test {
                 gameUuids_.add(v);
                 break;
               } // case 42
+              case 50: {
+                versionedUuid_ = input.readBytes();
+                versionedUuidCase_ = 6;
+                break;
+              } // case 50
+              case 58: {
+                versionedUuid_ = input.readBytes();
+                versionedUuidCase_ = 7;
+                break;
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -655,6 +837,21 @@ public final class Test {
         } // finally
         return this;
       }
+      private int versionedUuidCase_ = 0;
+      private java.lang.Object versionedUuid_;
+      public VersionedUuidCase
+          getVersionedUuidCase() {
+        return VersionedUuidCase.forNumber(
+            versionedUuidCase_);
+      }
+
+      public Builder clearVersionedUuid() {
+        versionedUuidCase_ = 0;
+        versionedUuid_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private com.google.protobuf.ByteString internalUuid_ = com.google.protobuf.ByteString.EMPTY;
@@ -949,6 +1146,90 @@ public final class Test {
         return this;
       }
 
+      /**
+       * <code>bytes v1_uuid = 6;</code>
+       * @return Whether the v1Uuid field is set.
+       */
+      public boolean hasV1Uuid() {
+        return versionedUuidCase_ == 6;
+      }
+      /**
+       * <code>bytes v1_uuid = 6;</code>
+       * @return The v1Uuid.
+       */
+      public com.google.protobuf.ByteString getV1Uuid() {
+        if (versionedUuidCase_ == 6) {
+          return (com.google.protobuf.ByteString) versionedUuid_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <code>bytes v1_uuid = 6;</code>
+       * @param value The v1Uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV1Uuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        versionedUuidCase_ = 6;
+        versionedUuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes v1_uuid = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV1Uuid() {
+        if (versionedUuidCase_ == 6) {
+          versionedUuidCase_ = 0;
+          versionedUuid_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>bytes v2_uuid = 7;</code>
+       * @return Whether the v2Uuid field is set.
+       */
+      public boolean hasV2Uuid() {
+        return versionedUuidCase_ == 7;
+      }
+      /**
+       * <code>bytes v2_uuid = 7;</code>
+       * @return The v2Uuid.
+       */
+      public com.google.protobuf.ByteString getV2Uuid() {
+        if (versionedUuidCase_ == 7) {
+          return (com.google.protobuf.ByteString) versionedUuid_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <code>bytes v2_uuid = 7;</code>
+       * @param value The v2Uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV2Uuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        versionedUuidCase_ = 7;
+        versionedUuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes v2_uuid = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV2Uuid() {
+        if (versionedUuidCase_ == 7) {
+          versionedUuidCase_ = 0;
+          versionedUuid_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:uuidhelper.test.Player)
     }
 
@@ -1014,12 +1295,13 @@ public final class Test {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntest.proto\022\017uuidhelper.test\"p\n\006Player\022" +
-      "\025\n\rinternal_uuid\030\001 \001(\014\022\020\n\010username\030\002 \001(\t" +
-      "\022\024\n\014session_uuid\030\003 \001(\014\022\023\n\013string_uuid\030\004 " +
-      "\001(\t\022\022\n\ngame_uuids\030\005 \003(\014BA\n\027li.xiam.uuidh" +
-      "elper.testP\000Z$xiam.li/uuidhelper/interna" +
-      "l/test/genb\006proto3"
+      "\n\ntest.proto\022\017uuidhelper.test\"\250\001\n\006Player" +
+      "\022\025\n\rinternal_uuid\030\001 \001(\014\022\020\n\010username\030\002 \001(" +
+      "\t\022\024\n\014session_uuid\030\003 \001(\014\022\023\n\013string_uuid\030\004" +
+      " \001(\t\022\022\n\ngame_uuids\030\005 \003(\014\022\021\n\007v1_uuid\030\006 \001(" +
+      "\014H\000\022\021\n\007v2_uuid\030\007 \001(\014H\000B\020\n\016versioned_uuid" +
+      "BA\n\027li.xiam.uuidhelper.testP\000Z$xiam.li/u" +
+      "uidhelper/internal/test/genb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1030,7 +1312,7 @@ public final class Test {
     internal_static_uuidhelper_test_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_uuidhelper_test_Player_descriptor,
-        new java.lang.String[] { "InternalUuid", "Username", "SessionUuid", "StringUuid", "GameUuids", });
+        new java.lang.String[] { "InternalUuid", "Username", "SessionUuid", "StringUuid", "GameUuids", "V1Uuid", "V2Uuid", "VersionedUuid", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

@@ -29,6 +29,7 @@ func (w *goFileWriter) GenerateFileHeader() {
 }
 
 func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen.Field) {
+
 	// original proto field name, e.g. "session_uuid"
 	name := string(field.Desc.Name())
 
@@ -41,6 +42,28 @@ func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen
 	reader := "Get" + camel + "UUID"
 	setter := camel + "Uuid"
 	writer := "Set" + camel + "UUID"
+
+	if oneof := field.Oneof; oneof != nil {
+		oneOfSetter := core.DescriptorToCamelCase(oneof.Desc)
+
+		// read helper
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
+		w.g.P("    if bytes := m.", getter, "(); bytes == nil {")
+		w.g.P("        return uuid.Nil")
+		w.g.P("    } else {")
+		w.g.P("        return uuid.Must(uuid.FromBytes(bytes))")
+		w.g.P("    }")
+		w.g.P("}")
+		w.g.P()
+
+		// write helper
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u uuid.UUID) {")
+		w.g.P("m.", oneOfSetter, " = &", msg.GoIdent, "_", setter, "{", setter, ": u[:]}") // oneof field
+		w.g.P("}")
+		w.g.P()
+
+		return
+	}
 
 	// read helper
 	w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
