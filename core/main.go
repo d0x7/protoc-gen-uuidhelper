@@ -27,11 +27,15 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 	}
 
 	alreadyGenerated := make(map[string]struct{})
-	var generateMessage func(writer UUIDFileWriter, msg *protogen.Message)
-	generateMessage = func(writer UUIDFileWriter, msg *protogen.Message) {
+	var generateMessage func(writer UUIDFileWriter, file *protogen.File, msg *protogen.Message)
+	generateMessage = func(writer UUIDFileWriter, file *protogen.File, msg *protogen.Message) {
+		if msg.Desc.ParentFile() != file.Desc {
+			return
+		}
 		if _, already := alreadyGenerated[string(msg.Desc.Name())]; already {
 			return
 		}
+		alreadyGenerated[string(msg.Desc.Name())] = struct{}{}
 		for _, field := range msg.Fields {
 			if isUUIDField(field) {
 				writer.GenerateSingleField(msg, field)
@@ -40,10 +44,9 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 			} else if isUUIDMap(field) {
 				writer.GenerateMapField(msg, field)
 			} else if isEmbeddedUUIDField(field) {
-				generateMessage(writer, field.Message)
+				generateMessage(writer, file, field.Message)
 			}
 		}
-		alreadyGenerated[string(msg.Desc.Name())] = struct{}{}
 	}
 
 	protogen.Options{
@@ -67,16 +70,8 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 			// Check if the file contains any *_uuid fields
 			var needsGeneration bool
 			for _, msg := range file.Messages {
-				for _, field := range msg.Fields {
-					if isUUIDField(field) {
-						needsGeneration = true
-						break
-					} else if isUUIDsField(field) {
-						needsGeneration = true
-						break
-					}
-				}
-				if needsGeneration {
+				if containsUUIDFields(msg) {
+					needsGeneration = true
 					break
 				}
 			}
@@ -89,13 +84,24 @@ func MainWithFlags(flags *flag.FlagSet, generator UUIDHelperBackend) {
 			writer.GenerateFileHeader()
 
 			for _, msg := range file.Messages {
-				generateMessage(writer, msg)
+				generateMessage(writer, file, msg)
 			}
 
 			writer.Close()
 		}
 		return nil
 	})
+}
+
+func containsUUIDFields(msg *protogen.Message) bool {
+	for _, field := range msg.Fields {
+		if isUUIDField(field) || isUUIDsField(field) || isUUIDMap(field) /* || isEmbeddedUUIDField(field)*/ {
+			return true
+		} else if isEmbeddedUUIDField(field) && msg.Desc.ParentFile() == field.Message.Desc.ParentFile() {
+			return containsUUIDFields(field.Message)
+		}
+	}
+	return false
 }
 
 func isUUIDMap(field *protogen.Field) bool {
