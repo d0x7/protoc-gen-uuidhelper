@@ -162,7 +162,7 @@ func (w *goFileWriter) GenerateMapField(msg *protogen.Message, field *protogen.F
 	if strings.HasSuffix(name, "_uuids") {
 		methodName = core.SnakeToCamelCase(strings.TrimSuffix(name, "_uuids")) + "UUIDs"
 	} else {
-		methodName = core.SnakeToCamelCase(strings.TrimSuffix(name, "_uuids")) + "UUID"
+		methodName = core.SnakeToCamelCase(strings.TrimSuffix(name, "_uuid")) + "UUID"
 	}
 
 	accessor := "m." + core.DescriptorToCamelCase(field.Desc)
