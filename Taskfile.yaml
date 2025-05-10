@@ -57,19 +57,32 @@ tasks:
     deps:
       - install-go
       - install-kotlin
+  clean-go:
+    desc: Clean up generated Go files
+    cmd: fd -g '*.pb.go' internal/test/gen/go -x rm {}
+  clean-kotlin:
+    desc: Clean up generated Kotlin files
+    cmd: fd . -e kt -e java internal/test/gen/kotlin -x rm {}
+  clean:
+    desc: Clean up generated files
+    deps:
+      - clean-go
+      - clean-kotlin
+  proto-go:
+    desc: Generate Go protobuf files
+    cmd: fd -t f -e proto -0 | xargs -0 protoc -I internal/test --go_out=internal/test/gen/go --go_opt=paths=source_relative --uuidhelper-go_out=internal/test/gen/go --uuidhelper-go_opt=paths=source_relative
+  proto-kotlin:
+    desc: Generate Kotlin protobuf files
+    cmd: fd -t f -e proto -0 | xargs -0 protoc -I internal/test --java_out=internal/test/gen/kotlin --kotlin_out=internal/test/gen/kotlin --plugin=./protoc-gen-uuidhelper-kotlin --uuidhelper-kotlin_out=internal/test/gen/kotlin --uuidhelper-kotlin_opt=paths=source_relative,threadLocalBuffer=false
   proto:
     desc: Generate protobuf files
     deps:
-      - build-go
-      - build-kotlin
-    cmds:
-      - rm -rf internal/test/gen
-      - mkdir -p internal/test/gen/go internal/test/gen/kotlin
-      - fd -t f -e proto . internal/test -x protoc -I internal/test --go_out=internal/test/gen/go --go_opt=paths=source_relative --plugin=./protoc-gen-uuidhelper-go --uuidhelper-go_out=internal/test/gen/go --uuidhelper-go_opt=paths=source_relative {}
-      - fd -t f -e proto . internal/test -x protoc -I internal/test --java_out=internal/test/gen/kotlin --kotlin_out=internal/test/gen/kotlin --plugin=./protoc-gen-uuidhelper-kotlin --uuidhelper-kotlin_out=internal/test/gen/kotlin --uuidhelper-kotlin_opt=paths=source_relative,threadLocalBuffer=false {}
+      - clean
+      - proto-go
+      - proto-kotlin
   test-go:
     desc: Run tests
     deps:
-      - proto
+      - proto-go
     cmds:
       - go test -parallel 8 -v ./...
