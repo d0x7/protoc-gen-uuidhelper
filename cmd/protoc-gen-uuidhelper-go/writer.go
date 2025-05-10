@@ -7,6 +7,14 @@ import (
 	"xiam.li/uuidhelper/core"
 )
 
+var (
+	uuidPkg       = protogen.GoImportPath("github.com/google/uuid")
+	uuidMust      = uuidPkg.Ident("Must")
+	uuidFromBytes = uuidPkg.Ident("FromBytes")
+	uuidIdent     = uuidPkg.Ident("UUID")
+	nilIdent      = uuidPkg.Ident("Nil")
+)
+
 type goFileWriter struct {
 	gen  *protogen.Plugin
 	file *protogen.File
@@ -25,8 +33,6 @@ func (w *goFileWriter) GenerateFileHeader() {
 	}
 	w.g.P()
 	w.g.P("package ", w.file.GoPackageName)
-	w.g.P()
-	w.g.P("import \"github.com/google/uuid\"")
 }
 
 func (w *goFileWriter) GenerateSingleField(msg *protogen.Message, field *protogen.Field) {
@@ -46,17 +52,17 @@ func (w *goFileWriter) GenerateSingleField(msg *protogen.Message, field *protoge
 
 	if field.Desc.HasOptionalKeyword() { // optional field
 		// read helper
-		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() ", uuidIdent, " {")
 		w.g.P("    if bytes := m.", getter, "(); bytes == nil {")
-		w.g.P("        return uuid.Nil")
+		w.g.P("        return ", nilIdent, "")
 		w.g.P("    } else {")
-		w.g.P("        return uuid.Must(uuid.FromBytes(bytes))")
+		w.g.P("        return ", uuidMust, "(", uuidFromBytes, "(bytes))")
 		w.g.P("    }")
 		w.g.P("}")
 		w.g.P()
 
 		// write helper
-		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u uuid.UUID) {")
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u ", uuidIdent, ") {")
 		w.g.P("    m.", setter, " = u[:]")
 		w.g.P("}")
 		w.g.P()
@@ -64,29 +70,29 @@ func (w *goFileWriter) GenerateSingleField(msg *protogen.Message, field *protoge
 		oneOfSetter := core.DescriptorToCamelCase(oneof.Desc)
 
 		// read helper
-		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() ", uuidIdent, " {")
 		w.g.P("    if bytes := m.", getter, "(); bytes == nil {")
-		w.g.P("        return uuid.Nil")
+		w.g.P("        return ", nilIdent, "")
 		w.g.P("    } else {")
-		w.g.P("        return uuid.Must(uuid.FromBytes(bytes))")
+		w.g.P("        return ", uuidMust, "(", uuidFromBytes, "(bytes))")
 		w.g.P("    }")
 		w.g.P("}")
 		w.g.P()
 
 		// write helper
-		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u uuid.UUID) {")
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u ", uuidIdent, ") {")
 		w.g.P("m.", oneOfSetter, " = &", msg.GoIdent, "_", setter, "{", setter, ": u[:]}") // oneof field
 		w.g.P("}")
 		w.g.P()
 	} else { // Not an optional or an oneof field
 		// read helper
-		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
-		w.g.P("    return uuid.Must(uuid.FromBytes(m.", getter, "()))")
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() ", uuidIdent, " {")
+		w.g.P("    return ", uuidMust, "(", uuidFromBytes, "(m.", getter, "()))")
 		w.g.P("}")
 		w.g.P()
 
 		// write helper
-		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u uuid.UUID) {")
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u ", uuidIdent, ") {")
 		w.g.P("    m.", setter, " = u[:]")
 		w.g.P("}")
 		w.g.P()
@@ -109,24 +115,24 @@ func (w *goFileWriter) GenerateListField(msg *protogen.Message, field *protogen.
 	adder := "Add" + camel + "UUIDs"
 
 	// read helper
-	w.g.P("func (m *", msg.GoIdent, ") ", reader, "() []uuid.UUID {")
+	w.g.P("func (m *", msg.GoIdent, ") ", reader, "() []", uuidIdent, " {")
 	w.g.P("uuids := m.", getter, "()")
 	w.g.P("if len(uuids) == 0 {")
 	w.g.P("return nil")
 	w.g.P("}")
-	w.g.P("uuidsSlice := make([]uuid.UUID, len(uuids))")
+	w.g.P("uuidsSlice := make([]", uuidIdent, ", len(uuids))")
 	w.g.P("for i, uid := range uuids {")
 	w.g.P("if len(uid) != 16 {")
 	w.g.P("return nil")
 	w.g.P("}")
-	w.g.P("uuidsSlice[i] = uuid.Must(uuid.FromBytes(uid))")
+	w.g.P("uuidsSlice[i] = ", uuidMust, "(", uuidFromBytes, "(uid))")
 	w.g.P("}")
 	w.g.P("return uuidsSlice")
 	w.g.P("}")
 	w.g.P()
 
 	// write helper
-	w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u []uuid.UUID) {")
+	w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u []", uuidIdent, ") {")
 	w.g.P("if len(u) == 0 {")
 	w.g.P("m.", setter, " = nil")
 	w.g.P("return")
@@ -139,7 +145,7 @@ func (w *goFileWriter) GenerateListField(msg *protogen.Message, field *protogen.
 	w.g.P("}")
 	w.g.P()
 
-	w.g.P("func (m *", msg.GoIdent, ") ", adder, "(u ...uuid.UUID) {")
+	w.g.P("func (m *", msg.GoIdent, ") ", adder, "(u ...", uuidIdent, ") {")
 	w.g.P("if m.", setter, " == nil {")
 	w.g.P("m.", setter, " = make([][]byte, 0, len(u))")
 	w.g.P("}")
@@ -163,23 +169,23 @@ func (w *goFileWriter) GenerateMapField(msg *protogen.Message, field *protogen.F
 	keyGoType := w.mapKeyGoType(field)
 
 	// read helper
-	w.g.P("func (m *", msg.GoIdent, ") Get", methodName, "() map[", keyGoType, "]uuid.UUID {")
+	w.g.P("func (m *", msg.GoIdent, ") Get", methodName, "() map[", keyGoType, "]", uuidIdent, " {")
 	w.g.P("    if ", accessor, " == nil {")
 	w.g.P("        return nil")
 	w.g.P("    }")
-	w.g.P("    uuids := make(map[", keyGoType, "]uuid.UUID, len(", accessor, "))")
+	w.g.P("    uuids := make(map[", keyGoType, "]", uuidIdent, ", len(", accessor, "))")
 	w.g.P("    for k, v := range ", accessor, " {")
 	w.g.P("        if len(v) != 16 {")
 	w.g.P("            return nil")
 	w.g.P("        }")
-	w.g.P("        uuids[k] = uuid.Must(uuid.FromBytes(v))")
+	w.g.P("        uuids[k] = ", uuidMust, "(", uuidFromBytes, "(v))")
 	w.g.P("    }")
 	w.g.P("    return uuids")
 	w.g.P("}")
 	w.g.P()
 
 	// write helper
-	w.g.P("func (m *", msg.GoIdent, ") Set", methodName, "(u map[", keyGoType, "]uuid.UUID) {")
+	w.g.P("func (m *", msg.GoIdent, ") Set", methodName, "(u map[", keyGoType, "]", uuidIdent, ") {")
 	w.g.P("    if len(u) == 0 {")
 	w.g.P("        ", accessor, " = nil")
 	w.g.P("        return")
