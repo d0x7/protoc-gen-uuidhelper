@@ -2,8 +2,17 @@ package main
 
 import (
 	"google.golang.org/protobuf/compiler/protogen"
+	"google.golang.org/protobuf/reflect/protoreflect"
 	"strings"
 	"xiam.li/uuidhelper/core"
+)
+
+var (
+	uuidPkg       = protogen.GoImportPath("github.com/google/uuid")
+	uuidMust      = uuidPkg.Ident("Must")
+	uuidFromBytes = uuidPkg.Ident("FromBytes")
+	uuidIdent     = uuidPkg.Ident("UUID")
+	nilIdent      = uuidPkg.Ident("Nil")
 )
 
 type goFileWriter struct {
@@ -24,11 +33,10 @@ func (w *goFileWriter) GenerateFileHeader() {
 	}
 	w.g.P()
 	w.g.P("package ", w.file.GoPackageName)
-	w.g.P()
-	w.g.P("import \"github.com/google/uuid\"")
 }
 
-func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen.Field) {
+func (w *goFileWriter) GenerateSingleField(msg *protogen.Message, field *protogen.Field) {
+
 	// original proto field name, e.g. "session_uuid"
 	name := string(field.Desc.Name())
 
@@ -42,20 +50,56 @@ func (w *goFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen
 	setter := camel + "Uuid"
 	writer := "Set" + camel + "UUID"
 
-	// read helper
-	w.g.P("func (m *", msg.GoIdent, ") ", reader, "() uuid.UUID {")
-	w.g.P("    return uuid.Must(uuid.FromBytes(m.", getter, "()))")
-	w.g.P("}")
-	w.g.P()
+	if field.Desc.HasOptionalKeyword() { // optional field
+		// read helper
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() ", uuidIdent, " {")
+		w.g.P("    if bytes := m.", getter, "(); bytes == nil {")
+		w.g.P("        return ", nilIdent, "")
+		w.g.P("    } else {")
+		w.g.P("        return ", uuidMust, "(", uuidFromBytes, "(bytes))")
+		w.g.P("    }")
+		w.g.P("}")
+		w.g.P()
 
-	// write helper
-	w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u uuid.UUID) {")
-	w.g.P("    m.", setter, " = u[:]")
-	w.g.P("}")
-	w.g.P()
+		// write helper
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u ", uuidIdent, ") {")
+		w.g.P("    m.", setter, " = u[:]")
+		w.g.P("}")
+		w.g.P()
+	} else if oneof := field.Oneof; oneof != nil { // oneof field
+		oneOfSetter := core.DescriptorToCamelCase(oneof.Desc)
+
+		// read helper
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() ", uuidIdent, " {")
+		w.g.P("    if bytes := m.", getter, "(); bytes == nil {")
+		w.g.P("        return ", nilIdent, "")
+		w.g.P("    } else {")
+		w.g.P("        return ", uuidMust, "(", uuidFromBytes, "(bytes))")
+		w.g.P("    }")
+		w.g.P("}")
+		w.g.P()
+
+		// write helper
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u ", uuidIdent, ") {")
+		w.g.P("m.", oneOfSetter, " = &", msg.GoIdent, "_", setter, "{", setter, ": u[:]}") // oneof field
+		w.g.P("}")
+		w.g.P()
+	} else { // Not an optional or an oneof field
+		// read helper
+		w.g.P("func (m *", msg.GoIdent, ") ", reader, "() ", uuidIdent, " {")
+		w.g.P("    return ", uuidMust, "(", uuidFromBytes, "(m.", getter, "()))")
+		w.g.P("}")
+		w.g.P()
+
+		// write helper
+		w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u ", uuidIdent, ") {")
+		w.g.P("    m.", setter, " = u[:]")
+		w.g.P("}")
+		w.g.P()
+	}
 }
 
-func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protogen.Field) {
+func (w *goFileWriter) GenerateListField(msg *protogen.Message, field *protogen.Field) {
 	// original proto field name, e.g. "game_uuids"
 	name := string(field.Desc.Name())
 
@@ -71,24 +115,24 @@ func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protoge
 	adder := "Add" + camel + "UUIDs"
 
 	// read helper
-	w.g.P("func (m *", msg.GoIdent, ") ", reader, "() []uuid.UUID {")
+	w.g.P("func (m *", msg.GoIdent, ") ", reader, "() []", uuidIdent, " {")
 	w.g.P("uuids := m.", getter, "()")
 	w.g.P("if len(uuids) == 0 {")
 	w.g.P("return nil")
 	w.g.P("}")
-	w.g.P("uuidsSlice := make([]uuid.UUID, len(uuids))")
+	w.g.P("uuidsSlice := make([]", uuidIdent, ", len(uuids))")
 	w.g.P("for i, uid := range uuids {")
 	w.g.P("if len(uid) != 16 {")
 	w.g.P("return nil")
 	w.g.P("}")
-	w.g.P("uuidsSlice[i] = uuid.Must(uuid.FromBytes(uid))")
+	w.g.P("uuidsSlice[i] = ", uuidMust, "(", uuidFromBytes, "(uid))")
 	w.g.P("}")
 	w.g.P("return uuidsSlice")
 	w.g.P("}")
 	w.g.P()
 
 	// write helper
-	w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u []uuid.UUID) {")
+	w.g.P("func (m *", msg.GoIdent, ") ", writer, "(u []", uuidIdent, ") {")
 	w.g.P("if len(u) == 0 {")
 	w.g.P("m.", setter, " = nil")
 	w.g.P("return")
@@ -101,7 +145,7 @@ func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protoge
 	w.g.P("}")
 	w.g.P()
 
-	w.g.P("func (m *", msg.GoIdent, ") ", adder, "(u ...uuid.UUID) {")
+	w.g.P("func (m *", msg.GoIdent, ") ", adder, "(u ...", uuidIdent, ") {")
 	w.g.P("if m.", setter, " == nil {")
 	w.g.P("m.", setter, " = make([][]byte, 0, len(u))")
 	w.g.P("}")
@@ -110,6 +154,69 @@ func (w *goFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protoge
 	w.g.P("}")
 	w.g.P("}")
 	w.g.P()
+}
+
+func (w *goFileWriter) GenerateMapField(msg *protogen.Message, field *protogen.Field) {
+	var methodName string
+	name := string(field.Desc.Name())
+	if strings.HasSuffix(name, "_uuids") {
+		methodName = core.SnakeToCamelCase(strings.TrimSuffix(name, "_uuids")) + "UUIDs"
+	} else {
+		methodName = core.SnakeToCamelCase(strings.TrimSuffix(name, "_uuid")) + "UUID"
+	}
+
+	accessor := "m." + core.DescriptorToCamelCase(field.Desc)
+	keyGoType := w.mapKeyGoType(field)
+
+	// read helper
+	w.g.P("func (m *", msg.GoIdent, ") Get", methodName, "() map[", keyGoType, "]", uuidIdent, " {")
+	w.g.P("    if ", accessor, " == nil {")
+	w.g.P("        return nil")
+	w.g.P("    }")
+	w.g.P("    uuids := make(map[", keyGoType, "]", uuidIdent, ", len(", accessor, "))")
+	w.g.P("    for k, v := range ", accessor, " {")
+	w.g.P("        if len(v) != 16 {")
+	w.g.P("            return nil")
+	w.g.P("        }")
+	w.g.P("        uuids[k] = ", uuidMust, "(", uuidFromBytes, "(v))")
+	w.g.P("    }")
+	w.g.P("    return uuids")
+	w.g.P("}")
+	w.g.P()
+
+	// write helper
+	w.g.P("func (m *", msg.GoIdent, ") Set", methodName, "(u map[", keyGoType, "]", uuidIdent, ") {")
+	w.g.P("    if len(u) == 0 {")
+	w.g.P("        ", accessor, " = nil")
+	w.g.P("        return")
+	w.g.P("    }")
+	w.g.P("    protoMap := make(map[", keyGoType, "][]byte, len(u))")
+	w.g.P("    for k, uid := range u {")
+	w.g.P("        protoMap[k] = uid[:]")
+	w.g.P("    }")
+	w.g.P("    ", accessor, " = protoMap")
+	w.g.P("}")
+	w.g.P()
+}
+
+// mapKeyGoType returns the Go type for a protobuf map key
+func (w *goFileWriter) mapKeyGoType(field *protogen.Field) string {
+	key := field.Desc.MapKey()
+	switch key.Kind() {
+	case protoreflect.Int32Kind, protoreflect.Sint32Kind, protoreflect.Sfixed32Kind:
+		return "int32"
+	case protoreflect.Uint32Kind, protoreflect.Fixed32Kind:
+		return "uint32"
+	case protoreflect.Int64Kind, protoreflect.Sint64Kind, protoreflect.Sfixed64Kind:
+		return "int64"
+	case protoreflect.Uint64Kind, protoreflect.Fixed64Kind:
+		return "uint64"
+	case protoreflect.BoolKind:
+		return "bool"
+	default:
+		// Fallback for unexpected types
+		return "string"
+	}
 }
 
 func (w *goFileWriter) Close() {}

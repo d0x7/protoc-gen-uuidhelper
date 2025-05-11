@@ -69,7 +69,7 @@ func (w *kotlinFileWriter) GenerateFileHeader() {
 	w.g.P()
 }
 
-func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *protogen.Field) {
+func (w *kotlinFileWriter) GenerateSingleField(msg *protogen.Message, field *protogen.Field) {
 	// original proto field name, e.g. "session_uuid"
 	name := string(field.Desc.Name())
 
@@ -86,6 +86,8 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 
 	javaImport := toJavaImport(msg)
 
+	isOneOf := field.Oneof != nil
+
 	// DSL
 
 	// class.baseUUID read-only property
@@ -95,11 +97,25 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 	w.g.P(" * When getting, converts the underlying ByteString to a UUID.")
 	w.g.P(" * When setting, converts the UUID to a ByteString for Protobuf.")
 	w.g.P(" */")
-	w.g.P("var ", javaImport.KtSubClass, ".Dsl.", methodName, ": UUID")
-	w.g.P("    get() = byteStringToUUID(this.", property, ")")
-	w.g.P("    set(value) {")
-	w.g.P("        this.", property, " = uuidToByteString(value)")
-	w.g.P("    }")
+	if !isOneOf {
+		w.g.P("var ", javaImport.KtSubClass, ".Dsl.", methodName, ": UUID")
+		w.g.P("    get() = byteStringToUUID(this.", property, ")")
+		w.g.P("    set(value) {")
+		w.g.P("        this.", property, " = uuidToByteString(value)")
+		w.g.P("    }")
+	} else {
+		w.g.P("var ", javaImport.KtSubClass, ".Dsl.", methodName, ": UUID?")
+		w.g.P("    get() {")
+		w.g.P("        if (this.has", core.SnakeToPascalCase(property), "()) {")
+		w.g.P("            return null")
+		w.g.P("        }")
+		w.g.P("        return byteStringToUUID(this.", property, ")")
+		w.g.P("    }")
+		w.g.P("    set(value) {")
+		w.g.P("        require(value != null) { \"", base, "UUID cannot be null\" }")
+		w.g.P("        this.", property, " = uuidToByteString(value)")
+		w.g.P("    }")
+	}
 	w.g.P()
 
 	// Java Accessor
@@ -110,12 +126,23 @@ func (w *kotlinFileWriter) GenerateUUIDHelper(msg *protogen.Message, field *prot
 	w.g.P(" *")
 	w.g.P(" * Converts the underlying ByteString to a UUID.")
 	w.g.P(" */")
-	w.g.P("val ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, ": UUID")
-	w.g.P("	get() = byteStringToUUID(this.", property, ")")
+	if !isOneOf {
+		w.g.P("val ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, ": UUID")
+		w.g.P("	get() = byteStringToUUID(this.", property, ")")
+	} else {
+		w.g.P("val ", javaImport.Class, ".", javaImport.SubClass, ".", methodName, ": UUID?")
+		w.g.P("    get() {")
+		w.g.P("        if (this.has", core.SnakeToPascalCase(property), "()) {")
+		w.g.P("            return null")
+		w.g.P("        }")
+		w.g.P("        return byteStringToUUID(this.", property, ")")
+		w.g.P("    }")
+	}
 	w.g.P()
+
 }
 
-func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *protogen.Field) {
+func (w *kotlinFileWriter) GenerateListField(msg *protogen.Message, field *protogen.Field) {
 	// original proto field name, e.g. "game_uuids"
 	name := string(field.Desc.Name())
 
@@ -244,6 +271,11 @@ func (w *kotlinFileWriter) GenerateUUIDsHelper(msg *protogen.Message, field *pro
 	w.g.P("	}")
 	w.g.P("	return byteStringToUUID(this.", property, "List[index])")
 	w.g.P("}")
+	w.g.P()
+}
+
+func (w *kotlinFileWriter) GenerateMapField(msg *protogen.Message, field *protogen.Field) {
+	w.g.P("// Field '", field.Desc.Name(), "': Maps is not supported in Kotlin yet.")
 	w.g.P()
 }
 

@@ -30,6 +30,10 @@ public final class Test {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Single UUIDs
+     * </pre>
+     *
      * <code>bytes internal_uuid = 1;</code>
      * @return The internalUuid.
      */
@@ -66,21 +70,957 @@ public final class Test {
         getStringUuidBytes();
 
     /**
+     * <pre>
+     * List UUIDs
+     * </pre>
+     *
      * <code>repeated bytes game_uuids = 5;</code>
      * @return A list containing the gameUuids.
      */
     java.util.List<com.google.protobuf.ByteString> getGameUuidsList();
     /**
+     * <pre>
+     * List UUIDs
+     * </pre>
+     *
      * <code>repeated bytes game_uuids = 5;</code>
      * @return The count of gameUuids.
      */
     int getGameUuidsCount();
     /**
+     * <pre>
+     * List UUIDs
+     * </pre>
+     *
      * <code>repeated bytes game_uuids = 5;</code>
      * @param index The index of the element to return.
      * @return The gameUuids at the given index.
      */
     com.google.protobuf.ByteString getGameUuids(int index);
+
+    /**
+     * <code>bytes v1_uuid = 6;</code>
+     * @return Whether the v1Uuid field is set.
+     */
+    boolean hasV1Uuid();
+    /**
+     * <code>bytes v1_uuid = 6;</code>
+     * @return The v1Uuid.
+     */
+    com.google.protobuf.ByteString getV1Uuid();
+
+    /**
+     * <code>bytes v2_uuid = 7;</code>
+     * @return Whether the v2Uuid field is set.
+     */
+    boolean hasV2Uuid();
+    /**
+     * <code>bytes v2_uuid = 7;</code>
+     * @return The v2Uuid.
+     */
+    com.google.protobuf.ByteString getV2Uuid();
+
+    /**
+     * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+     * @return Whether the nested field is set.
+     */
+    boolean hasNested();
+    /**
+     * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+     * @return The nested.
+     */
+    li.xiam.uuidhelper.test.Test.Player.NestedMsg getNested();
+    /**
+     * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+     */
+    li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder getNestedOrBuilder();
+
+    /**
+     * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+     * @return Whether the optionalNested field is set.
+     */
+    boolean hasOptionalNested();
+    /**
+     * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+     * @return The optionalNested.
+     */
+    li.xiam.uuidhelper.test.Test.Player.NestedMsg getOptionalNested();
+    /**
+     * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+     */
+    li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder getOptionalNestedOrBuilder();
+
+    /**
+     * <pre>
+     * Optional UUID
+     * </pre>
+     *
+     * <code>optional bytes opt_uuid = 10;</code>
+     * @return Whether the optUuid field is set.
+     */
+    boolean hasOptUuid();
+    /**
+     * <pre>
+     * Optional UUID
+     * </pre>
+     *
+     * <code>optional bytes opt_uuid = 10;</code>
+     * @return The optUuid.
+     */
+    com.google.protobuf.ByteString getOptUuid();
+
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    int getMapInt32UuidCount();
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    boolean containsMapInt32Uuid(
+        int key);
+    /**
+     * Use {@link #getMapInt32UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapInt32Uuid();
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapInt32UuidMap();
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapInt32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    com.google.protobuf.ByteString getMapInt32UuidOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    int getMapInt64UuidCount();
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    boolean containsMapInt64Uuid(
+        long key);
+    /**
+     * Use {@link #getMapInt64UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapInt64Uuid();
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapInt64UuidMap();
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapInt64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    com.google.protobuf.ByteString getMapInt64UuidOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    int getMapUint32UuidCount();
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    boolean containsMapUint32Uuid(
+        int key);
+    /**
+     * Use {@link #getMapUint32UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapUint32Uuid();
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapUint32UuidMap();
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapUint32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    com.google.protobuf.ByteString getMapUint32UuidOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    int getMapUint64UuidCount();
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    boolean containsMapUint64Uuid(
+        long key);
+    /**
+     * Use {@link #getMapUint64UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapUint64Uuid();
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapUint64UuidMap();
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapUint64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    com.google.protobuf.ByteString getMapUint64UuidOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    int getMapSint32UuidCount();
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    boolean containsMapSint32Uuid(
+        int key);
+    /**
+     * Use {@link #getMapSint32UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapSint32Uuid();
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapSint32UuidMap();
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapSint32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    com.google.protobuf.ByteString getMapSint32UuidOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    int getMapSint64UuidCount();
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    boolean containsMapSint64Uuid(
+        long key);
+    /**
+     * Use {@link #getMapSint64UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapSint64Uuid();
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapSint64UuidMap();
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapSint64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    com.google.protobuf.ByteString getMapSint64UuidOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    int getMapFixed32UuidCount();
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    boolean containsMapFixed32Uuid(
+        int key);
+    /**
+     * Use {@link #getMapFixed32UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapFixed32Uuid();
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapFixed32UuidMap();
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapFixed32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    com.google.protobuf.ByteString getMapFixed32UuidOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    int getMapFixed64UuidCount();
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    boolean containsMapFixed64Uuid(
+        long key);
+    /**
+     * Use {@link #getMapFixed64UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapFixed64Uuid();
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapFixed64UuidMap();
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapFixed64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    com.google.protobuf.ByteString getMapFixed64UuidOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    int getMapSfixed32UuidCount();
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    boolean containsMapSfixed32Uuid(
+        int key);
+    /**
+     * Use {@link #getMapSfixed32UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapSfixed32Uuid();
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapSfixed32UuidMap();
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapSfixed32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    com.google.protobuf.ByteString getMapSfixed32UuidOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    int getMapSfixed64UuidCount();
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    boolean containsMapSfixed64Uuid(
+        long key);
+    /**
+     * Use {@link #getMapSfixed64UuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapSfixed64Uuid();
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapSfixed64UuidMap();
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapSfixed64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    com.google.protobuf.ByteString getMapSfixed64UuidOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    int getMapBoolUuidCount();
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    boolean containsMapBoolUuid(
+        boolean key);
+    /**
+     * Use {@link #getMapBoolUuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString>
+    getMapBoolUuid();
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString>
+    getMapBoolUuidMap();
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapBoolUuidOrDefault(
+        boolean key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    com.google.protobuf.ByteString getMapBoolUuidOrThrow(
+        boolean key);
+
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    int getMapStringUuidCount();
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    boolean containsMapStringUuid(
+        java.lang.String key);
+    /**
+     * Use {@link #getMapStringUuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getMapStringUuid();
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getMapStringUuidMap();
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapStringUuidOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    com.google.protobuf.ByteString getMapStringUuidOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    int getMapInt32UuidsCount();
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    boolean containsMapInt32Uuids(
+        int key);
+    /**
+     * Use {@link #getMapInt32UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapInt32Uuids();
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapInt32UuidsMap();
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapInt32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    com.google.protobuf.ByteString getMapInt32UuidsOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    int getMapInt64UuidsCount();
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    boolean containsMapInt64Uuids(
+        long key);
+    /**
+     * Use {@link #getMapInt64UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapInt64Uuids();
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapInt64UuidsMap();
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapInt64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    com.google.protobuf.ByteString getMapInt64UuidsOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    int getMapUint32UuidsCount();
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    boolean containsMapUint32Uuids(
+        int key);
+    /**
+     * Use {@link #getMapUint32UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapUint32Uuids();
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapUint32UuidsMap();
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapUint32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    com.google.protobuf.ByteString getMapUint32UuidsOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    int getMapUint64UuidsCount();
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    boolean containsMapUint64Uuids(
+        long key);
+    /**
+     * Use {@link #getMapUint64UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapUint64Uuids();
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapUint64UuidsMap();
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapUint64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    com.google.protobuf.ByteString getMapUint64UuidsOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    int getMapSint32UuidsCount();
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    boolean containsMapSint32Uuids(
+        int key);
+    /**
+     * Use {@link #getMapSint32UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapSint32Uuids();
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapSint32UuidsMap();
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapSint32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    com.google.protobuf.ByteString getMapSint32UuidsOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    int getMapSint64UuidsCount();
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    boolean containsMapSint64Uuids(
+        long key);
+    /**
+     * Use {@link #getMapSint64UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapSint64Uuids();
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapSint64UuidsMap();
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapSint64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    com.google.protobuf.ByteString getMapSint64UuidsOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    int getMapFixed32UuidsCount();
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    boolean containsMapFixed32Uuids(
+        int key);
+    /**
+     * Use {@link #getMapFixed32UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapFixed32Uuids();
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapFixed32UuidsMap();
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapFixed32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    com.google.protobuf.ByteString getMapFixed32UuidsOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    int getMapFixed64UuidsCount();
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    boolean containsMapFixed64Uuids(
+        long key);
+    /**
+     * Use {@link #getMapFixed64UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapFixed64Uuids();
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapFixed64UuidsMap();
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapFixed64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    com.google.protobuf.ByteString getMapFixed64UuidsOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    int getMapSfixed32UuidsCount();
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    boolean containsMapSfixed32Uuids(
+        int key);
+    /**
+     * Use {@link #getMapSfixed32UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapSfixed32Uuids();
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+    getMapSfixed32UuidsMap();
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapSfixed32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    com.google.protobuf.ByteString getMapSfixed32UuidsOrThrow(
+        int key);
+
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    int getMapSfixed64UuidsCount();
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    boolean containsMapSfixed64Uuids(
+        long key);
+    /**
+     * Use {@link #getMapSfixed64UuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapSfixed64Uuids();
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+    getMapSfixed64UuidsMap();
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapSfixed64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    com.google.protobuf.ByteString getMapSfixed64UuidsOrThrow(
+        long key);
+
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    int getMapBoolUuidsCount();
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    boolean containsMapBoolUuids(
+        boolean key);
+    /**
+     * Use {@link #getMapBoolUuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString>
+    getMapBoolUuids();
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString>
+    getMapBoolUuidsMap();
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapBoolUuidsOrDefault(
+        boolean key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    com.google.protobuf.ByteString getMapBoolUuidsOrThrow(
+        boolean key);
+
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    int getMapStringUuidsCount();
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    boolean containsMapStringUuids(
+        java.lang.String key);
+    /**
+     * Use {@link #getMapStringUuidsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getMapStringUuids();
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getMapStringUuidsMap();
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapStringUuidsOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    com.google.protobuf.ByteString getMapStringUuidsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>.uuidhelper.test.Child child = 35;</code>
+     * @return Whether the child field is set.
+     */
+    boolean hasChild();
+    /**
+     * <code>.uuidhelper.test.Child child = 35;</code>
+     * @return The child.
+     */
+    li.xiam.uuidhelper.test.Test.Child getChild();
+    /**
+     * <code>.uuidhelper.test.Child child = 35;</code>
+     */
+    li.xiam.uuidhelper.test.Test.ChildOrBuilder getChildOrBuilder();
+
+    li.xiam.uuidhelper.test.Test.Player.VersionedUuidCase getVersionedUuidCase();
   }
   /**
    * Protobuf type {@code uuidhelper.test.Player}
@@ -109,6 +1049,7 @@ public final class Test {
       sessionUuid_ = com.google.protobuf.ByteString.EMPTY;
       stringUuid_ = "";
       gameUuids_ = emptyList(com.google.protobuf.ByteString.class);
+      optUuid_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -116,6 +1057,64 @@ public final class Test {
       return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+        int number) {
+      switch (number) {
+        case 11:
+          return internalGetMapInt32Uuid();
+        case 12:
+          return internalGetMapInt64Uuid();
+        case 13:
+          return internalGetMapUint32Uuid();
+        case 14:
+          return internalGetMapUint64Uuid();
+        case 15:
+          return internalGetMapSint32Uuid();
+        case 16:
+          return internalGetMapSint64Uuid();
+        case 17:
+          return internalGetMapFixed32Uuid();
+        case 18:
+          return internalGetMapFixed64Uuid();
+        case 19:
+          return internalGetMapSfixed32Uuid();
+        case 20:
+          return internalGetMapSfixed64Uuid();
+        case 21:
+          return internalGetMapBoolUuid();
+        case 22:
+          return internalGetMapStringUuid();
+        case 23:
+          return internalGetMapInt32Uuids();
+        case 24:
+          return internalGetMapInt64Uuids();
+        case 25:
+          return internalGetMapUint32Uuids();
+        case 26:
+          return internalGetMapUint64Uuids();
+        case 27:
+          return internalGetMapSint32Uuids();
+        case 28:
+          return internalGetMapSint64Uuids();
+        case 29:
+          return internalGetMapFixed32Uuids();
+        case 30:
+          return internalGetMapFixed64Uuids();
+        case 31:
+          return internalGetMapSfixed32Uuids();
+        case 32:
+          return internalGetMapSfixed64Uuids();
+        case 33:
+          return internalGetMapBoolUuids();
+        case 34:
+          return internalGetMapStringUuids();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -124,9 +1123,499 @@ public final class Test {
               li.xiam.uuidhelper.test.Test.Player.class, li.xiam.uuidhelper.test.Test.Player.Builder.class);
     }
 
+    public interface NestedMsgOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:uuidhelper.test.Player.NestedMsg)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bytes nested_uuid = 1;</code>
+       * @return The nestedUuid.
+       */
+      com.google.protobuf.ByteString getNestedUuid();
+    }
+    /**
+     * <pre>
+     * Nested UUID
+     * </pre>
+     *
+     * Protobuf type {@code uuidhelper.test.Player.NestedMsg}
+     */
+    public static final class NestedMsg extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:uuidhelper.test.Player.NestedMsg)
+        NestedMsgOrBuilder {
+    private static final long serialVersionUID = 0L;
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 29,
+          /* patch= */ 3,
+          /* suffix= */ "",
+          NestedMsg.class.getName());
+      }
+      // Use NestedMsg.newBuilder() to construct.
+      private NestedMsg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private NestedMsg() {
+        nestedUuid_ = com.google.protobuf.ByteString.EMPTY;
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_NestedMsg_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_NestedMsg_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                li.xiam.uuidhelper.test.Test.Player.NestedMsg.class, li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder.class);
+      }
+
+      public static final int NESTED_UUID_FIELD_NUMBER = 1;
+      private com.google.protobuf.ByteString nestedUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes nested_uuid = 1;</code>
+       * @return The nestedUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getNestedUuid() {
+        return nestedUuid_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!nestedUuid_.isEmpty()) {
+          output.writeBytes(1, nestedUuid_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!nestedUuid_.isEmpty()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, nestedUuid_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof li.xiam.uuidhelper.test.Test.Player.NestedMsg)) {
+          return super.equals(obj);
+        }
+        li.xiam.uuidhelper.test.Test.Player.NestedMsg other = (li.xiam.uuidhelper.test.Test.Player.NestedMsg) obj;
+
+        if (!getNestedUuid()
+            .equals(other.getNestedUuid())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NESTED_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getNestedUuid().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(li.xiam.uuidhelper.test.Test.Player.NestedMsg prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Nested UUID
+       * </pre>
+       *
+       * Protobuf type {@code uuidhelper.test.Player.NestedMsg}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:uuidhelper.test.Player.NestedMsg)
+          li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_NestedMsg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_NestedMsg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  li.xiam.uuidhelper.test.Test.Player.NestedMsg.class, li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder.class);
+        }
+
+        // Construct using li.xiam.uuidhelper.test.Test.Player.NestedMsg.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          nestedUuid_ = com.google.protobuf.ByteString.EMPTY;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_NestedMsg_descriptor;
+        }
+
+        @java.lang.Override
+        public li.xiam.uuidhelper.test.Test.Player.NestedMsg getDefaultInstanceForType() {
+          return li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public li.xiam.uuidhelper.test.Test.Player.NestedMsg build() {
+          li.xiam.uuidhelper.test.Test.Player.NestedMsg result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public li.xiam.uuidhelper.test.Test.Player.NestedMsg buildPartial() {
+          li.xiam.uuidhelper.test.Test.Player.NestedMsg result = new li.xiam.uuidhelper.test.Test.Player.NestedMsg(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(li.xiam.uuidhelper.test.Test.Player.NestedMsg result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.nestedUuid_ = nestedUuid_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof li.xiam.uuidhelper.test.Test.Player.NestedMsg) {
+            return mergeFrom((li.xiam.uuidhelper.test.Test.Player.NestedMsg)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(li.xiam.uuidhelper.test.Test.Player.NestedMsg other) {
+          if (other == li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance()) return this;
+          if (other.getNestedUuid() != com.google.protobuf.ByteString.EMPTY) {
+            setNestedUuid(other.getNestedUuid());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  nestedUuid_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.ByteString nestedUuid_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>bytes nested_uuid = 1;</code>
+         * @return The nestedUuid.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString getNestedUuid() {
+          return nestedUuid_;
+        }
+        /**
+         * <code>bytes nested_uuid = 1;</code>
+         * @param value The nestedUuid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNestedUuid(com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          nestedUuid_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bytes nested_uuid = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNestedUuid() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          nestedUuid_ = getDefaultInstance().getNestedUuid();
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:uuidhelper.test.Player.NestedMsg)
+      }
+
+      // @@protoc_insertion_point(class_scope:uuidhelper.test.Player.NestedMsg)
+      private static final li.xiam.uuidhelper.test.Test.Player.NestedMsg DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new li.xiam.uuidhelper.test.Test.Player.NestedMsg();
+      }
+
+      public static li.xiam.uuidhelper.test.Test.Player.NestedMsg getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<NestedMsg>
+          PARSER = new com.google.protobuf.AbstractParser<NestedMsg>() {
+        @java.lang.Override
+        public NestedMsg parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<NestedMsg> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<NestedMsg> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public li.xiam.uuidhelper.test.Test.Player.NestedMsg getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    private int versionedUuidCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object versionedUuid_;
+    public enum VersionedUuidCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      V1_UUID(6),
+      V2_UUID(7),
+      VERSIONEDUUID_NOT_SET(0);
+      private final int value;
+      private VersionedUuidCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static VersionedUuidCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static VersionedUuidCase forNumber(int value) {
+        switch (value) {
+          case 6: return V1_UUID;
+          case 7: return V2_UUID;
+          case 0: return VERSIONEDUUID_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public VersionedUuidCase
+    getVersionedUuidCase() {
+      return VersionedUuidCase.forNumber(
+          versionedUuidCase_);
+    }
+
     public static final int INTERNAL_UUID_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString internalUuid_ = com.google.protobuf.ByteString.EMPTY;
     /**
+     * <pre>
+     * Single UUIDs
+     * </pre>
+     *
      * <code>bytes internal_uuid = 1;</code>
      * @return The internalUuid.
      */
@@ -229,6 +1718,10 @@ public final class Test {
     private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> gameUuids_ =
         emptyList(com.google.protobuf.ByteString.class);
     /**
+     * <pre>
+     * List UUIDs
+     * </pre>
+     *
      * <code>repeated bytes game_uuids = 5;</code>
      * @return A list containing the gameUuids.
      */
@@ -238,6 +1731,10 @@ public final class Test {
       return gameUuids_;
     }
     /**
+     * <pre>
+     * List UUIDs
+     * </pre>
+     *
      * <code>repeated bytes game_uuids = 5;</code>
      * @return The count of gameUuids.
      */
@@ -245,12 +1742,2075 @@ public final class Test {
       return gameUuids_.size();
     }
     /**
+     * <pre>
+     * List UUIDs
+     * </pre>
+     *
      * <code>repeated bytes game_uuids = 5;</code>
      * @param index The index of the element to return.
      * @return The gameUuids at the given index.
      */
     public com.google.protobuf.ByteString getGameUuids(int index) {
       return gameUuids_.get(index);
+    }
+
+    public static final int V1_UUID_FIELD_NUMBER = 6;
+    /**
+     * <code>bytes v1_uuid = 6;</code>
+     * @return Whether the v1Uuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasV1Uuid() {
+      return versionedUuidCase_ == 6;
+    }
+    /**
+     * <code>bytes v1_uuid = 6;</code>
+     * @return The v1Uuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getV1Uuid() {
+      if (versionedUuidCase_ == 6) {
+        return (com.google.protobuf.ByteString) versionedUuid_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int V2_UUID_FIELD_NUMBER = 7;
+    /**
+     * <code>bytes v2_uuid = 7;</code>
+     * @return Whether the v2Uuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasV2Uuid() {
+      return versionedUuidCase_ == 7;
+    }
+    /**
+     * <code>bytes v2_uuid = 7;</code>
+     * @return The v2Uuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getV2Uuid() {
+      if (versionedUuidCase_ == 7) {
+        return (com.google.protobuf.ByteString) versionedUuid_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int NESTED_FIELD_NUMBER = 8;
+    private li.xiam.uuidhelper.test.Test.Player.NestedMsg nested_;
+    /**
+     * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+     * @return Whether the nested field is set.
+     */
+    @java.lang.Override
+    public boolean hasNested() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+     * @return The nested.
+     */
+    @java.lang.Override
+    public li.xiam.uuidhelper.test.Test.Player.NestedMsg getNested() {
+      return nested_ == null ? li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance() : nested_;
+    }
+    /**
+     * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+     */
+    @java.lang.Override
+    public li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder getNestedOrBuilder() {
+      return nested_ == null ? li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance() : nested_;
+    }
+
+    public static final int OPTIONAL_NESTED_FIELD_NUMBER = 9;
+    private li.xiam.uuidhelper.test.Test.Player.NestedMsg optionalNested_;
+    /**
+     * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+     * @return Whether the optionalNested field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptionalNested() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+     * @return The optionalNested.
+     */
+    @java.lang.Override
+    public li.xiam.uuidhelper.test.Test.Player.NestedMsg getOptionalNested() {
+      return optionalNested_ == null ? li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance() : optionalNested_;
+    }
+    /**
+     * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+     */
+    @java.lang.Override
+    public li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder getOptionalNestedOrBuilder() {
+      return optionalNested_ == null ? li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance() : optionalNested_;
+    }
+
+    public static final int OPT_UUID_FIELD_NUMBER = 10;
+    private com.google.protobuf.ByteString optUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Optional UUID
+     * </pre>
+     *
+     * <code>optional bytes opt_uuid = 10;</code>
+     * @return Whether the optUuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptUuid() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional UUID
+     * </pre>
+     *
+     * <code>optional bytes opt_uuid = 10;</code>
+     * @return The optUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getOptUuid() {
+      return optUuid_;
+    }
+
+    public static final int MAP_INT32_UUID_FIELD_NUMBER = 11;
+    private static final class MapInt32UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapInt32UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapInt32Uuid_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapInt32Uuid() {
+      if (mapInt32Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapInt32UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapInt32Uuid_;
+    }
+    public int getMapInt32UuidCount() {
+      return internalGetMapInt32Uuid().getMap().size();
+    }
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapInt32Uuid(
+        int key) {
+
+      return internalGetMapInt32Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapInt32UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapInt32Uuid() {
+      return getMapInt32UuidMap();
+    }
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapInt32UuidMap() {
+      return internalGetMapInt32Uuid().getMap();
+    }
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapInt32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapInt32Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Map UUIDs
+     * </pre>
+     *
+     * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapInt32UuidOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapInt32Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_INT64_UUID_FIELD_NUMBER = 12;
+    private static final class MapInt64UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapInt64UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapInt64Uuid_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapInt64Uuid() {
+      if (mapInt64Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapInt64UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapInt64Uuid_;
+    }
+    public int getMapInt64UuidCount() {
+      return internalGetMapInt64Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapInt64Uuid(
+        long key) {
+
+      return internalGetMapInt64Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapInt64UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapInt64Uuid() {
+      return getMapInt64UuidMap();
+    }
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapInt64UuidMap() {
+      return internalGetMapInt64Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapInt64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapInt64Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapInt64UuidOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapInt64Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_UINT32_UUID_FIELD_NUMBER = 13;
+    private static final class MapUint32UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapUint32UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapUint32Uuid_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapUint32Uuid() {
+      if (mapUint32Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapUint32UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapUint32Uuid_;
+    }
+    public int getMapUint32UuidCount() {
+      return internalGetMapUint32Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapUint32Uuid(
+        int key) {
+
+      return internalGetMapUint32Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapUint32UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapUint32Uuid() {
+      return getMapUint32UuidMap();
+    }
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapUint32UuidMap() {
+      return internalGetMapUint32Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapUint32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapUint32Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapUint32UuidOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapUint32Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_UINT64_UUID_FIELD_NUMBER = 14;
+    private static final class MapUint64UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapUint64UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapUint64Uuid_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapUint64Uuid() {
+      if (mapUint64Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapUint64UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapUint64Uuid_;
+    }
+    public int getMapUint64UuidCount() {
+      return internalGetMapUint64Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapUint64Uuid(
+        long key) {
+
+      return internalGetMapUint64Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapUint64UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapUint64Uuid() {
+      return getMapUint64UuidMap();
+    }
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapUint64UuidMap() {
+      return internalGetMapUint64Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapUint64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapUint64Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapUint64UuidOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapUint64Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_SINT32_UUID_FIELD_NUMBER = 15;
+    private static final class MapSint32UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapSint32UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.SINT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapSint32Uuid_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapSint32Uuid() {
+      if (mapSint32Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapSint32UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapSint32Uuid_;
+    }
+    public int getMapSint32UuidCount() {
+      return internalGetMapSint32Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapSint32Uuid(
+        int key) {
+
+      return internalGetMapSint32Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapSint32UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSint32Uuid() {
+      return getMapSint32UuidMap();
+    }
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSint32UuidMap() {
+      return internalGetMapSint32Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapSint32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapSint32Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapSint32UuidOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapSint32Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_SINT64_UUID_FIELD_NUMBER = 16;
+    private static final class MapSint64UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapSint64UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.SINT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapSint64Uuid_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapSint64Uuid() {
+      if (mapSint64Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapSint64UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapSint64Uuid_;
+    }
+    public int getMapSint64UuidCount() {
+      return internalGetMapSint64Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapSint64Uuid(
+        long key) {
+
+      return internalGetMapSint64Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapSint64UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSint64Uuid() {
+      return getMapSint64UuidMap();
+    }
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSint64UuidMap() {
+      return internalGetMapSint64Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapSint64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapSint64Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapSint64UuidOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapSint64Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_FIXED32_UUID_FIELD_NUMBER = 17;
+    private static final class MapFixed32UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapFixed32UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.FIXED32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapFixed32Uuid_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapFixed32Uuid() {
+      if (mapFixed32Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapFixed32UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapFixed32Uuid_;
+    }
+    public int getMapFixed32UuidCount() {
+      return internalGetMapFixed32Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapFixed32Uuid(
+        int key) {
+
+      return internalGetMapFixed32Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapFixed32UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapFixed32Uuid() {
+      return getMapFixed32UuidMap();
+    }
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapFixed32UuidMap() {
+      return internalGetMapFixed32Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapFixed32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapFixed32Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapFixed32UuidOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapFixed32Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_FIXED64_UUID_FIELD_NUMBER = 18;
+    private static final class MapFixed64UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapFixed64UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.FIXED64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapFixed64Uuid_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapFixed64Uuid() {
+      if (mapFixed64Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapFixed64UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapFixed64Uuid_;
+    }
+    public int getMapFixed64UuidCount() {
+      return internalGetMapFixed64Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapFixed64Uuid(
+        long key) {
+
+      return internalGetMapFixed64Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapFixed64UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapFixed64Uuid() {
+      return getMapFixed64UuidMap();
+    }
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapFixed64UuidMap() {
+      return internalGetMapFixed64Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapFixed64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapFixed64Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapFixed64UuidOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapFixed64Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_SFIXED32_UUID_FIELD_NUMBER = 19;
+    private static final class MapSfixed32UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapSfixed32UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.SFIXED32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapSfixed32Uuid_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapSfixed32Uuid() {
+      if (mapSfixed32Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapSfixed32UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapSfixed32Uuid_;
+    }
+    public int getMapSfixed32UuidCount() {
+      return internalGetMapSfixed32Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapSfixed32Uuid(
+        int key) {
+
+      return internalGetMapSfixed32Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapSfixed32UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSfixed32Uuid() {
+      return getMapSfixed32UuidMap();
+    }
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSfixed32UuidMap() {
+      return internalGetMapSfixed32Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapSfixed32UuidOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapSfixed32Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapSfixed32UuidOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapSfixed32Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_SFIXED64_UUID_FIELD_NUMBER = 20;
+    private static final class MapSfixed64UuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapSfixed64UuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.SFIXED64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapSfixed64Uuid_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapSfixed64Uuid() {
+      if (mapSfixed64Uuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapSfixed64UuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapSfixed64Uuid_;
+    }
+    public int getMapSfixed64UuidCount() {
+      return internalGetMapSfixed64Uuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapSfixed64Uuid(
+        long key) {
+
+      return internalGetMapSfixed64Uuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapSfixed64UuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSfixed64Uuid() {
+      return getMapSfixed64UuidMap();
+    }
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSfixed64UuidMap() {
+      return internalGetMapSfixed64Uuid().getMap();
+    }
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapSfixed64UuidOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapSfixed64Uuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapSfixed64UuidOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapSfixed64Uuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_BOOL_UUID_FIELD_NUMBER = 21;
+    private static final class MapBoolUuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Boolean, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Boolean, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapBoolUuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Boolean, com.google.protobuf.ByteString> mapBoolUuid_;
+    private com.google.protobuf.MapField<java.lang.Boolean, com.google.protobuf.ByteString>
+    internalGetMapBoolUuid() {
+      if (mapBoolUuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapBoolUuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapBoolUuid_;
+    }
+    public int getMapBoolUuidCount() {
+      return internalGetMapBoolUuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapBoolUuid(
+        boolean key) {
+
+      return internalGetMapBoolUuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapBoolUuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> getMapBoolUuid() {
+      return getMapBoolUuidMap();
+    }
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> getMapBoolUuidMap() {
+      return internalGetMapBoolUuid().getMap();
+    }
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapBoolUuidOrDefault(
+        boolean key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> map =
+          internalGetMapBoolUuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapBoolUuidOrThrow(
+        boolean key) {
+
+      java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> map =
+          internalGetMapBoolUuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_STRING_UUID_FIELD_NUMBER = 22;
+    private static final class MapStringUuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapStringUuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.protobuf.ByteString> mapStringUuid_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+    internalGetMapStringUuid() {
+      if (mapStringUuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapStringUuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapStringUuid_;
+    }
+    public int getMapStringUuidCount() {
+      return internalGetMapStringUuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapStringUuid(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetMapStringUuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapStringUuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapStringUuid() {
+      return getMapStringUuidMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapStringUuidMap() {
+      return internalGetMapStringUuid().getMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapStringUuidOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetMapStringUuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapStringUuidOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetMapStringUuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_INT32_UUIDS_FIELD_NUMBER = 23;
+    private static final class MapInt32UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapInt32UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapInt32Uuids_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapInt32Uuids() {
+      if (mapInt32Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapInt32UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapInt32Uuids_;
+    }
+    public int getMapInt32UuidsCount() {
+      return internalGetMapInt32Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapInt32Uuids(
+        int key) {
+
+      return internalGetMapInt32Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapInt32UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapInt32Uuids() {
+      return getMapInt32UuidsMap();
+    }
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapInt32UuidsMap() {
+      return internalGetMapInt32Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapInt32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapInt32Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapInt32UuidsOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapInt32Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_INT64_UUIDS_FIELD_NUMBER = 24;
+    private static final class MapInt64UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapInt64UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapInt64Uuids_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapInt64Uuids() {
+      if (mapInt64Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapInt64UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapInt64Uuids_;
+    }
+    public int getMapInt64UuidsCount() {
+      return internalGetMapInt64Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapInt64Uuids(
+        long key) {
+
+      return internalGetMapInt64Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapInt64UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapInt64Uuids() {
+      return getMapInt64UuidsMap();
+    }
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapInt64UuidsMap() {
+      return internalGetMapInt64Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapInt64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapInt64Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapInt64UuidsOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapInt64Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_UINT32_UUIDS_FIELD_NUMBER = 25;
+    private static final class MapUint32UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapUint32UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapUint32Uuids_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapUint32Uuids() {
+      if (mapUint32Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapUint32UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapUint32Uuids_;
+    }
+    public int getMapUint32UuidsCount() {
+      return internalGetMapUint32Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapUint32Uuids(
+        int key) {
+
+      return internalGetMapUint32Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapUint32UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapUint32Uuids() {
+      return getMapUint32UuidsMap();
+    }
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapUint32UuidsMap() {
+      return internalGetMapUint32Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapUint32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapUint32Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapUint32UuidsOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapUint32Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_UINT64_UUIDS_FIELD_NUMBER = 26;
+    private static final class MapUint64UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapUint64UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapUint64Uuids_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapUint64Uuids() {
+      if (mapUint64Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapUint64UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapUint64Uuids_;
+    }
+    public int getMapUint64UuidsCount() {
+      return internalGetMapUint64Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapUint64Uuids(
+        long key) {
+
+      return internalGetMapUint64Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapUint64UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapUint64Uuids() {
+      return getMapUint64UuidsMap();
+    }
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapUint64UuidsMap() {
+      return internalGetMapUint64Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapUint64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapUint64Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapUint64UuidsOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapUint64Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_SINT32_UUIDS_FIELD_NUMBER = 27;
+    private static final class MapSint32UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapSint32UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.SINT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapSint32Uuids_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapSint32Uuids() {
+      if (mapSint32Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapSint32UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapSint32Uuids_;
+    }
+    public int getMapSint32UuidsCount() {
+      return internalGetMapSint32Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapSint32Uuids(
+        int key) {
+
+      return internalGetMapSint32Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapSint32UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSint32Uuids() {
+      return getMapSint32UuidsMap();
+    }
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSint32UuidsMap() {
+      return internalGetMapSint32Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapSint32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapSint32Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapSint32UuidsOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapSint32Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_SINT64_UUIDS_FIELD_NUMBER = 28;
+    private static final class MapSint64UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapSint64UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.SINT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapSint64Uuids_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapSint64Uuids() {
+      if (mapSint64Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapSint64UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapSint64Uuids_;
+    }
+    public int getMapSint64UuidsCount() {
+      return internalGetMapSint64Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapSint64Uuids(
+        long key) {
+
+      return internalGetMapSint64Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapSint64UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSint64Uuids() {
+      return getMapSint64UuidsMap();
+    }
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSint64UuidsMap() {
+      return internalGetMapSint64Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapSint64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapSint64Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapSint64UuidsOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapSint64Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_FIXED32_UUIDS_FIELD_NUMBER = 29;
+    private static final class MapFixed32UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapFixed32UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.FIXED32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapFixed32Uuids_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapFixed32Uuids() {
+      if (mapFixed32Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapFixed32UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapFixed32Uuids_;
+    }
+    public int getMapFixed32UuidsCount() {
+      return internalGetMapFixed32Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapFixed32Uuids(
+        int key) {
+
+      return internalGetMapFixed32Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapFixed32UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapFixed32Uuids() {
+      return getMapFixed32UuidsMap();
+    }
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapFixed32UuidsMap() {
+      return internalGetMapFixed32Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapFixed32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapFixed32Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapFixed32UuidsOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapFixed32Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_FIXED64_UUIDS_FIELD_NUMBER = 30;
+    private static final class MapFixed64UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapFixed64UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.FIXED64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapFixed64Uuids_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapFixed64Uuids() {
+      if (mapFixed64Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapFixed64UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapFixed64Uuids_;
+    }
+    public int getMapFixed64UuidsCount() {
+      return internalGetMapFixed64Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapFixed64Uuids(
+        long key) {
+
+      return internalGetMapFixed64Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapFixed64UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapFixed64Uuids() {
+      return getMapFixed64UuidsMap();
+    }
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapFixed64UuidsMap() {
+      return internalGetMapFixed64Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapFixed64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapFixed64Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapFixed64UuidsOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapFixed64Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_SFIXED32_UUIDS_FIELD_NUMBER = 31;
+    private static final class MapSfixed32UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapSfixed32UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.SFIXED32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Integer, com.google.protobuf.ByteString> mapSfixed32Uuids_;
+    private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+    internalGetMapSfixed32Uuids() {
+      if (mapSfixed32Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapSfixed32UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapSfixed32Uuids_;
+    }
+    public int getMapSfixed32UuidsCount() {
+      return internalGetMapSfixed32Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapSfixed32Uuids(
+        int key) {
+
+      return internalGetMapSfixed32Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapSfixed32UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSfixed32Uuids() {
+      return getMapSfixed32UuidsMap();
+    }
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSfixed32UuidsMap() {
+      return internalGetMapSfixed32Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapSfixed32UuidsOrDefault(
+        int key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapSfixed32Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapSfixed32UuidsOrThrow(
+        int key) {
+
+      java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+          internalGetMapSfixed32Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_SFIXED64_UUIDS_FIELD_NUMBER = 32;
+    private static final class MapSfixed64UuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapSfixed64UuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.SFIXED64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.google.protobuf.ByteString> mapSfixed64Uuids_;
+    private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+    internalGetMapSfixed64Uuids() {
+      if (mapSfixed64Uuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapSfixed64UuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapSfixed64Uuids_;
+    }
+    public int getMapSfixed64UuidsCount() {
+      return internalGetMapSfixed64Uuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapSfixed64Uuids(
+        long key) {
+
+      return internalGetMapSfixed64Uuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapSfixed64UuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSfixed64Uuids() {
+      return getMapSfixed64UuidsMap();
+    }
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSfixed64UuidsMap() {
+      return internalGetMapSfixed64Uuids().getMap();
+    }
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapSfixed64UuidsOrDefault(
+        long key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapSfixed64Uuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapSfixed64UuidsOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+          internalGetMapSfixed64Uuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_BOOL_UUIDS_FIELD_NUMBER = 33;
+    private static final class MapBoolUuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Boolean, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Boolean, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapBoolUuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false,
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Boolean, com.google.protobuf.ByteString> mapBoolUuids_;
+    private com.google.protobuf.MapField<java.lang.Boolean, com.google.protobuf.ByteString>
+    internalGetMapBoolUuids() {
+      if (mapBoolUuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapBoolUuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapBoolUuids_;
+    }
+    public int getMapBoolUuidsCount() {
+      return internalGetMapBoolUuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapBoolUuids(
+        boolean key) {
+
+      return internalGetMapBoolUuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapBoolUuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> getMapBoolUuids() {
+      return getMapBoolUuidsMap();
+    }
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> getMapBoolUuidsMap() {
+      return internalGetMapBoolUuids().getMap();
+    }
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapBoolUuidsOrDefault(
+        boolean key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+      java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> map =
+          internalGetMapBoolUuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapBoolUuidsOrThrow(
+        boolean key) {
+
+      java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> map =
+          internalGetMapBoolUuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int MAP_STRING_UUIDS_FIELD_NUMBER = 34;
+    private static final class MapStringUuidsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_MapStringUuidsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.protobuf.ByteString> mapStringUuids_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+    internalGetMapStringUuids() {
+      if (mapStringUuids_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapStringUuidsDefaultEntryHolder.defaultEntry);
+      }
+      return mapStringUuids_;
+    }
+    public int getMapStringUuidsCount() {
+      return internalGetMapStringUuids().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapStringUuids(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetMapStringUuids().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapStringUuidsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapStringUuids() {
+      return getMapStringUuidsMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapStringUuidsMap() {
+      return internalGetMapStringUuids().getMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapStringUuidsOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetMapStringUuids().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapStringUuidsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetMapStringUuids().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int CHILD_FIELD_NUMBER = 35;
+    private li.xiam.uuidhelper.test.Test.Child child_;
+    /**
+     * <code>.uuidhelper.test.Child child = 35;</code>
+     * @return Whether the child field is set.
+     */
+    @java.lang.Override
+    public boolean hasChild() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.uuidhelper.test.Child child = 35;</code>
+     * @return The child.
+     */
+    @java.lang.Override
+    public li.xiam.uuidhelper.test.Test.Child getChild() {
+      return child_ == null ? li.xiam.uuidhelper.test.Test.Child.getDefaultInstance() : child_;
+    }
+    /**
+     * <code>.uuidhelper.test.Child child = 35;</code>
+     */
+    @java.lang.Override
+    public li.xiam.uuidhelper.test.Test.ChildOrBuilder getChildOrBuilder() {
+      return child_ == null ? li.xiam.uuidhelper.test.Test.Child.getDefaultInstance() : child_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -281,6 +3841,170 @@ public final class Test {
       }
       for (int i = 0; i < gameUuids_.size(); i++) {
         output.writeBytes(5, gameUuids_.get(i));
+      }
+      if (versionedUuidCase_ == 6) {
+        output.writeBytes(
+            6, (com.google.protobuf.ByteString) versionedUuid_);
+      }
+      if (versionedUuidCase_ == 7) {
+        output.writeBytes(
+            7, (com.google.protobuf.ByteString) versionedUuid_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(8, getNested());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(9, getOptionalNested());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeBytes(10, optUuid_);
+      }
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapInt32Uuid(),
+          MapInt32UuidDefaultEntryHolder.defaultEntry,
+          11);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapInt64Uuid(),
+          MapInt64UuidDefaultEntryHolder.defaultEntry,
+          12);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapUint32Uuid(),
+          MapUint32UuidDefaultEntryHolder.defaultEntry,
+          13);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapUint64Uuid(),
+          MapUint64UuidDefaultEntryHolder.defaultEntry,
+          14);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapSint32Uuid(),
+          MapSint32UuidDefaultEntryHolder.defaultEntry,
+          15);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapSint64Uuid(),
+          MapSint64UuidDefaultEntryHolder.defaultEntry,
+          16);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapFixed32Uuid(),
+          MapFixed32UuidDefaultEntryHolder.defaultEntry,
+          17);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapFixed64Uuid(),
+          MapFixed64UuidDefaultEntryHolder.defaultEntry,
+          18);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapSfixed32Uuid(),
+          MapSfixed32UuidDefaultEntryHolder.defaultEntry,
+          19);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapSfixed64Uuid(),
+          MapSfixed64UuidDefaultEntryHolder.defaultEntry,
+          20);
+      com.google.protobuf.GeneratedMessage
+        .serializeBooleanMapTo(
+          output,
+          internalGetMapBoolUuid(),
+          MapBoolUuidDefaultEntryHolder.defaultEntry,
+          21);
+      com.google.protobuf.GeneratedMessage
+        .serializeStringMapTo(
+          output,
+          internalGetMapStringUuid(),
+          MapStringUuidDefaultEntryHolder.defaultEntry,
+          22);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapInt32Uuids(),
+          MapInt32UuidsDefaultEntryHolder.defaultEntry,
+          23);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapInt64Uuids(),
+          MapInt64UuidsDefaultEntryHolder.defaultEntry,
+          24);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapUint32Uuids(),
+          MapUint32UuidsDefaultEntryHolder.defaultEntry,
+          25);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapUint64Uuids(),
+          MapUint64UuidsDefaultEntryHolder.defaultEntry,
+          26);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapSint32Uuids(),
+          MapSint32UuidsDefaultEntryHolder.defaultEntry,
+          27);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapSint64Uuids(),
+          MapSint64UuidsDefaultEntryHolder.defaultEntry,
+          28);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapFixed32Uuids(),
+          MapFixed32UuidsDefaultEntryHolder.defaultEntry,
+          29);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapFixed64Uuids(),
+          MapFixed64UuidsDefaultEntryHolder.defaultEntry,
+          30);
+      com.google.protobuf.GeneratedMessage
+        .serializeIntegerMapTo(
+          output,
+          internalGetMapSfixed32Uuids(),
+          MapSfixed32UuidsDefaultEntryHolder.defaultEntry,
+          31);
+      com.google.protobuf.GeneratedMessage
+        .serializeLongMapTo(
+          output,
+          internalGetMapSfixed64Uuids(),
+          MapSfixed64UuidsDefaultEntryHolder.defaultEntry,
+          32);
+      com.google.protobuf.GeneratedMessage
+        .serializeBooleanMapTo(
+          output,
+          internalGetMapBoolUuids(),
+          MapBoolUuidsDefaultEntryHolder.defaultEntry,
+          33);
+      com.google.protobuf.GeneratedMessage
+        .serializeStringMapTo(
+          output,
+          internalGetMapStringUuids(),
+          MapStringUuidsDefaultEntryHolder.defaultEntry,
+          34);
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(35, getChild());
       }
       getUnknownFields().writeTo(output);
     }
@@ -314,6 +4038,272 @@ public final class Test {
         size += dataSize;
         size += 1 * getGameUuidsList().size();
       }
+      if (versionedUuidCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              6, (com.google.protobuf.ByteString) versionedUuid_);
+      }
+      if (versionedUuidCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              7, (com.google.protobuf.ByteString) versionedUuid_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getNested());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getOptionalNested());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(10, optUuid_);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapInt32Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapInt32Uuid__ = MapInt32UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, mapInt32Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapInt64Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapInt64Uuid__ = MapInt64UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, mapInt64Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapUint32Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapUint32Uuid__ = MapUint32UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(13, mapUint32Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapUint64Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapUint64Uuid__ = MapUint64UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(14, mapUint64Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapSint32Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapSint32Uuid__ = MapSint32UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(15, mapSint32Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapSint64Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapSint64Uuid__ = MapSint64UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(16, mapSint64Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapFixed32Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapFixed32Uuid__ = MapFixed32UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(17, mapFixed32Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapFixed64Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapFixed64Uuid__ = MapFixed64UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(18, mapFixed64Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapSfixed32Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapSfixed32Uuid__ = MapSfixed32UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(19, mapSfixed32Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapSfixed64Uuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapSfixed64Uuid__ = MapSfixed64UuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(20, mapSfixed64Uuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Boolean, com.google.protobuf.ByteString> entry
+           : internalGetMapBoolUuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Boolean, com.google.protobuf.ByteString>
+        mapBoolUuid__ = MapBoolUuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(21, mapBoolUuid__);
+      }
+      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.ByteString> entry
+           : internalGetMapStringUuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+        mapStringUuid__ = MapStringUuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(22, mapStringUuid__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapInt32Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapInt32Uuids__ = MapInt32UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(23, mapInt32Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapInt64Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapInt64Uuids__ = MapInt64UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(24, mapInt64Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapUint32Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapUint32Uuids__ = MapUint32UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(25, mapUint32Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapUint64Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapUint64Uuids__ = MapUint64UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(26, mapUint64Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapSint32Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapSint32Uuids__ = MapSint32UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(27, mapSint32Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapSint64Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapSint64Uuids__ = MapSint64UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(28, mapSint64Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapFixed32Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapFixed32Uuids__ = MapFixed32UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(29, mapFixed32Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapFixed64Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapFixed64Uuids__ = MapFixed64UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(30, mapFixed64Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Integer, com.google.protobuf.ByteString> entry
+           : internalGetMapSfixed32Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+        mapSfixed32Uuids__ = MapSfixed32UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(31, mapSfixed32Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.google.protobuf.ByteString> entry
+           : internalGetMapSfixed64Uuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+        mapSfixed64Uuids__ = MapSfixed64UuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(32, mapSfixed64Uuids__);
+      }
+      for (java.util.Map.Entry<java.lang.Boolean, com.google.protobuf.ByteString> entry
+           : internalGetMapBoolUuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Boolean, com.google.protobuf.ByteString>
+        mapBoolUuids__ = MapBoolUuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(33, mapBoolUuids__);
+      }
+      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.ByteString> entry
+           : internalGetMapStringUuids().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+        mapStringUuids__ = MapStringUuidsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(34, mapStringUuids__);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(35, getChild());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -339,6 +4329,87 @@ public final class Test {
           .equals(other.getStringUuid())) return false;
       if (!getGameUuidsList()
           .equals(other.getGameUuidsList())) return false;
+      if (hasNested() != other.hasNested()) return false;
+      if (hasNested()) {
+        if (!getNested()
+            .equals(other.getNested())) return false;
+      }
+      if (hasOptionalNested() != other.hasOptionalNested()) return false;
+      if (hasOptionalNested()) {
+        if (!getOptionalNested()
+            .equals(other.getOptionalNested())) return false;
+      }
+      if (hasOptUuid() != other.hasOptUuid()) return false;
+      if (hasOptUuid()) {
+        if (!getOptUuid()
+            .equals(other.getOptUuid())) return false;
+      }
+      if (!internalGetMapInt32Uuid().equals(
+          other.internalGetMapInt32Uuid())) return false;
+      if (!internalGetMapInt64Uuid().equals(
+          other.internalGetMapInt64Uuid())) return false;
+      if (!internalGetMapUint32Uuid().equals(
+          other.internalGetMapUint32Uuid())) return false;
+      if (!internalGetMapUint64Uuid().equals(
+          other.internalGetMapUint64Uuid())) return false;
+      if (!internalGetMapSint32Uuid().equals(
+          other.internalGetMapSint32Uuid())) return false;
+      if (!internalGetMapSint64Uuid().equals(
+          other.internalGetMapSint64Uuid())) return false;
+      if (!internalGetMapFixed32Uuid().equals(
+          other.internalGetMapFixed32Uuid())) return false;
+      if (!internalGetMapFixed64Uuid().equals(
+          other.internalGetMapFixed64Uuid())) return false;
+      if (!internalGetMapSfixed32Uuid().equals(
+          other.internalGetMapSfixed32Uuid())) return false;
+      if (!internalGetMapSfixed64Uuid().equals(
+          other.internalGetMapSfixed64Uuid())) return false;
+      if (!internalGetMapBoolUuid().equals(
+          other.internalGetMapBoolUuid())) return false;
+      if (!internalGetMapStringUuid().equals(
+          other.internalGetMapStringUuid())) return false;
+      if (!internalGetMapInt32Uuids().equals(
+          other.internalGetMapInt32Uuids())) return false;
+      if (!internalGetMapInt64Uuids().equals(
+          other.internalGetMapInt64Uuids())) return false;
+      if (!internalGetMapUint32Uuids().equals(
+          other.internalGetMapUint32Uuids())) return false;
+      if (!internalGetMapUint64Uuids().equals(
+          other.internalGetMapUint64Uuids())) return false;
+      if (!internalGetMapSint32Uuids().equals(
+          other.internalGetMapSint32Uuids())) return false;
+      if (!internalGetMapSint64Uuids().equals(
+          other.internalGetMapSint64Uuids())) return false;
+      if (!internalGetMapFixed32Uuids().equals(
+          other.internalGetMapFixed32Uuids())) return false;
+      if (!internalGetMapFixed64Uuids().equals(
+          other.internalGetMapFixed64Uuids())) return false;
+      if (!internalGetMapSfixed32Uuids().equals(
+          other.internalGetMapSfixed32Uuids())) return false;
+      if (!internalGetMapSfixed64Uuids().equals(
+          other.internalGetMapSfixed64Uuids())) return false;
+      if (!internalGetMapBoolUuids().equals(
+          other.internalGetMapBoolUuids())) return false;
+      if (!internalGetMapStringUuids().equals(
+          other.internalGetMapStringUuids())) return false;
+      if (hasChild() != other.hasChild()) return false;
+      if (hasChild()) {
+        if (!getChild()
+            .equals(other.getChild())) return false;
+      }
+      if (!getVersionedUuidCase().equals(other.getVersionedUuidCase())) return false;
+      switch (versionedUuidCase_) {
+        case 6:
+          if (!getV1Uuid()
+              .equals(other.getV1Uuid())) return false;
+          break;
+        case 7:
+          if (!getV2Uuid()
+              .equals(other.getV2Uuid())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -361,6 +4432,130 @@ public final class Test {
       if (getGameUuidsCount() > 0) {
         hash = (37 * hash) + GAME_UUIDS_FIELD_NUMBER;
         hash = (53 * hash) + getGameUuidsList().hashCode();
+      }
+      if (hasNested()) {
+        hash = (37 * hash) + NESTED_FIELD_NUMBER;
+        hash = (53 * hash) + getNested().hashCode();
+      }
+      if (hasOptionalNested()) {
+        hash = (37 * hash) + OPTIONAL_NESTED_FIELD_NUMBER;
+        hash = (53 * hash) + getOptionalNested().hashCode();
+      }
+      if (hasOptUuid()) {
+        hash = (37 * hash) + OPT_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getOptUuid().hashCode();
+      }
+      if (!internalGetMapInt32Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_INT32_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapInt32Uuid().hashCode();
+      }
+      if (!internalGetMapInt64Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_INT64_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapInt64Uuid().hashCode();
+      }
+      if (!internalGetMapUint32Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_UINT32_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapUint32Uuid().hashCode();
+      }
+      if (!internalGetMapUint64Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_UINT64_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapUint64Uuid().hashCode();
+      }
+      if (!internalGetMapSint32Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_SINT32_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapSint32Uuid().hashCode();
+      }
+      if (!internalGetMapSint64Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_SINT64_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapSint64Uuid().hashCode();
+      }
+      if (!internalGetMapFixed32Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_FIXED32_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapFixed32Uuid().hashCode();
+      }
+      if (!internalGetMapFixed64Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_FIXED64_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapFixed64Uuid().hashCode();
+      }
+      if (!internalGetMapSfixed32Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_SFIXED32_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapSfixed32Uuid().hashCode();
+      }
+      if (!internalGetMapSfixed64Uuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_SFIXED64_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapSfixed64Uuid().hashCode();
+      }
+      if (!internalGetMapBoolUuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_BOOL_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapBoolUuid().hashCode();
+      }
+      if (!internalGetMapStringUuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_STRING_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapStringUuid().hashCode();
+      }
+      if (!internalGetMapInt32Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_INT32_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapInt32Uuids().hashCode();
+      }
+      if (!internalGetMapInt64Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_INT64_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapInt64Uuids().hashCode();
+      }
+      if (!internalGetMapUint32Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_UINT32_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapUint32Uuids().hashCode();
+      }
+      if (!internalGetMapUint64Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_UINT64_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapUint64Uuids().hashCode();
+      }
+      if (!internalGetMapSint32Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_SINT32_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapSint32Uuids().hashCode();
+      }
+      if (!internalGetMapSint64Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_SINT64_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapSint64Uuids().hashCode();
+      }
+      if (!internalGetMapFixed32Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_FIXED32_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapFixed32Uuids().hashCode();
+      }
+      if (!internalGetMapFixed64Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_FIXED64_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapFixed64Uuids().hashCode();
+      }
+      if (!internalGetMapSfixed32Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_SFIXED32_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapSfixed32Uuids().hashCode();
+      }
+      if (!internalGetMapSfixed64Uuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_SFIXED64_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapSfixed64Uuids().hashCode();
+      }
+      if (!internalGetMapBoolUuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_BOOL_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapBoolUuids().hashCode();
+      }
+      if (!internalGetMapStringUuids().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_STRING_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapStringUuids().hashCode();
+      }
+      if (hasChild()) {
+        hash = (37 * hash) + CHILD_FIELD_NUMBER;
+        hash = (53 * hash) + getChild().hashCode();
+      }
+      switch (versionedUuidCase_) {
+        case 6:
+          hash = (37 * hash) + V1_UUID_FIELD_NUMBER;
+          hash = (53 * hash) + getV1Uuid().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + V2_UUID_FIELD_NUMBER;
+          hash = (53 * hash) + getV2Uuid().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -471,6 +4666,120 @@ public final class Test {
         return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Player_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+          int number) {
+        switch (number) {
+          case 11:
+            return internalGetMapInt32Uuid();
+          case 12:
+            return internalGetMapInt64Uuid();
+          case 13:
+            return internalGetMapUint32Uuid();
+          case 14:
+            return internalGetMapUint64Uuid();
+          case 15:
+            return internalGetMapSint32Uuid();
+          case 16:
+            return internalGetMapSint64Uuid();
+          case 17:
+            return internalGetMapFixed32Uuid();
+          case 18:
+            return internalGetMapFixed64Uuid();
+          case 19:
+            return internalGetMapSfixed32Uuid();
+          case 20:
+            return internalGetMapSfixed64Uuid();
+          case 21:
+            return internalGetMapBoolUuid();
+          case 22:
+            return internalGetMapStringUuid();
+          case 23:
+            return internalGetMapInt32Uuids();
+          case 24:
+            return internalGetMapInt64Uuids();
+          case 25:
+            return internalGetMapUint32Uuids();
+          case 26:
+            return internalGetMapUint64Uuids();
+          case 27:
+            return internalGetMapSint32Uuids();
+          case 28:
+            return internalGetMapSint64Uuids();
+          case 29:
+            return internalGetMapFixed32Uuids();
+          case 30:
+            return internalGetMapFixed64Uuids();
+          case 31:
+            return internalGetMapSfixed32Uuids();
+          case 32:
+            return internalGetMapSfixed64Uuids();
+          case 33:
+            return internalGetMapBoolUuids();
+          case 34:
+            return internalGetMapStringUuids();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
+          int number) {
+        switch (number) {
+          case 11:
+            return internalGetMutableMapInt32Uuid();
+          case 12:
+            return internalGetMutableMapInt64Uuid();
+          case 13:
+            return internalGetMutableMapUint32Uuid();
+          case 14:
+            return internalGetMutableMapUint64Uuid();
+          case 15:
+            return internalGetMutableMapSint32Uuid();
+          case 16:
+            return internalGetMutableMapSint64Uuid();
+          case 17:
+            return internalGetMutableMapFixed32Uuid();
+          case 18:
+            return internalGetMutableMapFixed64Uuid();
+          case 19:
+            return internalGetMutableMapSfixed32Uuid();
+          case 20:
+            return internalGetMutableMapSfixed64Uuid();
+          case 21:
+            return internalGetMutableMapBoolUuid();
+          case 22:
+            return internalGetMutableMapStringUuid();
+          case 23:
+            return internalGetMutableMapInt32Uuids();
+          case 24:
+            return internalGetMutableMapInt64Uuids();
+          case 25:
+            return internalGetMutableMapUint32Uuids();
+          case 26:
+            return internalGetMutableMapUint64Uuids();
+          case 27:
+            return internalGetMutableMapSint32Uuids();
+          case 28:
+            return internalGetMutableMapSint64Uuids();
+          case 29:
+            return internalGetMutableMapFixed32Uuids();
+          case 30:
+            return internalGetMutableMapFixed64Uuids();
+          case 31:
+            return internalGetMutableMapSfixed32Uuids();
+          case 32:
+            return internalGetMutableMapSfixed64Uuids();
+          case 33:
+            return internalGetMutableMapBoolUuids();
+          case 34:
+            return internalGetMutableMapStringUuids();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -481,23 +4790,74 @@ public final class Test {
 
       // Construct using li.xiam.uuidhelper.test.Test.Player.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getNestedFieldBuilder();
+          getOptionalNestedFieldBuilder();
+          getChildFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        bitField1_ = 0;
         internalUuid_ = com.google.protobuf.ByteString.EMPTY;
         username_ = "";
         sessionUuid_ = com.google.protobuf.ByteString.EMPTY;
         stringUuid_ = "";
         gameUuids_ = emptyList(com.google.protobuf.ByteString.class);
+        nested_ = null;
+        if (nestedBuilder_ != null) {
+          nestedBuilder_.dispose();
+          nestedBuilder_ = null;
+        }
+        optionalNested_ = null;
+        if (optionalNestedBuilder_ != null) {
+          optionalNestedBuilder_.dispose();
+          optionalNestedBuilder_ = null;
+        }
+        optUuid_ = com.google.protobuf.ByteString.EMPTY;
+        internalGetMutableMapInt32Uuid().clear();
+        internalGetMutableMapInt64Uuid().clear();
+        internalGetMutableMapUint32Uuid().clear();
+        internalGetMutableMapUint64Uuid().clear();
+        internalGetMutableMapSint32Uuid().clear();
+        internalGetMutableMapSint64Uuid().clear();
+        internalGetMutableMapFixed32Uuid().clear();
+        internalGetMutableMapFixed64Uuid().clear();
+        internalGetMutableMapSfixed32Uuid().clear();
+        internalGetMutableMapSfixed64Uuid().clear();
+        internalGetMutableMapBoolUuid().clear();
+        internalGetMutableMapStringUuid().clear();
+        internalGetMutableMapInt32Uuids().clear();
+        internalGetMutableMapInt64Uuids().clear();
+        internalGetMutableMapUint32Uuids().clear();
+        internalGetMutableMapUint64Uuids().clear();
+        internalGetMutableMapSint32Uuids().clear();
+        internalGetMutableMapSint64Uuids().clear();
+        internalGetMutableMapFixed32Uuids().clear();
+        internalGetMutableMapFixed64Uuids().clear();
+        internalGetMutableMapSfixed32Uuids().clear();
+        internalGetMutableMapSfixed64Uuids().clear();
+        internalGetMutableMapBoolUuids().clear();
+        internalGetMutableMapStringUuids().clear();
+        child_ = null;
+        if (childBuilder_ != null) {
+          childBuilder_.dispose();
+          childBuilder_ = null;
+        }
+        versionedUuidCase_ = 0;
+        versionedUuid_ = null;
         return this;
       }
 
@@ -525,6 +4885,8 @@ public final class Test {
       public li.xiam.uuidhelper.test.Test.Player buildPartial() {
         li.xiam.uuidhelper.test.Test.Player result = new li.xiam.uuidhelper.test.Test.Player(this);
         if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
@@ -547,6 +4909,137 @@ public final class Test {
           gameUuids_.makeImmutable();
           result.gameUuids_ = gameUuids_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.nested_ = nestedBuilder_ == null
+              ? nested_
+              : nestedBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.optionalNested_ = optionalNestedBuilder_ == null
+              ? optionalNested_
+              : optionalNestedBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.optUuid_ = optUuid_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.mapInt32Uuid_ = internalGetMapInt32Uuid();
+          result.mapInt32Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.mapInt64Uuid_ = internalGetMapInt64Uuid();
+          result.mapInt64Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.mapUint32Uuid_ = internalGetMapUint32Uuid();
+          result.mapUint32Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.mapUint64Uuid_ = internalGetMapUint64Uuid();
+          result.mapUint64Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.mapSint32Uuid_ = internalGetMapSint32Uuid();
+          result.mapSint32Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.mapSint64Uuid_ = internalGetMapSint64Uuid();
+          result.mapSint64Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.mapFixed32Uuid_ = internalGetMapFixed32Uuid();
+          result.mapFixed32Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.mapFixed64Uuid_ = internalGetMapFixed64Uuid();
+          result.mapFixed64Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.mapSfixed32Uuid_ = internalGetMapSfixed32Uuid();
+          result.mapSfixed32Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.mapSfixed64Uuid_ = internalGetMapSfixed64Uuid();
+          result.mapSfixed64Uuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.mapBoolUuid_ = internalGetMapBoolUuid();
+          result.mapBoolUuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.mapStringUuid_ = internalGetMapStringUuid();
+          result.mapStringUuid_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.mapInt32Uuids_ = internalGetMapInt32Uuids();
+          result.mapInt32Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.mapInt64Uuids_ = internalGetMapInt64Uuids();
+          result.mapInt64Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.mapUint32Uuids_ = internalGetMapUint32Uuids();
+          result.mapUint32Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.mapUint64Uuids_ = internalGetMapUint64Uuids();
+          result.mapUint64Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.mapSint32Uuids_ = internalGetMapSint32Uuids();
+          result.mapSint32Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.mapSint64Uuids_ = internalGetMapSint64Uuids();
+          result.mapSint64Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.mapFixed32Uuids_ = internalGetMapFixed32Uuids();
+          result.mapFixed32Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          result.mapFixed64Uuids_ = internalGetMapFixed64Uuids();
+          result.mapFixed64Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.mapSfixed32Uuids_ = internalGetMapSfixed32Uuids();
+          result.mapSfixed32Uuids_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.mapSfixed64Uuids_ = internalGetMapSfixed64Uuids();
+          result.mapSfixed64Uuids_.makeImmutable();
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartial1(li.xiam.uuidhelper.test.Test.Player result) {
+        int from_bitField1_ = bitField1_;
+        if (((from_bitField1_ & 0x00000001) != 0)) {
+          result.mapBoolUuids_ = internalGetMapBoolUuids();
+          result.mapBoolUuids_.makeImmutable();
+        }
+        if (((from_bitField1_ & 0x00000002) != 0)) {
+          result.mapStringUuids_ = internalGetMapStringUuids();
+          result.mapStringUuids_.makeImmutable();
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField1_ & 0x00000004) != 0)) {
+          result.child_ = childBuilder_ == null
+              ? child_
+              : childBuilder_.build();
+          to_bitField0_ |= 0x00000008;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartialOneofs(li.xiam.uuidhelper.test.Test.Player result) {
+        result.versionedUuidCase_ = versionedUuidCase_;
+        result.versionedUuid_ = this.versionedUuid_;
       }
 
       @java.lang.Override
@@ -587,6 +5080,103 @@ public final class Test {
             gameUuids_.addAll(other.gameUuids_);
           }
           onChanged();
+        }
+        if (other.hasNested()) {
+          mergeNested(other.getNested());
+        }
+        if (other.hasOptionalNested()) {
+          mergeOptionalNested(other.getOptionalNested());
+        }
+        if (other.hasOptUuid()) {
+          setOptUuid(other.getOptUuid());
+        }
+        internalGetMutableMapInt32Uuid().mergeFrom(
+            other.internalGetMapInt32Uuid());
+        bitField0_ |= 0x00000400;
+        internalGetMutableMapInt64Uuid().mergeFrom(
+            other.internalGetMapInt64Uuid());
+        bitField0_ |= 0x00000800;
+        internalGetMutableMapUint32Uuid().mergeFrom(
+            other.internalGetMapUint32Uuid());
+        bitField0_ |= 0x00001000;
+        internalGetMutableMapUint64Uuid().mergeFrom(
+            other.internalGetMapUint64Uuid());
+        bitField0_ |= 0x00002000;
+        internalGetMutableMapSint32Uuid().mergeFrom(
+            other.internalGetMapSint32Uuid());
+        bitField0_ |= 0x00004000;
+        internalGetMutableMapSint64Uuid().mergeFrom(
+            other.internalGetMapSint64Uuid());
+        bitField0_ |= 0x00008000;
+        internalGetMutableMapFixed32Uuid().mergeFrom(
+            other.internalGetMapFixed32Uuid());
+        bitField0_ |= 0x00010000;
+        internalGetMutableMapFixed64Uuid().mergeFrom(
+            other.internalGetMapFixed64Uuid());
+        bitField0_ |= 0x00020000;
+        internalGetMutableMapSfixed32Uuid().mergeFrom(
+            other.internalGetMapSfixed32Uuid());
+        bitField0_ |= 0x00040000;
+        internalGetMutableMapSfixed64Uuid().mergeFrom(
+            other.internalGetMapSfixed64Uuid());
+        bitField0_ |= 0x00080000;
+        internalGetMutableMapBoolUuid().mergeFrom(
+            other.internalGetMapBoolUuid());
+        bitField0_ |= 0x00100000;
+        internalGetMutableMapStringUuid().mergeFrom(
+            other.internalGetMapStringUuid());
+        bitField0_ |= 0x00200000;
+        internalGetMutableMapInt32Uuids().mergeFrom(
+            other.internalGetMapInt32Uuids());
+        bitField0_ |= 0x00400000;
+        internalGetMutableMapInt64Uuids().mergeFrom(
+            other.internalGetMapInt64Uuids());
+        bitField0_ |= 0x00800000;
+        internalGetMutableMapUint32Uuids().mergeFrom(
+            other.internalGetMapUint32Uuids());
+        bitField0_ |= 0x01000000;
+        internalGetMutableMapUint64Uuids().mergeFrom(
+            other.internalGetMapUint64Uuids());
+        bitField0_ |= 0x02000000;
+        internalGetMutableMapSint32Uuids().mergeFrom(
+            other.internalGetMapSint32Uuids());
+        bitField0_ |= 0x04000000;
+        internalGetMutableMapSint64Uuids().mergeFrom(
+            other.internalGetMapSint64Uuids());
+        bitField0_ |= 0x08000000;
+        internalGetMutableMapFixed32Uuids().mergeFrom(
+            other.internalGetMapFixed32Uuids());
+        bitField0_ |= 0x10000000;
+        internalGetMutableMapFixed64Uuids().mergeFrom(
+            other.internalGetMapFixed64Uuids());
+        bitField0_ |= 0x20000000;
+        internalGetMutableMapSfixed32Uuids().mergeFrom(
+            other.internalGetMapSfixed32Uuids());
+        bitField0_ |= 0x40000000;
+        internalGetMutableMapSfixed64Uuids().mergeFrom(
+            other.internalGetMapSfixed64Uuids());
+        bitField0_ |= 0x80000000;
+        internalGetMutableMapBoolUuids().mergeFrom(
+            other.internalGetMapBoolUuids());
+        bitField1_ |= 0x00000001;
+        internalGetMutableMapStringUuids().mergeFrom(
+            other.internalGetMapStringUuids());
+        bitField1_ |= 0x00000002;
+        if (other.hasChild()) {
+          mergeChild(other.getChild());
+        }
+        switch (other.getVersionedUuidCase()) {
+          case V1_UUID: {
+            setV1Uuid(other.getV1Uuid());
+            break;
+          }
+          case V2_UUID: {
+            setV2Uuid(other.getV2Uuid());
+            break;
+          }
+          case VERSIONEDUUID_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -640,6 +5230,258 @@ public final class Test {
                 gameUuids_.add(v);
                 break;
               } // case 42
+              case 50: {
+                versionedUuid_ = input.readBytes();
+                versionedUuidCase_ = 6;
+                break;
+              } // case 50
+              case 58: {
+                versionedUuid_ = input.readBytes();
+                versionedUuidCase_ = 7;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getNestedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getOptionalNestedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                optUuid_ = input.readBytes();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapInt32Uuid__ = input.readMessage(
+                    MapInt32UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapInt32Uuid().getMutableMap().put(
+                    mapInt32Uuid__.getKey(), mapInt32Uuid__.getValue());
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapInt64Uuid__ = input.readMessage(
+                    MapInt64UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapInt64Uuid().getMutableMap().put(
+                    mapInt64Uuid__.getKey(), mapInt64Uuid__.getValue());
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapUint32Uuid__ = input.readMessage(
+                    MapUint32UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapUint32Uuid().getMutableMap().put(
+                    mapUint32Uuid__.getKey(), mapUint32Uuid__.getValue());
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapUint64Uuid__ = input.readMessage(
+                    MapUint64UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapUint64Uuid().getMutableMap().put(
+                    mapUint64Uuid__.getKey(), mapUint64Uuid__.getValue());
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapSint32Uuid__ = input.readMessage(
+                    MapSint32UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapSint32Uuid().getMutableMap().put(
+                    mapSint32Uuid__.getKey(), mapSint32Uuid__.getValue());
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+              case 130: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapSint64Uuid__ = input.readMessage(
+                    MapSint64UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapSint64Uuid().getMutableMap().put(
+                    mapSint64Uuid__.getKey(), mapSint64Uuid__.getValue());
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+              case 138: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapFixed32Uuid__ = input.readMessage(
+                    MapFixed32UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapFixed32Uuid().getMutableMap().put(
+                    mapFixed32Uuid__.getKey(), mapFixed32Uuid__.getValue());
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 138
+              case 146: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapFixed64Uuid__ = input.readMessage(
+                    MapFixed64UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapFixed64Uuid().getMutableMap().put(
+                    mapFixed64Uuid__.getKey(), mapFixed64Uuid__.getValue());
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 146
+              case 154: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapSfixed32Uuid__ = input.readMessage(
+                    MapSfixed32UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapSfixed32Uuid().getMutableMap().put(
+                    mapSfixed32Uuid__.getKey(), mapSfixed32Uuid__.getValue());
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 154
+              case 162: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapSfixed64Uuid__ = input.readMessage(
+                    MapSfixed64UuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapSfixed64Uuid().getMutableMap().put(
+                    mapSfixed64Uuid__.getKey(), mapSfixed64Uuid__.getValue());
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 162
+              case 170: {
+                com.google.protobuf.MapEntry<java.lang.Boolean, com.google.protobuf.ByteString>
+                mapBoolUuid__ = input.readMessage(
+                    MapBoolUuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapBoolUuid().getMutableMap().put(
+                    mapBoolUuid__.getKey(), mapBoolUuid__.getValue());
+                bitField0_ |= 0x00100000;
+                break;
+              } // case 170
+              case 178: {
+                com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+                mapStringUuid__ = input.readMessage(
+                    MapStringUuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapStringUuid().getMutableMap().put(
+                    mapStringUuid__.getKey(), mapStringUuid__.getValue());
+                bitField0_ |= 0x00200000;
+                break;
+              } // case 178
+              case 186: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapInt32Uuids__ = input.readMessage(
+                    MapInt32UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapInt32Uuids().getMutableMap().put(
+                    mapInt32Uuids__.getKey(), mapInt32Uuids__.getValue());
+                bitField0_ |= 0x00400000;
+                break;
+              } // case 186
+              case 194: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapInt64Uuids__ = input.readMessage(
+                    MapInt64UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapInt64Uuids().getMutableMap().put(
+                    mapInt64Uuids__.getKey(), mapInt64Uuids__.getValue());
+                bitField0_ |= 0x00800000;
+                break;
+              } // case 194
+              case 202: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapUint32Uuids__ = input.readMessage(
+                    MapUint32UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapUint32Uuids().getMutableMap().put(
+                    mapUint32Uuids__.getKey(), mapUint32Uuids__.getValue());
+                bitField0_ |= 0x01000000;
+                break;
+              } // case 202
+              case 210: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapUint64Uuids__ = input.readMessage(
+                    MapUint64UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapUint64Uuids().getMutableMap().put(
+                    mapUint64Uuids__.getKey(), mapUint64Uuids__.getValue());
+                bitField0_ |= 0x02000000;
+                break;
+              } // case 210
+              case 218: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapSint32Uuids__ = input.readMessage(
+                    MapSint32UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapSint32Uuids().getMutableMap().put(
+                    mapSint32Uuids__.getKey(), mapSint32Uuids__.getValue());
+                bitField0_ |= 0x04000000;
+                break;
+              } // case 218
+              case 226: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapSint64Uuids__ = input.readMessage(
+                    MapSint64UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapSint64Uuids().getMutableMap().put(
+                    mapSint64Uuids__.getKey(), mapSint64Uuids__.getValue());
+                bitField0_ |= 0x08000000;
+                break;
+              } // case 226
+              case 234: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapFixed32Uuids__ = input.readMessage(
+                    MapFixed32UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapFixed32Uuids().getMutableMap().put(
+                    mapFixed32Uuids__.getKey(), mapFixed32Uuids__.getValue());
+                bitField0_ |= 0x10000000;
+                break;
+              } // case 234
+              case 242: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapFixed64Uuids__ = input.readMessage(
+                    MapFixed64UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapFixed64Uuids().getMutableMap().put(
+                    mapFixed64Uuids__.getKey(), mapFixed64Uuids__.getValue());
+                bitField0_ |= 0x20000000;
+                break;
+              } // case 242
+              case 250: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.google.protobuf.ByteString>
+                mapSfixed32Uuids__ = input.readMessage(
+                    MapSfixed32UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapSfixed32Uuids().getMutableMap().put(
+                    mapSfixed32Uuids__.getKey(), mapSfixed32Uuids__.getValue());
+                bitField0_ |= 0x40000000;
+                break;
+              } // case 250
+              case 258: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.google.protobuf.ByteString>
+                mapSfixed64Uuids__ = input.readMessage(
+                    MapSfixed64UuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapSfixed64Uuids().getMutableMap().put(
+                    mapSfixed64Uuids__.getKey(), mapSfixed64Uuids__.getValue());
+                bitField0_ |= 0x80000000;
+                break;
+              } // case 258
+              case 266: {
+                com.google.protobuf.MapEntry<java.lang.Boolean, com.google.protobuf.ByteString>
+                mapBoolUuids__ = input.readMessage(
+                    MapBoolUuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapBoolUuids().getMutableMap().put(
+                    mapBoolUuids__.getKey(), mapBoolUuids__.getValue());
+                bitField1_ |= 0x00000001;
+                break;
+              } // case 266
+              case 274: {
+                com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+                mapStringUuids__ = input.readMessage(
+                    MapStringUuidsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapStringUuids().getMutableMap().put(
+                    mapStringUuids__.getKey(), mapStringUuids__.getValue());
+                bitField1_ |= 0x00000002;
+                break;
+              } // case 274
+              case 282: {
+                input.readMessage(
+                    getChildFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField1_ |= 0x00000004;
+                break;
+              } // case 282
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -655,10 +5497,30 @@ public final class Test {
         } // finally
         return this;
       }
+      private int versionedUuidCase_ = 0;
+      private java.lang.Object versionedUuid_;
+      public VersionedUuidCase
+          getVersionedUuidCase() {
+        return VersionedUuidCase.forNumber(
+            versionedUuidCase_);
+      }
+
+      public Builder clearVersionedUuid() {
+        versionedUuidCase_ = 0;
+        versionedUuid_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
+      private int bitField1_;
 
       private com.google.protobuf.ByteString internalUuid_ = com.google.protobuf.ByteString.EMPTY;
       /**
+       * <pre>
+       * Single UUIDs
+       * </pre>
+       *
        * <code>bytes internal_uuid = 1;</code>
        * @return The internalUuid.
        */
@@ -667,6 +5529,10 @@ public final class Test {
         return internalUuid_;
       }
       /**
+       * <pre>
+       * Single UUIDs
+       * </pre>
+       *
        * <code>bytes internal_uuid = 1;</code>
        * @param value The internalUuid to set.
        * @return This builder for chaining.
@@ -679,6 +5545,10 @@ public final class Test {
         return this;
       }
       /**
+       * <pre>
+       * Single UUIDs
+       * </pre>
+       *
        * <code>bytes internal_uuid = 1;</code>
        * @return This builder for chaining.
        */
@@ -873,6 +5743,10 @@ public final class Test {
         bitField0_ |= 0x00000010;
       }
       /**
+       * <pre>
+       * List UUIDs
+       * </pre>
+       *
        * <code>repeated bytes game_uuids = 5;</code>
        * @return A list containing the gameUuids.
        */
@@ -882,6 +5756,10 @@ public final class Test {
         return gameUuids_;
       }
       /**
+       * <pre>
+       * List UUIDs
+       * </pre>
+       *
        * <code>repeated bytes game_uuids = 5;</code>
        * @return The count of gameUuids.
        */
@@ -889,6 +5767,10 @@ public final class Test {
         return gameUuids_.size();
       }
       /**
+       * <pre>
+       * List UUIDs
+       * </pre>
+       *
        * <code>repeated bytes game_uuids = 5;</code>
        * @param index The index of the element to return.
        * @return The gameUuids at the given index.
@@ -897,6 +5779,10 @@ public final class Test {
         return gameUuids_.get(index);
       }
       /**
+       * <pre>
+       * List UUIDs
+       * </pre>
+       *
        * <code>repeated bytes game_uuids = 5;</code>
        * @param index The index to set the value at.
        * @param value The gameUuids to set.
@@ -912,6 +5798,10 @@ public final class Test {
         return this;
       }
       /**
+       * <pre>
+       * List UUIDs
+       * </pre>
+       *
        * <code>repeated bytes game_uuids = 5;</code>
        * @param value The gameUuids to add.
        * @return This builder for chaining.
@@ -925,6 +5815,10 @@ public final class Test {
         return this;
       }
       /**
+       * <pre>
+       * List UUIDs
+       * </pre>
+       *
        * <code>repeated bytes game_uuids = 5;</code>
        * @param values The gameUuids to add.
        * @return This builder for chaining.
@@ -939,6 +5833,10 @@ public final class Test {
         return this;
       }
       /**
+       * <pre>
+       * List UUIDs
+       * </pre>
+       *
        * <code>repeated bytes game_uuids = 5;</code>
        * @return This builder for chaining.
        */
@@ -947,6 +5845,3585 @@ public final class Test {
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
+      }
+
+      /**
+       * <code>bytes v1_uuid = 6;</code>
+       * @return Whether the v1Uuid field is set.
+       */
+      public boolean hasV1Uuid() {
+        return versionedUuidCase_ == 6;
+      }
+      /**
+       * <code>bytes v1_uuid = 6;</code>
+       * @return The v1Uuid.
+       */
+      public com.google.protobuf.ByteString getV1Uuid() {
+        if (versionedUuidCase_ == 6) {
+          return (com.google.protobuf.ByteString) versionedUuid_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <code>bytes v1_uuid = 6;</code>
+       * @param value The v1Uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV1Uuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        versionedUuidCase_ = 6;
+        versionedUuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes v1_uuid = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV1Uuid() {
+        if (versionedUuidCase_ == 6) {
+          versionedUuidCase_ = 0;
+          versionedUuid_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>bytes v2_uuid = 7;</code>
+       * @return Whether the v2Uuid field is set.
+       */
+      public boolean hasV2Uuid() {
+        return versionedUuidCase_ == 7;
+      }
+      /**
+       * <code>bytes v2_uuid = 7;</code>
+       * @return The v2Uuid.
+       */
+      public com.google.protobuf.ByteString getV2Uuid() {
+        if (versionedUuidCase_ == 7) {
+          return (com.google.protobuf.ByteString) versionedUuid_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <code>bytes v2_uuid = 7;</code>
+       * @param value The v2Uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV2Uuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        versionedUuidCase_ = 7;
+        versionedUuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes v2_uuid = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV2Uuid() {
+        if (versionedUuidCase_ == 7) {
+          versionedUuidCase_ = 0;
+          versionedUuid_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private li.xiam.uuidhelper.test.Test.Player.NestedMsg nested_;
+      private com.google.protobuf.SingleFieldBuilder<
+          li.xiam.uuidhelper.test.Test.Player.NestedMsg, li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder, li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder> nestedBuilder_;
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       * @return Whether the nested field is set.
+       */
+      public boolean hasNested() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       * @return The nested.
+       */
+      public li.xiam.uuidhelper.test.Test.Player.NestedMsg getNested() {
+        if (nestedBuilder_ == null) {
+          return nested_ == null ? li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance() : nested_;
+        } else {
+          return nestedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       */
+      public Builder setNested(li.xiam.uuidhelper.test.Test.Player.NestedMsg value) {
+        if (nestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nested_ = value;
+        } else {
+          nestedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       */
+      public Builder setNested(
+          li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder builderForValue) {
+        if (nestedBuilder_ == null) {
+          nested_ = builderForValue.build();
+        } else {
+          nestedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       */
+      public Builder mergeNested(li.xiam.uuidhelper.test.Test.Player.NestedMsg value) {
+        if (nestedBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            nested_ != null &&
+            nested_ != li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance()) {
+            getNestedBuilder().mergeFrom(value);
+          } else {
+            nested_ = value;
+          }
+        } else {
+          nestedBuilder_.mergeFrom(value);
+        }
+        if (nested_ != null) {
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       */
+      public Builder clearNested() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        nested_ = null;
+        if (nestedBuilder_ != null) {
+          nestedBuilder_.dispose();
+          nestedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       */
+      public li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder getNestedBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getNestedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       */
+      public li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder getNestedOrBuilder() {
+        if (nestedBuilder_ != null) {
+          return nestedBuilder_.getMessageOrBuilder();
+        } else {
+          return nested_ == null ?
+              li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance() : nested_;
+        }
+      }
+      /**
+       * <code>.uuidhelper.test.Player.NestedMsg nested = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          li.xiam.uuidhelper.test.Test.Player.NestedMsg, li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder, li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder> 
+          getNestedFieldBuilder() {
+        if (nestedBuilder_ == null) {
+          nestedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              li.xiam.uuidhelper.test.Test.Player.NestedMsg, li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder, li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder>(
+                  getNested(),
+                  getParentForChildren(),
+                  isClean());
+          nested_ = null;
+        }
+        return nestedBuilder_;
+      }
+
+      private li.xiam.uuidhelper.test.Test.Player.NestedMsg optionalNested_;
+      private com.google.protobuf.SingleFieldBuilder<
+          li.xiam.uuidhelper.test.Test.Player.NestedMsg, li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder, li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder> optionalNestedBuilder_;
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       * @return Whether the optionalNested field is set.
+       */
+      public boolean hasOptionalNested() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       * @return The optionalNested.
+       */
+      public li.xiam.uuidhelper.test.Test.Player.NestedMsg getOptionalNested() {
+        if (optionalNestedBuilder_ == null) {
+          return optionalNested_ == null ? li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance() : optionalNested_;
+        } else {
+          return optionalNestedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       */
+      public Builder setOptionalNested(li.xiam.uuidhelper.test.Test.Player.NestedMsg value) {
+        if (optionalNestedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          optionalNested_ = value;
+        } else {
+          optionalNestedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       */
+      public Builder setOptionalNested(
+          li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder builderForValue) {
+        if (optionalNestedBuilder_ == null) {
+          optionalNested_ = builderForValue.build();
+        } else {
+          optionalNestedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       */
+      public Builder mergeOptionalNested(li.xiam.uuidhelper.test.Test.Player.NestedMsg value) {
+        if (optionalNestedBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            optionalNested_ != null &&
+            optionalNested_ != li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance()) {
+            getOptionalNestedBuilder().mergeFrom(value);
+          } else {
+            optionalNested_ = value;
+          }
+        } else {
+          optionalNestedBuilder_.mergeFrom(value);
+        }
+        if (optionalNested_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       */
+      public Builder clearOptionalNested() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        optionalNested_ = null;
+        if (optionalNestedBuilder_ != null) {
+          optionalNestedBuilder_.dispose();
+          optionalNestedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       */
+      public li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder getOptionalNestedBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getOptionalNestedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       */
+      public li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder getOptionalNestedOrBuilder() {
+        if (optionalNestedBuilder_ != null) {
+          return optionalNestedBuilder_.getMessageOrBuilder();
+        } else {
+          return optionalNested_ == null ?
+              li.xiam.uuidhelper.test.Test.Player.NestedMsg.getDefaultInstance() : optionalNested_;
+        }
+      }
+      /**
+       * <code>optional .uuidhelper.test.Player.NestedMsg optional_nested = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          li.xiam.uuidhelper.test.Test.Player.NestedMsg, li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder, li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder> 
+          getOptionalNestedFieldBuilder() {
+        if (optionalNestedBuilder_ == null) {
+          optionalNestedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              li.xiam.uuidhelper.test.Test.Player.NestedMsg, li.xiam.uuidhelper.test.Test.Player.NestedMsg.Builder, li.xiam.uuidhelper.test.Test.Player.NestedMsgOrBuilder>(
+                  getOptionalNested(),
+                  getParentForChildren(),
+                  isClean());
+          optionalNested_ = null;
+        }
+        return optionalNestedBuilder_;
+      }
+
+      private com.google.protobuf.ByteString optUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Optional UUID
+       * </pre>
+       *
+       * <code>optional bytes opt_uuid = 10;</code>
+       * @return Whether the optUuid field is set.
+       */
+      @java.lang.Override
+      public boolean hasOptUuid() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * Optional UUID
+       * </pre>
+       *
+       * <code>optional bytes opt_uuid = 10;</code>
+       * @return The optUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getOptUuid() {
+        return optUuid_;
+      }
+      /**
+       * <pre>
+       * Optional UUID
+       * </pre>
+       *
+       * <code>optional bytes opt_uuid = 10;</code>
+       * @param value The optUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        optUuid_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional UUID
+       * </pre>
+       *
+       * <code>optional bytes opt_uuid = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOptUuid() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        optUuid_ = getDefaultInstance().getOptUuid();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapInt32Uuid_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapInt32Uuid() {
+        if (mapInt32Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapInt32UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapInt32Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapInt32Uuid() {
+        if (mapInt32Uuid_ == null) {
+          mapInt32Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapInt32UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapInt32Uuid_.isMutable()) {
+          mapInt32Uuid_ = mapInt32Uuid_.copy();
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return mapInt32Uuid_;
+      }
+      public int getMapInt32UuidCount() {
+        return internalGetMapInt32Uuid().getMap().size();
+      }
+      /**
+       * <pre>
+       * Map UUIDs
+       * </pre>
+       *
+       * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapInt32Uuid(
+          int key) {
+
+        return internalGetMapInt32Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapInt32UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapInt32Uuid() {
+        return getMapInt32UuidMap();
+      }
+      /**
+       * <pre>
+       * Map UUIDs
+       * </pre>
+       *
+       * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapInt32UuidMap() {
+        return internalGetMapInt32Uuid().getMap();
+      }
+      /**
+       * <pre>
+       * Map UUIDs
+       * </pre>
+       *
+       * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapInt32UuidOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapInt32Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Map UUIDs
+       * </pre>
+       *
+       * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapInt32UuidOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapInt32Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapInt32Uuid() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        internalGetMutableMapInt32Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Map UUIDs
+       * </pre>
+       *
+       * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+       */
+      public Builder removeMapInt32Uuid(
+          int key) {
+
+        internalGetMutableMapInt32Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapInt32Uuid() {
+        bitField0_ |= 0x00000400;
+        return internalGetMutableMapInt32Uuid().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Map UUIDs
+       * </pre>
+       *
+       * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+       */
+      public Builder putMapInt32Uuid(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapInt32Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <pre>
+       * Map UUIDs
+       * </pre>
+       *
+       * <code>map&lt;int32, bytes&gt; map_int32_uuid = 11;</code>
+       */
+      public Builder putAllMapInt32Uuid(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapInt32Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapInt64Uuid_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapInt64Uuid() {
+        if (mapInt64Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapInt64UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapInt64Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapInt64Uuid() {
+        if (mapInt64Uuid_ == null) {
+          mapInt64Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapInt64UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapInt64Uuid_.isMutable()) {
+          mapInt64Uuid_ = mapInt64Uuid_.copy();
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return mapInt64Uuid_;
+      }
+      public int getMapInt64UuidCount() {
+        return internalGetMapInt64Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapInt64Uuid(
+          long key) {
+
+        return internalGetMapInt64Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapInt64UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapInt64Uuid() {
+        return getMapInt64UuidMap();
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapInt64UuidMap() {
+        return internalGetMapInt64Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapInt64UuidOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapInt64Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapInt64UuidOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapInt64Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapInt64Uuid() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        internalGetMutableMapInt64Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+       */
+      public Builder removeMapInt64Uuid(
+          long key) {
+
+        internalGetMutableMapInt64Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapInt64Uuid() {
+        bitField0_ |= 0x00000800;
+        return internalGetMutableMapInt64Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+       */
+      public Builder putMapInt64Uuid(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapInt64Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuid = 12;</code>
+       */
+      public Builder putAllMapInt64Uuid(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapInt64Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapUint32Uuid_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapUint32Uuid() {
+        if (mapUint32Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapUint32UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapUint32Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapUint32Uuid() {
+        if (mapUint32Uuid_ == null) {
+          mapUint32Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapUint32UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapUint32Uuid_.isMutable()) {
+          mapUint32Uuid_ = mapUint32Uuid_.copy();
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return mapUint32Uuid_;
+      }
+      public int getMapUint32UuidCount() {
+        return internalGetMapUint32Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapUint32Uuid(
+          int key) {
+
+        return internalGetMapUint32Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapUint32UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapUint32Uuid() {
+        return getMapUint32UuidMap();
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapUint32UuidMap() {
+        return internalGetMapUint32Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapUint32UuidOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapUint32Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapUint32UuidOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapUint32Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapUint32Uuid() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        internalGetMutableMapUint32Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+       */
+      public Builder removeMapUint32Uuid(
+          int key) {
+
+        internalGetMutableMapUint32Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapUint32Uuid() {
+        bitField0_ |= 0x00001000;
+        return internalGetMutableMapUint32Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+       */
+      public Builder putMapUint32Uuid(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapUint32Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuid = 13;</code>
+       */
+      public Builder putAllMapUint32Uuid(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapUint32Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapUint64Uuid_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapUint64Uuid() {
+        if (mapUint64Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapUint64UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapUint64Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapUint64Uuid() {
+        if (mapUint64Uuid_ == null) {
+          mapUint64Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapUint64UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapUint64Uuid_.isMutable()) {
+          mapUint64Uuid_ = mapUint64Uuid_.copy();
+        }
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return mapUint64Uuid_;
+      }
+      public int getMapUint64UuidCount() {
+        return internalGetMapUint64Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapUint64Uuid(
+          long key) {
+
+        return internalGetMapUint64Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapUint64UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapUint64Uuid() {
+        return getMapUint64UuidMap();
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapUint64UuidMap() {
+        return internalGetMapUint64Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapUint64UuidOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapUint64Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapUint64UuidOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapUint64Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapUint64Uuid() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        internalGetMutableMapUint64Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+       */
+      public Builder removeMapUint64Uuid(
+          long key) {
+
+        internalGetMutableMapUint64Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapUint64Uuid() {
+        bitField0_ |= 0x00002000;
+        return internalGetMutableMapUint64Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+       */
+      public Builder putMapUint64Uuid(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapUint64Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00002000;
+        return this;
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuid = 14;</code>
+       */
+      public Builder putAllMapUint64Uuid(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapUint64Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00002000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapSint32Uuid_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapSint32Uuid() {
+        if (mapSint32Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapSint32UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapSint32Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapSint32Uuid() {
+        if (mapSint32Uuid_ == null) {
+          mapSint32Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapSint32UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapSint32Uuid_.isMutable()) {
+          mapSint32Uuid_ = mapSint32Uuid_.copy();
+        }
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return mapSint32Uuid_;
+      }
+      public int getMapSint32UuidCount() {
+        return internalGetMapSint32Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapSint32Uuid(
+          int key) {
+
+        return internalGetMapSint32Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapSint32UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSint32Uuid() {
+        return getMapSint32UuidMap();
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSint32UuidMap() {
+        return internalGetMapSint32Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapSint32UuidOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapSint32Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapSint32UuidOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapSint32Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapSint32Uuid() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        internalGetMutableMapSint32Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+       */
+      public Builder removeMapSint32Uuid(
+          int key) {
+
+        internalGetMutableMapSint32Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapSint32Uuid() {
+        bitField0_ |= 0x00004000;
+        return internalGetMutableMapSint32Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+       */
+      public Builder putMapSint32Uuid(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapSint32Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuid = 15;</code>
+       */
+      public Builder putAllMapSint32Uuid(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapSint32Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00004000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapSint64Uuid_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapSint64Uuid() {
+        if (mapSint64Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapSint64UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapSint64Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapSint64Uuid() {
+        if (mapSint64Uuid_ == null) {
+          mapSint64Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapSint64UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapSint64Uuid_.isMutable()) {
+          mapSint64Uuid_ = mapSint64Uuid_.copy();
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return mapSint64Uuid_;
+      }
+      public int getMapSint64UuidCount() {
+        return internalGetMapSint64Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapSint64Uuid(
+          long key) {
+
+        return internalGetMapSint64Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapSint64UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSint64Uuid() {
+        return getMapSint64UuidMap();
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSint64UuidMap() {
+        return internalGetMapSint64Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapSint64UuidOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapSint64Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapSint64UuidOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapSint64Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapSint64Uuid() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        internalGetMutableMapSint64Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+       */
+      public Builder removeMapSint64Uuid(
+          long key) {
+
+        internalGetMutableMapSint64Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapSint64Uuid() {
+        bitField0_ |= 0x00008000;
+        return internalGetMutableMapSint64Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+       */
+      public Builder putMapSint64Uuid(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapSint64Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00008000;
+        return this;
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuid = 16;</code>
+       */
+      public Builder putAllMapSint64Uuid(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapSint64Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00008000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapFixed32Uuid_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapFixed32Uuid() {
+        if (mapFixed32Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapFixed32UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapFixed32Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapFixed32Uuid() {
+        if (mapFixed32Uuid_ == null) {
+          mapFixed32Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapFixed32UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapFixed32Uuid_.isMutable()) {
+          mapFixed32Uuid_ = mapFixed32Uuid_.copy();
+        }
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return mapFixed32Uuid_;
+      }
+      public int getMapFixed32UuidCount() {
+        return internalGetMapFixed32Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapFixed32Uuid(
+          int key) {
+
+        return internalGetMapFixed32Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapFixed32UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapFixed32Uuid() {
+        return getMapFixed32UuidMap();
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapFixed32UuidMap() {
+        return internalGetMapFixed32Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapFixed32UuidOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapFixed32Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapFixed32UuidOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapFixed32Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapFixed32Uuid() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        internalGetMutableMapFixed32Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+       */
+      public Builder removeMapFixed32Uuid(
+          int key) {
+
+        internalGetMutableMapFixed32Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapFixed32Uuid() {
+        bitField0_ |= 0x00010000;
+        return internalGetMutableMapFixed32Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+       */
+      public Builder putMapFixed32Uuid(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapFixed32Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00010000;
+        return this;
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuid = 17;</code>
+       */
+      public Builder putAllMapFixed32Uuid(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapFixed32Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00010000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapFixed64Uuid_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapFixed64Uuid() {
+        if (mapFixed64Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapFixed64UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapFixed64Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapFixed64Uuid() {
+        if (mapFixed64Uuid_ == null) {
+          mapFixed64Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapFixed64UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapFixed64Uuid_.isMutable()) {
+          mapFixed64Uuid_ = mapFixed64Uuid_.copy();
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return mapFixed64Uuid_;
+      }
+      public int getMapFixed64UuidCount() {
+        return internalGetMapFixed64Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapFixed64Uuid(
+          long key) {
+
+        return internalGetMapFixed64Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapFixed64UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapFixed64Uuid() {
+        return getMapFixed64UuidMap();
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapFixed64UuidMap() {
+        return internalGetMapFixed64Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapFixed64UuidOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapFixed64Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapFixed64UuidOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapFixed64Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapFixed64Uuid() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        internalGetMutableMapFixed64Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+       */
+      public Builder removeMapFixed64Uuid(
+          long key) {
+
+        internalGetMutableMapFixed64Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapFixed64Uuid() {
+        bitField0_ |= 0x00020000;
+        return internalGetMutableMapFixed64Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+       */
+      public Builder putMapFixed64Uuid(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapFixed64Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00020000;
+        return this;
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuid = 18;</code>
+       */
+      public Builder putAllMapFixed64Uuid(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapFixed64Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00020000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapSfixed32Uuid_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapSfixed32Uuid() {
+        if (mapSfixed32Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapSfixed32UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapSfixed32Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapSfixed32Uuid() {
+        if (mapSfixed32Uuid_ == null) {
+          mapSfixed32Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapSfixed32UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapSfixed32Uuid_.isMutable()) {
+          mapSfixed32Uuid_ = mapSfixed32Uuid_.copy();
+        }
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return mapSfixed32Uuid_;
+      }
+      public int getMapSfixed32UuidCount() {
+        return internalGetMapSfixed32Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapSfixed32Uuid(
+          int key) {
+
+        return internalGetMapSfixed32Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapSfixed32UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSfixed32Uuid() {
+        return getMapSfixed32UuidMap();
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSfixed32UuidMap() {
+        return internalGetMapSfixed32Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapSfixed32UuidOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapSfixed32Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapSfixed32UuidOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapSfixed32Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapSfixed32Uuid() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        internalGetMutableMapSfixed32Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+       */
+      public Builder removeMapSfixed32Uuid(
+          int key) {
+
+        internalGetMutableMapSfixed32Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapSfixed32Uuid() {
+        bitField0_ |= 0x00040000;
+        return internalGetMutableMapSfixed32Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+       */
+      public Builder putMapSfixed32Uuid(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapSfixed32Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuid = 19;</code>
+       */
+      public Builder putAllMapSfixed32Uuid(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapSfixed32Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapSfixed64Uuid_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapSfixed64Uuid() {
+        if (mapSfixed64Uuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapSfixed64UuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapSfixed64Uuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapSfixed64Uuid() {
+        if (mapSfixed64Uuid_ == null) {
+          mapSfixed64Uuid_ = com.google.protobuf.MapField.newMapField(
+              MapSfixed64UuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapSfixed64Uuid_.isMutable()) {
+          mapSfixed64Uuid_ = mapSfixed64Uuid_.copy();
+        }
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return mapSfixed64Uuid_;
+      }
+      public int getMapSfixed64UuidCount() {
+        return internalGetMapSfixed64Uuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapSfixed64Uuid(
+          long key) {
+
+        return internalGetMapSfixed64Uuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapSfixed64UuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSfixed64Uuid() {
+        return getMapSfixed64UuidMap();
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSfixed64UuidMap() {
+        return internalGetMapSfixed64Uuid().getMap();
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapSfixed64UuidOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapSfixed64Uuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapSfixed64UuidOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapSfixed64Uuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapSfixed64Uuid() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        internalGetMutableMapSfixed64Uuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+       */
+      public Builder removeMapSfixed64Uuid(
+          long key) {
+
+        internalGetMutableMapSfixed64Uuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapSfixed64Uuid() {
+        bitField0_ |= 0x00080000;
+        return internalGetMutableMapSfixed64Uuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+       */
+      public Builder putMapSfixed64Uuid(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapSfixed64Uuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00080000;
+        return this;
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuid = 20;</code>
+       */
+      public Builder putAllMapSfixed64Uuid(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapSfixed64Uuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00080000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Boolean, com.google.protobuf.ByteString> mapBoolUuid_;
+      private com.google.protobuf.MapField<java.lang.Boolean, com.google.protobuf.ByteString>
+          internalGetMapBoolUuid() {
+        if (mapBoolUuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapBoolUuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapBoolUuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.Boolean, com.google.protobuf.ByteString>
+          internalGetMutableMapBoolUuid() {
+        if (mapBoolUuid_ == null) {
+          mapBoolUuid_ = com.google.protobuf.MapField.newMapField(
+              MapBoolUuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapBoolUuid_.isMutable()) {
+          mapBoolUuid_ = mapBoolUuid_.copy();
+        }
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return mapBoolUuid_;
+      }
+      public int getMapBoolUuidCount() {
+        return internalGetMapBoolUuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapBoolUuid(
+          boolean key) {
+
+        return internalGetMapBoolUuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapBoolUuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> getMapBoolUuid() {
+        return getMapBoolUuidMap();
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> getMapBoolUuidMap() {
+        return internalGetMapBoolUuid().getMap();
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapBoolUuidOrDefault(
+          boolean key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> map =
+            internalGetMapBoolUuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapBoolUuidOrThrow(
+          boolean key) {
+
+        java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> map =
+            internalGetMapBoolUuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapBoolUuid() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        internalGetMutableMapBoolUuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+       */
+      public Builder removeMapBoolUuid(
+          boolean key) {
+
+        internalGetMutableMapBoolUuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString>
+          getMutableMapBoolUuid() {
+        bitField0_ |= 0x00100000;
+        return internalGetMutableMapBoolUuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+       */
+      public Builder putMapBoolUuid(
+          boolean key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapBoolUuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00100000;
+        return this;
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuid = 21;</code>
+       */
+      public Builder putAllMapBoolUuid(
+          java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapBoolUuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00100000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.protobuf.ByteString> mapStringUuid_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+          internalGetMapStringUuid() {
+        if (mapStringUuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapStringUuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapStringUuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+          internalGetMutableMapStringUuid() {
+        if (mapStringUuid_ == null) {
+          mapStringUuid_ = com.google.protobuf.MapField.newMapField(
+              MapStringUuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapStringUuid_.isMutable()) {
+          mapStringUuid_ = mapStringUuid_.copy();
+        }
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return mapStringUuid_;
+      }
+      public int getMapStringUuidCount() {
+        return internalGetMapStringUuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapStringUuid(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetMapStringUuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapStringUuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapStringUuid() {
+        return getMapStringUuidMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapStringUuidMap() {
+        return internalGetMapStringUuid().getMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapStringUuidOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetMapStringUuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapStringUuidOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetMapStringUuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapStringUuid() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        internalGetMutableMapStringUuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+       */
+      public Builder removeMapStringUuid(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableMapStringUuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+          getMutableMapStringUuid() {
+        bitField0_ |= 0x00200000;
+        return internalGetMutableMapStringUuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+       */
+      public Builder putMapStringUuid(
+          java.lang.String key,
+          com.google.protobuf.ByteString value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapStringUuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00200000;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuid = 22;</code>
+       */
+      public Builder putAllMapStringUuid(
+          java.util.Map<java.lang.String, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapStringUuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00200000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapInt32Uuids_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapInt32Uuids() {
+        if (mapInt32Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapInt32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapInt32Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapInt32Uuids() {
+        if (mapInt32Uuids_ == null) {
+          mapInt32Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapInt32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapInt32Uuids_.isMutable()) {
+          mapInt32Uuids_ = mapInt32Uuids_.copy();
+        }
+        bitField0_ |= 0x00400000;
+        onChanged();
+        return mapInt32Uuids_;
+      }
+      public int getMapInt32UuidsCount() {
+        return internalGetMapInt32Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapInt32Uuids(
+          int key) {
+
+        return internalGetMapInt32Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapInt32UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapInt32Uuids() {
+        return getMapInt32UuidsMap();
+      }
+      /**
+       * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapInt32UuidsMap() {
+        return internalGetMapInt32Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapInt32UuidsOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapInt32Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapInt32UuidsOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapInt32Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapInt32Uuids() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        internalGetMutableMapInt32Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+       */
+      public Builder removeMapInt32Uuids(
+          int key) {
+
+        internalGetMutableMapInt32Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapInt32Uuids() {
+        bitField0_ |= 0x00400000;
+        return internalGetMutableMapInt32Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+       */
+      public Builder putMapInt32Uuids(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapInt32Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00400000;
+        return this;
+      }
+      /**
+       * <code>map&lt;int32, bytes&gt; map_int32_uuids = 23;</code>
+       */
+      public Builder putAllMapInt32Uuids(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapInt32Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00400000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapInt64Uuids_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapInt64Uuids() {
+        if (mapInt64Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapInt64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapInt64Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapInt64Uuids() {
+        if (mapInt64Uuids_ == null) {
+          mapInt64Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapInt64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapInt64Uuids_.isMutable()) {
+          mapInt64Uuids_ = mapInt64Uuids_.copy();
+        }
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return mapInt64Uuids_;
+      }
+      public int getMapInt64UuidsCount() {
+        return internalGetMapInt64Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapInt64Uuids(
+          long key) {
+
+        return internalGetMapInt64Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapInt64UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapInt64Uuids() {
+        return getMapInt64UuidsMap();
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapInt64UuidsMap() {
+        return internalGetMapInt64Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapInt64UuidsOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapInt64Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapInt64UuidsOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapInt64Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapInt64Uuids() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        internalGetMutableMapInt64Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+       */
+      public Builder removeMapInt64Uuids(
+          long key) {
+
+        internalGetMutableMapInt64Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapInt64Uuids() {
+        bitField0_ |= 0x00800000;
+        return internalGetMutableMapInt64Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+       */
+      public Builder putMapInt64Uuids(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapInt64Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00800000;
+        return this;
+      }
+      /**
+       * <code>map&lt;int64, bytes&gt; map_int64_uuids = 24;</code>
+       */
+      public Builder putAllMapInt64Uuids(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapInt64Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00800000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapUint32Uuids_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapUint32Uuids() {
+        if (mapUint32Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapUint32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapUint32Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapUint32Uuids() {
+        if (mapUint32Uuids_ == null) {
+          mapUint32Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapUint32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapUint32Uuids_.isMutable()) {
+          mapUint32Uuids_ = mapUint32Uuids_.copy();
+        }
+        bitField0_ |= 0x01000000;
+        onChanged();
+        return mapUint32Uuids_;
+      }
+      public int getMapUint32UuidsCount() {
+        return internalGetMapUint32Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapUint32Uuids(
+          int key) {
+
+        return internalGetMapUint32Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapUint32UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapUint32Uuids() {
+        return getMapUint32UuidsMap();
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapUint32UuidsMap() {
+        return internalGetMapUint32Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapUint32UuidsOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapUint32Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapUint32UuidsOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapUint32Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapUint32Uuids() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        internalGetMutableMapUint32Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+       */
+      public Builder removeMapUint32Uuids(
+          int key) {
+
+        internalGetMutableMapUint32Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapUint32Uuids() {
+        bitField0_ |= 0x01000000;
+        return internalGetMutableMapUint32Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+       */
+      public Builder putMapUint32Uuids(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapUint32Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x01000000;
+        return this;
+      }
+      /**
+       * <code>map&lt;uint32, bytes&gt; map_uint32_uuids = 25;</code>
+       */
+      public Builder putAllMapUint32Uuids(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapUint32Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x01000000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapUint64Uuids_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapUint64Uuids() {
+        if (mapUint64Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapUint64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapUint64Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapUint64Uuids() {
+        if (mapUint64Uuids_ == null) {
+          mapUint64Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapUint64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapUint64Uuids_.isMutable()) {
+          mapUint64Uuids_ = mapUint64Uuids_.copy();
+        }
+        bitField0_ |= 0x02000000;
+        onChanged();
+        return mapUint64Uuids_;
+      }
+      public int getMapUint64UuidsCount() {
+        return internalGetMapUint64Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapUint64Uuids(
+          long key) {
+
+        return internalGetMapUint64Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapUint64UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapUint64Uuids() {
+        return getMapUint64UuidsMap();
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapUint64UuidsMap() {
+        return internalGetMapUint64Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapUint64UuidsOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapUint64Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapUint64UuidsOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapUint64Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapUint64Uuids() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        internalGetMutableMapUint64Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+       */
+      public Builder removeMapUint64Uuids(
+          long key) {
+
+        internalGetMutableMapUint64Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapUint64Uuids() {
+        bitField0_ |= 0x02000000;
+        return internalGetMutableMapUint64Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+       */
+      public Builder putMapUint64Uuids(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapUint64Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x02000000;
+        return this;
+      }
+      /**
+       * <code>map&lt;uint64, bytes&gt; map_uint64_uuids = 26;</code>
+       */
+      public Builder putAllMapUint64Uuids(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapUint64Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x02000000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapSint32Uuids_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapSint32Uuids() {
+        if (mapSint32Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapSint32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapSint32Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapSint32Uuids() {
+        if (mapSint32Uuids_ == null) {
+          mapSint32Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapSint32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapSint32Uuids_.isMutable()) {
+          mapSint32Uuids_ = mapSint32Uuids_.copy();
+        }
+        bitField0_ |= 0x04000000;
+        onChanged();
+        return mapSint32Uuids_;
+      }
+      public int getMapSint32UuidsCount() {
+        return internalGetMapSint32Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapSint32Uuids(
+          int key) {
+
+        return internalGetMapSint32Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapSint32UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSint32Uuids() {
+        return getMapSint32UuidsMap();
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSint32UuidsMap() {
+        return internalGetMapSint32Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapSint32UuidsOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapSint32Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapSint32UuidsOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapSint32Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapSint32Uuids() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        internalGetMutableMapSint32Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+       */
+      public Builder removeMapSint32Uuids(
+          int key) {
+
+        internalGetMutableMapSint32Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapSint32Uuids() {
+        bitField0_ |= 0x04000000;
+        return internalGetMutableMapSint32Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+       */
+      public Builder putMapSint32Uuids(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapSint32Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x04000000;
+        return this;
+      }
+      /**
+       * <code>map&lt;sint32, bytes&gt; map_sint32_uuids = 27;</code>
+       */
+      public Builder putAllMapSint32Uuids(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapSint32Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x04000000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapSint64Uuids_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapSint64Uuids() {
+        if (mapSint64Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapSint64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapSint64Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapSint64Uuids() {
+        if (mapSint64Uuids_ == null) {
+          mapSint64Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapSint64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapSint64Uuids_.isMutable()) {
+          mapSint64Uuids_ = mapSint64Uuids_.copy();
+        }
+        bitField0_ |= 0x08000000;
+        onChanged();
+        return mapSint64Uuids_;
+      }
+      public int getMapSint64UuidsCount() {
+        return internalGetMapSint64Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapSint64Uuids(
+          long key) {
+
+        return internalGetMapSint64Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapSint64UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSint64Uuids() {
+        return getMapSint64UuidsMap();
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSint64UuidsMap() {
+        return internalGetMapSint64Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapSint64UuidsOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapSint64Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapSint64UuidsOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapSint64Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapSint64Uuids() {
+        bitField0_ = (bitField0_ & ~0x08000000);
+        internalGetMutableMapSint64Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+       */
+      public Builder removeMapSint64Uuids(
+          long key) {
+
+        internalGetMutableMapSint64Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapSint64Uuids() {
+        bitField0_ |= 0x08000000;
+        return internalGetMutableMapSint64Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+       */
+      public Builder putMapSint64Uuids(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapSint64Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x08000000;
+        return this;
+      }
+      /**
+       * <code>map&lt;sint64, bytes&gt; map_sint64_uuids = 28;</code>
+       */
+      public Builder putAllMapSint64Uuids(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapSint64Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x08000000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapFixed32Uuids_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapFixed32Uuids() {
+        if (mapFixed32Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapFixed32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapFixed32Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapFixed32Uuids() {
+        if (mapFixed32Uuids_ == null) {
+          mapFixed32Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapFixed32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapFixed32Uuids_.isMutable()) {
+          mapFixed32Uuids_ = mapFixed32Uuids_.copy();
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return mapFixed32Uuids_;
+      }
+      public int getMapFixed32UuidsCount() {
+        return internalGetMapFixed32Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapFixed32Uuids(
+          int key) {
+
+        return internalGetMapFixed32Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapFixed32UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapFixed32Uuids() {
+        return getMapFixed32UuidsMap();
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapFixed32UuidsMap() {
+        return internalGetMapFixed32Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapFixed32UuidsOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapFixed32Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapFixed32UuidsOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapFixed32Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapFixed32Uuids() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        internalGetMutableMapFixed32Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+       */
+      public Builder removeMapFixed32Uuids(
+          int key) {
+
+        internalGetMutableMapFixed32Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapFixed32Uuids() {
+        bitField0_ |= 0x10000000;
+        return internalGetMutableMapFixed32Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+       */
+      public Builder putMapFixed32Uuids(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapFixed32Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x10000000;
+        return this;
+      }
+      /**
+       * <code>map&lt;fixed32, bytes&gt; map_fixed32_uuids = 29;</code>
+       */
+      public Builder putAllMapFixed32Uuids(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapFixed32Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x10000000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapFixed64Uuids_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapFixed64Uuids() {
+        if (mapFixed64Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapFixed64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapFixed64Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapFixed64Uuids() {
+        if (mapFixed64Uuids_ == null) {
+          mapFixed64Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapFixed64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapFixed64Uuids_.isMutable()) {
+          mapFixed64Uuids_ = mapFixed64Uuids_.copy();
+        }
+        bitField0_ |= 0x20000000;
+        onChanged();
+        return mapFixed64Uuids_;
+      }
+      public int getMapFixed64UuidsCount() {
+        return internalGetMapFixed64Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapFixed64Uuids(
+          long key) {
+
+        return internalGetMapFixed64Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapFixed64UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapFixed64Uuids() {
+        return getMapFixed64UuidsMap();
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapFixed64UuidsMap() {
+        return internalGetMapFixed64Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapFixed64UuidsOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapFixed64Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapFixed64UuidsOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapFixed64Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapFixed64Uuids() {
+        bitField0_ = (bitField0_ & ~0x20000000);
+        internalGetMutableMapFixed64Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+       */
+      public Builder removeMapFixed64Uuids(
+          long key) {
+
+        internalGetMutableMapFixed64Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapFixed64Uuids() {
+        bitField0_ |= 0x20000000;
+        return internalGetMutableMapFixed64Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+       */
+      public Builder putMapFixed64Uuids(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapFixed64Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x20000000;
+        return this;
+      }
+      /**
+       * <code>map&lt;fixed64, bytes&gt; map_fixed64_uuids = 30;</code>
+       */
+      public Builder putAllMapFixed64Uuids(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapFixed64Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x20000000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, com.google.protobuf.ByteString> mapSfixed32Uuids_;
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMapSfixed32Uuids() {
+        if (mapSfixed32Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapSfixed32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapSfixed32Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, com.google.protobuf.ByteString>
+          internalGetMutableMapSfixed32Uuids() {
+        if (mapSfixed32Uuids_ == null) {
+          mapSfixed32Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapSfixed32UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapSfixed32Uuids_.isMutable()) {
+          mapSfixed32Uuids_ = mapSfixed32Uuids_.copy();
+        }
+        bitField0_ |= 0x40000000;
+        onChanged();
+        return mapSfixed32Uuids_;
+      }
+      public int getMapSfixed32UuidsCount() {
+        return internalGetMapSfixed32Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapSfixed32Uuids(
+          int key) {
+
+        return internalGetMapSfixed32Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapSfixed32UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSfixed32Uuids() {
+        return getMapSfixed32UuidsMap();
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> getMapSfixed32UuidsMap() {
+        return internalGetMapSfixed32Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapSfixed32UuidsOrDefault(
+          int key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapSfixed32Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapSfixed32UuidsOrThrow(
+          int key) {
+
+        java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> map =
+            internalGetMapSfixed32Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapSfixed32Uuids() {
+        bitField0_ = (bitField0_ & ~0x40000000);
+        internalGetMutableMapSfixed32Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+       */
+      public Builder removeMapSfixed32Uuids(
+          int key) {
+
+        internalGetMutableMapSfixed32Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, com.google.protobuf.ByteString>
+          getMutableMapSfixed32Uuids() {
+        bitField0_ |= 0x40000000;
+        return internalGetMutableMapSfixed32Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+       */
+      public Builder putMapSfixed32Uuids(
+          int key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapSfixed32Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x40000000;
+        return this;
+      }
+      /**
+       * <code>map&lt;sfixed32, bytes&gt; map_sfixed32_uuids = 31;</code>
+       */
+      public Builder putAllMapSfixed32Uuids(
+          java.util.Map<java.lang.Integer, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapSfixed32Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x40000000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.google.protobuf.ByteString> mapSfixed64Uuids_;
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMapSfixed64Uuids() {
+        if (mapSfixed64Uuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapSfixed64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapSfixed64Uuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.google.protobuf.ByteString>
+          internalGetMutableMapSfixed64Uuids() {
+        if (mapSfixed64Uuids_ == null) {
+          mapSfixed64Uuids_ = com.google.protobuf.MapField.newMapField(
+              MapSfixed64UuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapSfixed64Uuids_.isMutable()) {
+          mapSfixed64Uuids_ = mapSfixed64Uuids_.copy();
+        }
+        bitField0_ |= 0x80000000;
+        onChanged();
+        return mapSfixed64Uuids_;
+      }
+      public int getMapSfixed64UuidsCount() {
+        return internalGetMapSfixed64Uuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapSfixed64Uuids(
+          long key) {
+
+        return internalGetMapSfixed64Uuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapSfixed64UuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSfixed64Uuids() {
+        return getMapSfixed64UuidsMap();
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString> getMapSfixed64UuidsMap() {
+        return internalGetMapSfixed64Uuids().getMap();
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapSfixed64UuidsOrDefault(
+          long key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapSfixed64Uuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapSfixed64UuidsOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.google.protobuf.ByteString> map =
+            internalGetMapSfixed64Uuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapSfixed64Uuids() {
+        bitField0_ = (bitField0_ & ~0x80000000);
+        internalGetMutableMapSfixed64Uuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+       */
+      public Builder removeMapSfixed64Uuids(
+          long key) {
+
+        internalGetMutableMapSfixed64Uuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.google.protobuf.ByteString>
+          getMutableMapSfixed64Uuids() {
+        bitField0_ |= 0x80000000;
+        return internalGetMutableMapSfixed64Uuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+       */
+      public Builder putMapSfixed64Uuids(
+          long key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapSfixed64Uuids().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x80000000;
+        return this;
+      }
+      /**
+       * <code>map&lt;sfixed64, bytes&gt; map_sfixed64_uuids = 32;</code>
+       */
+      public Builder putAllMapSfixed64Uuids(
+          java.util.Map<java.lang.Long, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapSfixed64Uuids().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x80000000;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Boolean, com.google.protobuf.ByteString> mapBoolUuids_;
+      private com.google.protobuf.MapField<java.lang.Boolean, com.google.protobuf.ByteString>
+          internalGetMapBoolUuids() {
+        if (mapBoolUuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapBoolUuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapBoolUuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.Boolean, com.google.protobuf.ByteString>
+          internalGetMutableMapBoolUuids() {
+        if (mapBoolUuids_ == null) {
+          mapBoolUuids_ = com.google.protobuf.MapField.newMapField(
+              MapBoolUuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapBoolUuids_.isMutable()) {
+          mapBoolUuids_ = mapBoolUuids_.copy();
+        }
+        bitField1_ |= 0x00000001;
+        onChanged();
+        return mapBoolUuids_;
+      }
+      public int getMapBoolUuidsCount() {
+        return internalGetMapBoolUuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapBoolUuids(
+          boolean key) {
+
+        return internalGetMapBoolUuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapBoolUuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> getMapBoolUuids() {
+        return getMapBoolUuidsMap();
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> getMapBoolUuidsMap() {
+        return internalGetMapBoolUuids().getMap();
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapBoolUuidsOrDefault(
+          boolean key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+
+        java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> map =
+            internalGetMapBoolUuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapBoolUuidsOrThrow(
+          boolean key) {
+
+        java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> map =
+            internalGetMapBoolUuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapBoolUuids() {
+        bitField1_ = (bitField1_ & ~0x00000001);
+        internalGetMutableMapBoolUuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+       */
+      public Builder removeMapBoolUuids(
+          boolean key) {
+
+        internalGetMutableMapBoolUuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString>
+          getMutableMapBoolUuids() {
+        bitField1_ |= 0x00000001;
+        return internalGetMutableMapBoolUuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+       */
+      public Builder putMapBoolUuids(
+          boolean key,
+          com.google.protobuf.ByteString value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapBoolUuids().getMutableMap()
+            .put(key, value);
+        bitField1_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>map&lt;bool, bytes&gt; map_bool_uuids = 33;</code>
+       */
+      public Builder putAllMapBoolUuids(
+          java.util.Map<java.lang.Boolean, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapBoolUuids().getMutableMap()
+            .putAll(values);
+        bitField1_ |= 0x00000001;
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.protobuf.ByteString> mapStringUuids_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+          internalGetMapStringUuids() {
+        if (mapStringUuids_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapStringUuidsDefaultEntryHolder.defaultEntry);
+        }
+        return mapStringUuids_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+          internalGetMutableMapStringUuids() {
+        if (mapStringUuids_ == null) {
+          mapStringUuids_ = com.google.protobuf.MapField.newMapField(
+              MapStringUuidsDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapStringUuids_.isMutable()) {
+          mapStringUuids_ = mapStringUuids_.copy();
+        }
+        bitField1_ |= 0x00000002;
+        onChanged();
+        return mapStringUuids_;
+      }
+      public int getMapStringUuidsCount() {
+        return internalGetMapStringUuids().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapStringUuids(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetMapStringUuids().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapStringUuidsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapStringUuids() {
+        return getMapStringUuidsMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapStringUuidsMap() {
+        return internalGetMapStringUuids().getMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapStringUuidsOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetMapStringUuids().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapStringUuidsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetMapStringUuids().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapStringUuids() {
+        bitField1_ = (bitField1_ & ~0x00000002);
+        internalGetMutableMapStringUuids().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+       */
+      public Builder removeMapStringUuids(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableMapStringUuids().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+          getMutableMapStringUuids() {
+        bitField1_ |= 0x00000002;
+        return internalGetMutableMapStringUuids().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+       */
+      public Builder putMapStringUuids(
+          java.lang.String key,
+          com.google.protobuf.ByteString value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapStringUuids().getMutableMap()
+            .put(key, value);
+        bitField1_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_string_uuids = 34;</code>
+       */
+      public Builder putAllMapStringUuids(
+          java.util.Map<java.lang.String, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapStringUuids().getMutableMap()
+            .putAll(values);
+        bitField1_ |= 0x00000002;
+        return this;
+      }
+
+      private li.xiam.uuidhelper.test.Test.Child child_;
+      private com.google.protobuf.SingleFieldBuilder<
+          li.xiam.uuidhelper.test.Test.Child, li.xiam.uuidhelper.test.Test.Child.Builder, li.xiam.uuidhelper.test.Test.ChildOrBuilder> childBuilder_;
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       * @return Whether the child field is set.
+       */
+      public boolean hasChild() {
+        return ((bitField1_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       * @return The child.
+       */
+      public li.xiam.uuidhelper.test.Test.Child getChild() {
+        if (childBuilder_ == null) {
+          return child_ == null ? li.xiam.uuidhelper.test.Test.Child.getDefaultInstance() : child_;
+        } else {
+          return childBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       */
+      public Builder setChild(li.xiam.uuidhelper.test.Test.Child value) {
+        if (childBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          child_ = value;
+        } else {
+          childBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       */
+      public Builder setChild(
+          li.xiam.uuidhelper.test.Test.Child.Builder builderForValue) {
+        if (childBuilder_ == null) {
+          child_ = builderForValue.build();
+        } else {
+          childBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       */
+      public Builder mergeChild(li.xiam.uuidhelper.test.Test.Child value) {
+        if (childBuilder_ == null) {
+          if (((bitField1_ & 0x00000004) != 0) &&
+            child_ != null &&
+            child_ != li.xiam.uuidhelper.test.Test.Child.getDefaultInstance()) {
+            getChildBuilder().mergeFrom(value);
+          } else {
+            child_ = value;
+          }
+        } else {
+          childBuilder_.mergeFrom(value);
+        }
+        if (child_ != null) {
+          bitField1_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       */
+      public Builder clearChild() {
+        bitField1_ = (bitField1_ & ~0x00000004);
+        child_ = null;
+        if (childBuilder_ != null) {
+          childBuilder_.dispose();
+          childBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       */
+      public li.xiam.uuidhelper.test.Test.Child.Builder getChildBuilder() {
+        bitField1_ |= 0x00000004;
+        onChanged();
+        return getChildFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       */
+      public li.xiam.uuidhelper.test.Test.ChildOrBuilder getChildOrBuilder() {
+        if (childBuilder_ != null) {
+          return childBuilder_.getMessageOrBuilder();
+        } else {
+          return child_ == null ?
+              li.xiam.uuidhelper.test.Test.Child.getDefaultInstance() : child_;
+        }
+      }
+      /**
+       * <code>.uuidhelper.test.Child child = 35;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          li.xiam.uuidhelper.test.Test.Child, li.xiam.uuidhelper.test.Test.Child.Builder, li.xiam.uuidhelper.test.Test.ChildOrBuilder> 
+          getChildFieldBuilder() {
+        if (childBuilder_ == null) {
+          childBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              li.xiam.uuidhelper.test.Test.Child, li.xiam.uuidhelper.test.Test.Child.Builder, li.xiam.uuidhelper.test.Test.ChildOrBuilder>(
+                  getChild(),
+                  getParentForChildren(),
+                  isClean());
+          child_ = null;
+        }
+        return childBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:uuidhelper.test.Player)
@@ -1000,11 +9477,1065 @@ public final class Test {
 
   }
 
+  public interface ChildOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:uuidhelper.test.Child)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes child_uuid = 1;</code>
+     * @return The childUuid.
+     */
+    com.google.protobuf.ByteString getChildUuid();
+
+    /**
+     * <code>repeated bytes child_uuids = 2;</code>
+     * @return A list containing the childUuids.
+     */
+    java.util.List<com.google.protobuf.ByteString> getChildUuidsList();
+    /**
+     * <code>repeated bytes child_uuids = 2;</code>
+     * @return The count of childUuids.
+     */
+    int getChildUuidsCount();
+    /**
+     * <code>repeated bytes child_uuids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The childUuids at the given index.
+     */
+    com.google.protobuf.ByteString getChildUuids(int index);
+
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    int getMapChildUuidCount();
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    boolean containsMapChildUuid(
+        java.lang.String key);
+    /**
+     * Use {@link #getMapChildUuidMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getMapChildUuid();
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getMapChildUuidMap();
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getMapChildUuidOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    com.google.protobuf.ByteString getMapChildUuidOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code uuidhelper.test.Child}
+   */
+  public static final class Child extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:uuidhelper.test.Child)
+      ChildOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        Child.class.getName());
+    }
+    // Use Child.newBuilder() to construct.
+    private Child(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Child() {
+      childUuid_ = com.google.protobuf.ByteString.EMPTY;
+      childUuids_ = emptyList(com.google.protobuf.ByteString.class);
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Child_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetMapChildUuid();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Child_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              li.xiam.uuidhelper.test.Test.Child.class, li.xiam.uuidhelper.test.Test.Child.Builder.class);
+    }
+
+    public static final int CHILD_UUID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString childUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes child_uuid = 1;</code>
+     * @return The childUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getChildUuid() {
+      return childUuid_;
+    }
+
+    public static final int CHILD_UUIDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> childUuids_ =
+        emptyList(com.google.protobuf.ByteString.class);
+    /**
+     * <code>repeated bytes child_uuids = 2;</code>
+     * @return A list containing the childUuids.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getChildUuidsList() {
+      return childUuids_;
+    }
+    /**
+     * <code>repeated bytes child_uuids = 2;</code>
+     * @return The count of childUuids.
+     */
+    public int getChildUuidsCount() {
+      return childUuids_.size();
+    }
+    /**
+     * <code>repeated bytes child_uuids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The childUuids at the given index.
+     */
+    public com.google.protobuf.ByteString getChildUuids(int index) {
+      return childUuids_.get(index);
+    }
+
+    public static final int MAP_CHILD_UUID_FIELD_NUMBER = 3;
+    private static final class MapChildUuidDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.protobuf.ByteString>newDefaultInstance(
+                  li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Child_MapChildUuidEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.protobuf.ByteString> mapChildUuid_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+    internalGetMapChildUuid() {
+      if (mapChildUuid_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MapChildUuidDefaultEntryHolder.defaultEntry);
+      }
+      return mapChildUuid_;
+    }
+    public int getMapChildUuidCount() {
+      return internalGetMapChildUuid().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    @java.lang.Override
+    public boolean containsMapChildUuid(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetMapChildUuid().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMapChildUuidMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapChildUuid() {
+      return getMapChildUuidMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapChildUuidMap() {
+      return internalGetMapChildUuid().getMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getMapChildUuidOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetMapChildUuid().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMapChildUuidOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetMapChildUuid().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!childUuid_.isEmpty()) {
+        output.writeBytes(1, childUuid_);
+      }
+      for (int i = 0; i < childUuids_.size(); i++) {
+        output.writeBytes(2, childUuids_.get(i));
+      }
+      com.google.protobuf.GeneratedMessage
+        .serializeStringMapTo(
+          output,
+          internalGetMapChildUuid(),
+          MapChildUuidDefaultEntryHolder.defaultEntry,
+          3);
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!childUuid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, childUuid_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < childUuids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(childUuids_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getChildUuidsList().size();
+      }
+      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.ByteString> entry
+           : internalGetMapChildUuid().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+        mapChildUuid__ = MapChildUuidDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, mapChildUuid__);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof li.xiam.uuidhelper.test.Test.Child)) {
+        return super.equals(obj);
+      }
+      li.xiam.uuidhelper.test.Test.Child other = (li.xiam.uuidhelper.test.Test.Child) obj;
+
+      if (!getChildUuid()
+          .equals(other.getChildUuid())) return false;
+      if (!getChildUuidsList()
+          .equals(other.getChildUuidsList())) return false;
+      if (!internalGetMapChildUuid().equals(
+          other.internalGetMapChildUuid())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHILD_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getChildUuid().hashCode();
+      if (getChildUuidsCount() > 0) {
+        hash = (37 * hash) + CHILD_UUIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getChildUuidsList().hashCode();
+      }
+      if (!internalGetMapChildUuid().getMap().isEmpty()) {
+        hash = (37 * hash) + MAP_CHILD_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMapChildUuid().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static li.xiam.uuidhelper.test.Test.Child parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static li.xiam.uuidhelper.test.Test.Child parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static li.xiam.uuidhelper.test.Test.Child parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(li.xiam.uuidhelper.test.Test.Child prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code uuidhelper.test.Child}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:uuidhelper.test.Child)
+        li.xiam.uuidhelper.test.Test.ChildOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Child_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMapChildUuid();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableMapChildUuid();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Child_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                li.xiam.uuidhelper.test.Test.Child.class, li.xiam.uuidhelper.test.Test.Child.Builder.class);
+      }
+
+      // Construct using li.xiam.uuidhelper.test.Test.Child.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        childUuid_ = com.google.protobuf.ByteString.EMPTY;
+        childUuids_ = emptyList(com.google.protobuf.ByteString.class);
+        internalGetMutableMapChildUuid().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return li.xiam.uuidhelper.test.Test.internal_static_uuidhelper_test_Child_descriptor;
+      }
+
+      @java.lang.Override
+      public li.xiam.uuidhelper.test.Test.Child getDefaultInstanceForType() {
+        return li.xiam.uuidhelper.test.Test.Child.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public li.xiam.uuidhelper.test.Test.Child build() {
+        li.xiam.uuidhelper.test.Test.Child result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public li.xiam.uuidhelper.test.Test.Child buildPartial() {
+        li.xiam.uuidhelper.test.Test.Child result = new li.xiam.uuidhelper.test.Test.Child(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(li.xiam.uuidhelper.test.Test.Child result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.childUuid_ = childUuid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          childUuids_.makeImmutable();
+          result.childUuids_ = childUuids_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.mapChildUuid_ = internalGetMapChildUuid();
+          result.mapChildUuid_.makeImmutable();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof li.xiam.uuidhelper.test.Test.Child) {
+          return mergeFrom((li.xiam.uuidhelper.test.Test.Child)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(li.xiam.uuidhelper.test.Test.Child other) {
+        if (other == li.xiam.uuidhelper.test.Test.Child.getDefaultInstance()) return this;
+        if (other.getChildUuid() != com.google.protobuf.ByteString.EMPTY) {
+          setChildUuid(other.getChildUuid());
+        }
+        if (!other.childUuids_.isEmpty()) {
+          if (childUuids_.isEmpty()) {
+            childUuids_ = other.childUuids_;
+            childUuids_.makeImmutable();
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureChildUuidsIsMutable();
+            childUuids_.addAll(other.childUuids_);
+          }
+          onChanged();
+        }
+        internalGetMutableMapChildUuid().mergeFrom(
+            other.internalGetMapChildUuid());
+        bitField0_ |= 0x00000004;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                childUuid_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.google.protobuf.ByteString v = input.readBytes();
+                ensureChildUuidsIsMutable();
+                childUuids_.add(v);
+                break;
+              } // case 18
+              case 26: {
+                com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+                mapChildUuid__ = input.readMessage(
+                    MapChildUuidDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMapChildUuid().getMutableMap().put(
+                    mapChildUuid__.getKey(), mapChildUuid__.getValue());
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString childUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes child_uuid = 1;</code>
+       * @return The childUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getChildUuid() {
+        return childUuid_;
+      }
+      /**
+       * <code>bytes child_uuid = 1;</code>
+       * @param value The childUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChildUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        childUuid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes child_uuid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChildUuid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        childUuid_ = getDefaultInstance().getChildUuid();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> childUuids_ = emptyList(com.google.protobuf.ByteString.class);
+      private void ensureChildUuidsIsMutable() {
+        if (!childUuids_.isModifiable()) {
+          childUuids_ = makeMutableCopy(childUuids_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated bytes child_uuids = 2;</code>
+       * @return A list containing the childUuids.
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getChildUuidsList() {
+        childUuids_.makeImmutable();
+        return childUuids_;
+      }
+      /**
+       * <code>repeated bytes child_uuids = 2;</code>
+       * @return The count of childUuids.
+       */
+      public int getChildUuidsCount() {
+        return childUuids_.size();
+      }
+      /**
+       * <code>repeated bytes child_uuids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The childUuids at the given index.
+       */
+      public com.google.protobuf.ByteString getChildUuids(int index) {
+        return childUuids_.get(index);
+      }
+      /**
+       * <code>repeated bytes child_uuids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The childUuids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChildUuids(
+          int index, com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChildUuidsIsMutable();
+        childUuids_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes child_uuids = 2;</code>
+       * @param value The childUuids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChildUuids(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureChildUuidsIsMutable();
+        childUuids_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes child_uuids = 2;</code>
+       * @param values The childUuids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChildUuids(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        ensureChildUuidsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, childUuids_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes child_uuids = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChildUuids() {
+        childUuids_ = emptyList(com.google.protobuf.ByteString.class);
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.protobuf.ByteString> mapChildUuid_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+          internalGetMapChildUuid() {
+        if (mapChildUuid_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MapChildUuidDefaultEntryHolder.defaultEntry);
+        }
+        return mapChildUuid_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+          internalGetMutableMapChildUuid() {
+        if (mapChildUuid_ == null) {
+          mapChildUuid_ = com.google.protobuf.MapField.newMapField(
+              MapChildUuidDefaultEntryHolder.defaultEntry);
+        }
+        if (!mapChildUuid_.isMutable()) {
+          mapChildUuid_ = mapChildUuid_.copy();
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return mapChildUuid_;
+      }
+      public int getMapChildUuidCount() {
+        return internalGetMapChildUuid().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+       */
+      @java.lang.Override
+      public boolean containsMapChildUuid(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetMapChildUuid().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMapChildUuidMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapChildUuid() {
+        return getMapChildUuidMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getMapChildUuidMap() {
+        return internalGetMapChildUuid().getMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getMapChildUuidOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetMapChildUuid().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMapChildUuidOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetMapChildUuid().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearMapChildUuid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        internalGetMutableMapChildUuid().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+       */
+      public Builder removeMapChildUuid(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableMapChildUuid().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+          getMutableMapChildUuid() {
+        bitField0_ |= 0x00000004;
+        return internalGetMutableMapChildUuid().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+       */
+      public Builder putMapChildUuid(
+          java.lang.String key,
+          com.google.protobuf.ByteString value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableMapChildUuid().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; map_child_uuid = 3;</code>
+       */
+      public Builder putAllMapChildUuid(
+          java.util.Map<java.lang.String, com.google.protobuf.ByteString> values) {
+        internalGetMutableMapChildUuid().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:uuidhelper.test.Child)
+    }
+
+    // @@protoc_insertion_point(class_scope:uuidhelper.test.Child)
+    private static final li.xiam.uuidhelper.test.Test.Child DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new li.xiam.uuidhelper.test.Test.Child();
+    }
+
+    public static li.xiam.uuidhelper.test.Test.Child getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Child>
+        PARSER = new com.google.protobuf.AbstractParser<Child>() {
+      @java.lang.Override
+      public Child parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Child> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Child> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public li.xiam.uuidhelper.test.Test.Child getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_uuidhelper_test_Player_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_uuidhelper_test_Player_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_NestedMsg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_NestedMsg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapInt32UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapInt32UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapInt64UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapInt64UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapUint32UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapUint32UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapUint64UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapUint64UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapSint32UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapSint32UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapSint64UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapSint64UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapFixed32UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapFixed32UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapFixed64UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapFixed64UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapSfixed32UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapSfixed32UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapSfixed64UuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapSfixed64UuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapBoolUuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapBoolUuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapStringUuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapStringUuidEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapInt32UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapInt32UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapInt64UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapInt64UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapUint32UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapUint32UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapUint64UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapUint64UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapSint32UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapSint32UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapSint64UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapSint64UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapFixed32UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapFixed32UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapFixed64UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapFixed64UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapSfixed32UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapSfixed32UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapSfixed64UuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapSfixed64UuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapBoolUuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapBoolUuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Player_MapStringUuidsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Player_MapStringUuidsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Child_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Child_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_uuidhelper_test_Child_MapChildUuidEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_uuidhelper_test_Child_MapChildUuidEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1014,12 +10545,99 @@ public final class Test {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntest.proto\022\017uuidhelper.test\"p\n\006Player\022" +
-      "\025\n\rinternal_uuid\030\001 \001(\014\022\020\n\010username\030\002 \001(\t" +
-      "\022\024\n\014session_uuid\030\003 \001(\014\022\023\n\013string_uuid\030\004 " +
-      "\001(\t\022\022\n\ngame_uuids\030\005 \003(\014BA\n\027li.xiam.uuidh" +
-      "elper.testP\000Z$xiam.li/uuidhelper/interna" +
-      "l/test/genb\006proto3"
+      "\n\ntest.proto\022\017uuidhelper.test\"\325\032\n\006Player" +
+      "\022\025\n\rinternal_uuid\030\001 \001(\014\022\020\n\010username\030\002 \001(" +
+      "\t\022\024\n\014session_uuid\030\003 \001(\014\022\023\n\013string_uuid\030\004" +
+      " \001(\t\022\022\n\ngame_uuids\030\005 \003(\014\022\021\n\007v1_uuid\030\006 \001(" +
+      "\014H\000\022\021\n\007v2_uuid\030\007 \001(\014H\000\0221\n\006nested\030\010 \001(\0132!" +
+      ".uuidhelper.test.Player.NestedMsg\022?\n\017opt" +
+      "ional_nested\030\t \001(\0132!.uuidhelper.test.Pla" +
+      "yer.NestedMsgH\001\210\001\001\022\025\n\010opt_uuid\030\n \001(\014H\002\210\001" +
+      "\001\022A\n\016map_int32_uuid\030\013 \003(\0132).uuidhelper.t" +
+      "est.Player.MapInt32UuidEntry\022A\n\016map_int6" +
+      "4_uuid\030\014 \003(\0132).uuidhelper.test.Player.Ma" +
+      "pInt64UuidEntry\022C\n\017map_uint32_uuid\030\r \003(\013" +
+      "2*.uuidhelper.test.Player.MapUint32UuidE" +
+      "ntry\022C\n\017map_uint64_uuid\030\016 \003(\0132*.uuidhelp" +
+      "er.test.Player.MapUint64UuidEntry\022C\n\017map" +
+      "_sint32_uuid\030\017 \003(\0132*.uuidhelper.test.Pla" +
+      "yer.MapSint32UuidEntry\022C\n\017map_sint64_uui" +
+      "d\030\020 \003(\0132*.uuidhelper.test.Player.MapSint" +
+      "64UuidEntry\022E\n\020map_fixed32_uuid\030\021 \003(\0132+." +
+      "uuidhelper.test.Player.MapFixed32UuidEnt" +
+      "ry\022E\n\020map_fixed64_uuid\030\022 \003(\0132+.uuidhelpe" +
+      "r.test.Player.MapFixed64UuidEntry\022G\n\021map" +
+      "_sfixed32_uuid\030\023 \003(\0132,.uuidhelper.test.P" +
+      "layer.MapSfixed32UuidEntry\022G\n\021map_sfixed" +
+      "64_uuid\030\024 \003(\0132,.uuidhelper.test.Player.M" +
+      "apSfixed64UuidEntry\022?\n\rmap_bool_uuid\030\025 \003" +
+      "(\0132(.uuidhelper.test.Player.MapBoolUuidE" +
+      "ntry\022C\n\017map_string_uuid\030\026 \003(\0132*.uuidhelp" +
+      "er.test.Player.MapStringUuidEntry\022C\n\017map" +
+      "_int32_uuids\030\027 \003(\0132*.uuidhelper.test.Pla" +
+      "yer.MapInt32UuidsEntry\022C\n\017map_int64_uuid" +
+      "s\030\030 \003(\0132*.uuidhelper.test.Player.MapInt6" +
+      "4UuidsEntry\022E\n\020map_uint32_uuids\030\031 \003(\0132+." +
+      "uuidhelper.test.Player.MapUint32UuidsEnt" +
+      "ry\022E\n\020map_uint64_uuids\030\032 \003(\0132+.uuidhelpe" +
+      "r.test.Player.MapUint64UuidsEntry\022E\n\020map" +
+      "_sint32_uuids\030\033 \003(\0132+.uuidhelper.test.Pl" +
+      "ayer.MapSint32UuidsEntry\022E\n\020map_sint64_u" +
+      "uids\030\034 \003(\0132+.uuidhelper.test.Player.MapS" +
+      "int64UuidsEntry\022G\n\021map_fixed32_uuids\030\035 \003" +
+      "(\0132,.uuidhelper.test.Player.MapFixed32Uu" +
+      "idsEntry\022G\n\021map_fixed64_uuids\030\036 \003(\0132,.uu" +
+      "idhelper.test.Player.MapFixed64UuidsEntr" +
+      "y\022I\n\022map_sfixed32_uuids\030\037 \003(\0132-.uuidhelp" +
+      "er.test.Player.MapSfixed32UuidsEntry\022I\n\022" +
+      "map_sfixed64_uuids\030  \003(\0132-.uuidhelper.te" +
+      "st.Player.MapSfixed64UuidsEntry\022A\n\016map_b" +
+      "ool_uuids\030! \003(\0132).uuidhelper.test.Player" +
+      ".MapBoolUuidsEntry\022E\n\020map_string_uuids\030\"" +
+      " \003(\0132+.uuidhelper.test.Player.MapStringU" +
+      "uidsEntry\022%\n\005child\030# \001(\0132\026.uuidhelper.te" +
+      "st.Child\032 \n\tNestedMsg\022\023\n\013nested_uuid\030\001 \001" +
+      "(\014\0323\n\021MapInt32UuidEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005" +
+      "value\030\002 \001(\014:\0028\001\0323\n\021MapInt64UuidEntry\022\013\n\003" +
+      "key\030\001 \001(\003\022\r\n\005value\030\002 \001(\014:\0028\001\0324\n\022MapUint3" +
+      "2UuidEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\014:\002" +
+      "8\001\0324\n\022MapUint64UuidEntry\022\013\n\003key\030\001 \001(\004\022\r\n" +
+      "\005value\030\002 \001(\014:\0028\001\0324\n\022MapSint32UuidEntry\022\013" +
+      "\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(\014:\0028\001\0324\n\022MapSin" +
+      "t64UuidEntry\022\013\n\003key\030\001 \001(\022\022\r\n\005value\030\002 \001(\014" +
+      ":\0028\001\0325\n\023MapFixed32UuidEntry\022\013\n\003key\030\001 \001(\007" +
+      "\022\r\n\005value\030\002 \001(\014:\0028\001\0325\n\023MapFixed64UuidEnt" +
+      "ry\022\013\n\003key\030\001 \001(\006\022\r\n\005value\030\002 \001(\014:\0028\001\0326\n\024Ma" +
+      "pSfixed32UuidEntry\022\013\n\003key\030\001 \001(\017\022\r\n\005value" +
+      "\030\002 \001(\014:\0028\001\0326\n\024MapSfixed64UuidEntry\022\013\n\003ke" +
+      "y\030\001 \001(\020\022\r\n\005value\030\002 \001(\014:\0028\001\0322\n\020MapBoolUui" +
+      "dEntry\022\013\n\003key\030\001 \001(\010\022\r\n\005value\030\002 \001(\014:\0028\001\0324" +
+      "\n\022MapStringUuidEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\014:\0028\001\0324\n\022MapInt32UuidsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\005\022\r\n\005value\030\002 \001(\014:\0028\001\0324\n\022MapInt64Uu" +
+      "idsEntry\022\013\n\003key\030\001 \001(\003\022\r\n\005value\030\002 \001(\014:\0028\001" +
+      "\0325\n\023MapUint32UuidsEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005" +
+      "value\030\002 \001(\014:\0028\001\0325\n\023MapUint64UuidsEntry\022\013" +
+      "\n\003key\030\001 \001(\004\022\r\n\005value\030\002 \001(\014:\0028\001\0325\n\023MapSin" +
+      "t32UuidsEntry\022\013\n\003key\030\001 \001(\021\022\r\n\005value\030\002 \001(" +
+      "\014:\0028\001\0325\n\023MapSint64UuidsEntry\022\013\n\003key\030\001 \001(" +
+      "\022\022\r\n\005value\030\002 \001(\014:\0028\001\0326\n\024MapFixed32UuidsE" +
+      "ntry\022\013\n\003key\030\001 \001(\007\022\r\n\005value\030\002 \001(\014:\0028\001\0326\n\024" +
+      "MapFixed64UuidsEntry\022\013\n\003key\030\001 \001(\006\022\r\n\005val" +
+      "ue\030\002 \001(\014:\0028\001\0327\n\025MapSfixed32UuidsEntry\022\013\n" +
+      "\003key\030\001 \001(\017\022\r\n\005value\030\002 \001(\014:\0028\001\0327\n\025MapSfix" +
+      "ed64UuidsEntry\022\013\n\003key\030\001 \001(\020\022\r\n\005value\030\002 \001" +
+      "(\014:\0028\001\0323\n\021MapBoolUuidsEntry\022\013\n\003key\030\001 \001(\010" +
+      "\022\r\n\005value\030\002 \001(\014:\0028\001\0325\n\023MapStringUuidsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\014:\0028\001B\020\n\016ve" +
+      "rsioned_uuidB\022\n\020_optional_nestedB\013\n\t_opt" +
+      "_uuid\"\247\001\n\005Child\022\022\n\nchild_uuid\030\001 \001(\014\022\023\n\013c" +
+      "hild_uuids\030\002 \003(\014\022@\n\016map_child_uuid\030\003 \003(\013" +
+      "2(.uuidhelper.test.Child.MapChildUuidEnt" +
+      "ry\0323\n\021MapChildUuidEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\014:\0028\001BA\n\027li.xiam.uuidhelper.te" +
+      "stP\000Z$xiam.li/uuidhelper/internal/test/g" +
+      "enb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1030,7 +10648,169 @@ public final class Test {
     internal_static_uuidhelper_test_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_uuidhelper_test_Player_descriptor,
-        new java.lang.String[] { "InternalUuid", "Username", "SessionUuid", "StringUuid", "GameUuids", });
+        new java.lang.String[] { "InternalUuid", "Username", "SessionUuid", "StringUuid", "GameUuids", "V1Uuid", "V2Uuid", "Nested", "OptionalNested", "OptUuid", "MapInt32Uuid", "MapInt64Uuid", "MapUint32Uuid", "MapUint64Uuid", "MapSint32Uuid", "MapSint64Uuid", "MapFixed32Uuid", "MapFixed64Uuid", "MapSfixed32Uuid", "MapSfixed64Uuid", "MapBoolUuid", "MapStringUuid", "MapInt32Uuids", "MapInt64Uuids", "MapUint32Uuids", "MapUint64Uuids", "MapSint32Uuids", "MapSint64Uuids", "MapFixed32Uuids", "MapFixed64Uuids", "MapSfixed32Uuids", "MapSfixed64Uuids", "MapBoolUuids", "MapStringUuids", "Child", "VersionedUuid", });
+    internal_static_uuidhelper_test_Player_NestedMsg_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(0);
+    internal_static_uuidhelper_test_Player_NestedMsg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_NestedMsg_descriptor,
+        new java.lang.String[] { "NestedUuid", });
+    internal_static_uuidhelper_test_Player_MapInt32UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(1);
+    internal_static_uuidhelper_test_Player_MapInt32UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapInt32UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapInt64UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(2);
+    internal_static_uuidhelper_test_Player_MapInt64UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapInt64UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapUint32UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(3);
+    internal_static_uuidhelper_test_Player_MapUint32UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapUint32UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapUint64UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(4);
+    internal_static_uuidhelper_test_Player_MapUint64UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapUint64UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapSint32UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(5);
+    internal_static_uuidhelper_test_Player_MapSint32UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapSint32UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapSint64UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(6);
+    internal_static_uuidhelper_test_Player_MapSint64UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapSint64UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapFixed32UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(7);
+    internal_static_uuidhelper_test_Player_MapFixed32UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapFixed32UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapFixed64UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(8);
+    internal_static_uuidhelper_test_Player_MapFixed64UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapFixed64UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapSfixed32UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(9);
+    internal_static_uuidhelper_test_Player_MapSfixed32UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapSfixed32UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapSfixed64UuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(10);
+    internal_static_uuidhelper_test_Player_MapSfixed64UuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapSfixed64UuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapBoolUuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(11);
+    internal_static_uuidhelper_test_Player_MapBoolUuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapBoolUuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapStringUuidEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(12);
+    internal_static_uuidhelper_test_Player_MapStringUuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapStringUuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapInt32UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(13);
+    internal_static_uuidhelper_test_Player_MapInt32UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapInt32UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapInt64UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(14);
+    internal_static_uuidhelper_test_Player_MapInt64UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapInt64UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapUint32UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(15);
+    internal_static_uuidhelper_test_Player_MapUint32UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapUint32UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapUint64UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(16);
+    internal_static_uuidhelper_test_Player_MapUint64UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapUint64UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapSint32UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(17);
+    internal_static_uuidhelper_test_Player_MapSint32UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapSint32UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapSint64UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(18);
+    internal_static_uuidhelper_test_Player_MapSint64UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapSint64UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapFixed32UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(19);
+    internal_static_uuidhelper_test_Player_MapFixed32UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapFixed32UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapFixed64UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(20);
+    internal_static_uuidhelper_test_Player_MapFixed64UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapFixed64UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapSfixed32UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(21);
+    internal_static_uuidhelper_test_Player_MapSfixed32UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapSfixed32UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapSfixed64UuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(22);
+    internal_static_uuidhelper_test_Player_MapSfixed64UuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapSfixed64UuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapBoolUuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(23);
+    internal_static_uuidhelper_test_Player_MapBoolUuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapBoolUuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Player_MapStringUuidsEntry_descriptor =
+      internal_static_uuidhelper_test_Player_descriptor.getNestedTypes().get(24);
+    internal_static_uuidhelper_test_Player_MapStringUuidsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Player_MapStringUuidsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_uuidhelper_test_Child_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_uuidhelper_test_Child_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Child_descriptor,
+        new java.lang.String[] { "ChildUuid", "ChildUuids", "MapChildUuid", });
+    internal_static_uuidhelper_test_Child_MapChildUuidEntry_descriptor =
+      internal_static_uuidhelper_test_Child_descriptor.getNestedTypes().get(0);
+    internal_static_uuidhelper_test_Child_MapChildUuidEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_uuidhelper_test_Child_MapChildUuidEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     descriptor.resolveAllFeaturesImmutable();
   }
 
